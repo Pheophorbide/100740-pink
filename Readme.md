@@ -1,7 +1,7 @@
 # Проект «Пинк» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Дарья Найдикова](https://htmlacademy.ru/profile/id100740).
-* Наставник: `Unknown`.
+* Наставник: Денис Байдаров.
 
 ### Немного о себе
 
