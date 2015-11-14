@@ -5,110 +5,122 @@
     <title>HTML Academy: Пинк</title>
   </head>
   <body>
-
     <!-- <p>Репозиторий создан для обучения на интенсивном онлайн-курсе «<a href="https://htmlacademy.ru/advanced_intensive">Продвинутый HTML и CSS</a>».</p> -->
-    <header class="main-header">
-      <div class="top-header">
-          <div class="logo">
-            <p>PINK</p>
+    <header class="header-container">
+      <div class="top-menu-wrapper">
+        <div class="top-menu-row">
+          <div class="top-menu-column">
+            <a class="logo" href="#">PINK</a>
           </div>
-          <div class="menu-container">
-            <div class="menu"></div>
+          <div class="top-menu-column">
+            <a class="menu" href="#">
+              <img src="img/burger-icon.png" alt="">
+            </a>
           </div>
-      </div>
-      <div class="middle-header">
-          <p>Взгляни на жизнь иначе!</p>
-      </div>
-      <div class="bottom-header">
-          <div class="search-container">
-            <input type="search" name="search">
-          </div>
-          <div class="OSicon-container">
-            <div class="apple-icon"></div>
-            <div class="android-icon"></div>
-            <div class="windows-icon"></div>
-          </div>
-          <div class="OSdescription-container">
-            <p>Доступно для iPhone, iPad, Android,</p>
-            <p>Windows Phone, OS X, Windows 8 </p>
         </div>
+        <div class="top-menu-row">
+          <div class="top-menu-column">
+            <ul class="sub-menu">
+              <li><a href="#Information">Информация</a></li>
+              <li><a href="#Blog">Блог</a></li>
+              <li><a href="#Feedback">Отзывы</a></li>
+              <li><a href="#Сompetition">Конкурс</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="middle-menu-wrapper">
+          <div class="middle-menu">Взгляни на жизнь иначе!</div>
+      </div>
+      <div class="bottom-menu-wrapper">
+        <div class="bottom-menu-row">
+          <div class="shape-collumn">
+            <div class="shape">Скачать приложение</div>
+          </div>
+        </div>
+        <div class="bottom-menu-row">
+          <div class="aplication-column"><img src="img/apple-logo.png" alt=""></div>
+          <div class="aplication-column"><img src="img/android-logo.png" alt=""></div>
+          <div class="aplication-column"><img src="img/windows-logo.png" alt=""></div>
+        </div>
+        <div class="bottom-menu-row">Доступно для iPhone, iPad, Android,<p>Windows Phone, OS X, Window</p></div>
       </div>
     </header>
     <main>
-      <section class="top-description">
-        <h1>Устали от серости мегаполиса?</h1>
-        <h1>Нам есть,что вам предложить!</h1>
+      <section class="intro">
+        <div class="intro-text">Устали от серости мегаполиса?</div>
+        <div class="intro-text">Нам есть, что вам  предложить!</div>
       </section>
-      <section class="middle-description">
-        <h2>Поднимаем настроение</h2>
-        <p>
-              Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-        </p>
-        <h2>Меняет мир вокруг</h2>
-        <p>
-              Сделайте снимок и украстье его смайликом или текстовой подписью,чтобы усилить эффект
-        </p>
-        <h2>Заводит новых друзей</h2>
-        <p>
-              Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-        </p>
+      <section class="aboutUs">
+        <div class="aboutUs-row"><div class="aboutUs-title">Поднимает настроение</div><div class="aboutUs-text">Приложение позволит вам победить осеннюю</div></div>
+        <div class="aboutUs-row"><div class="aboutUs-title">Меняет мир вокруг</div><div class="aboutUs-text">Сделайте снимок и украсьте его смайликом или</div></div>
+        <div class="aboutUs-row"><div class="aboutUs-title">Заводит новых друзей</div><div class="aboutUs-text">Ставьте лайки, комментируте, делитесь фото</div></div>
       </section>
-      <div class="phone-image">
-        <img src="" alt="Всем привет!" />
+      <div class="iPhone-screen-container">
+        <img src="img/iPhone-screen.png" alt="">
       </div>
-      <section class="feedback">
-        <h2>Николай Петров</h2>
-        <p>
-          Говорит слова
-        </p>
-      </section>
-      <div class="hot-offer">
-        <div class="hot-offer-row">
-          <img src="" alt="хит" />
+      <div class="reivew-container">
+        <div class="reivew-title">Николай Петров</div>
+        <div class="reivew-text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</div>
+        <div class="reivew-navigation">
+          <ul class="navigation">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
         </div>
-        <div class="hot-offer-row">
-          <li><span>Розовый фильтр</span></li>
-          <li>
-            <img src="" alt="галочка" />
-          </li>
+      </div>
+      <div class="price-container">
+        <div class="price-title">
+          <div class="hit"></div>
+          <div class="price-text">Стандарт <p>3,99 USD</p></div>
         </div>
-        <div class="hot-offer-row">
-          <li><span>Смайлики</span></li>
-          <li>
-            <img src="" alt="галочка" />
-          </li>
+        <div class="price-row">
+          <div class="price-column">
+            <div class="offer">Розовый фильтр</div>
+            <div class="check"></div>
+          </div>
         </div>
-        <div class="hot-offer-row">
-          <li><span>Комментарии<span></li>
-          <li>
-            <img src="" alt="крестик" />
-          </li>
+        <div class="price-row">
+          <div class="price-column">
+            <div class="offer">Смайлики</div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="price-row">
+          <div class="price-column">
+            <div class="offer">Комментарии</div>
+            <div class="check"></div>
+          </div>
+        </div>
+        <div class="price-navigation">
+          <ul class="navigation">
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
         </div>
       </div>
     </main>
     <footer>
-      <section class="questions">
-      <h1>Остались вопросы?</h1>
-      <h1>Свяжитесь с нами!</h1>
-      </section>
-      <article class="phone">
-        <p>
-          Звоните:
-        </p>
-        <p>
-          +7
-        </p>
+     <div class="questions-container">Остались вопросы?
+       <p>Свяжитесь с нами!</p>
+     </div>
+      <article class="contacts-container">
+        <div class="contactBlock">
+          <div class="contactBlock-title">Звоните:</div>
+          <div class="contactBlock-text"><a href="#">+7 (812) 555-66-66</a></div>
+        </div>
+        <div class="contactBlock">
+          <div class="contactBlock-title">Пишите:</div>
+          <div class="contactBlock-text"><a href="#">mail@htmlacademy.ru</a></div>
+        </div>
+        <div class="contactBlock">
+          <div class="contactBlock-title">Приезжайте в гости:</div>
+          <div class="contactBlock-text"><a href="#">ул. Большая Конюшенная, 19/8</a></div>
+        </div>
       </article>
-      <article class="e-mail">
-        <p>
-          Пишите
-        </p>
-        <p>
-          @
-        </p>
-      </article>
-
+      <div class="map"></div>
     </footer>
-
   </body>
 </html>
