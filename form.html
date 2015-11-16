@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
-  <meta name="keywords" content="">
-  <meta name="discription" content="">
+  <meta name="keywords" content="Мобильное приложение, фото, обработка фотографий">
+  <meta name="discription" content="Мобильная приложение для обработки фото,позволяет делиться фотографиями с пользователями, оставлять комментаррии и лайки.">
 </head>
 <body>
 <header>
@@ -30,36 +30,36 @@
       </div>
     </div>
   </div>
-  <div class="header-title">Конкурс на самое безбашеное путешествие с Пинк</div>
+  <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
 </header>
 <main>
   <div class="form-wrapper">
-    <div class="form-title">Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную
-    карту!
+    <div class="form-title">
+      Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
     </div>
-    <form method="get">
-      <div class="login-form-wrapper">
-        <div class="login-form">
-          <label for="login-name">Имя:*</label>
-
-          <div class="login-form-block"><input type="text" id="login-name" value="Введите ваше имя" name="login-name">
+    <form action="#" method="get">
+      <div class="form-container-wrapper">
+        <div class="form-container">
+          <label for="login-name">Имя:</label>
+          <div class="form-block">
+            <input type="text" id="login-name" value="Введите ваше имя" name="login-name">
           </div>
         </div>
-        <div class="login-form">
-          <label for="login-surname">Фамилия:*</label>
-
-          <div class="login-form-block"><input type="text" id="login-surname" value="Укажите фамилию"
-                                               name="login-surname"></div>
+        <div class="form-container">
+          <label for="login-surname">Фамилия:</label>
+          <div class="form-block">
+            <input type="text" id="login-surname" value="Укажите фамилию" name="login-surname">
+          </div>
         </div>
-        <div class="login-form">
+        <div class="form-container">
           <label for="login-patronymic">Отчество:</label>
-
-          <div class="login-form-block"><input type="text" id="login-patronymic" value="Ну и отчество тоже"
-                                               name="login-patronymic"></div>
+          <div class="form-block">
+            <input type="text" id="login-patronymic" value="Ну и отчество тоже" name="login-patronymic">
+          </div>
         </div>
       </div>
       <div class="apps-block-wrapper">
-        <div class="apps-block-title">С каким приложением путешествовали? *</div>
+        <div class="apps-block-title">С каким приложением путешествовали?</div>
         <div class="apps-block-radio">
           <div class="radio-block">
             <input type="radio" id="apps-iOS" name="apps-radio" value="rad1" checked><label for="apps-iOS">Pink
@@ -75,80 +75,77 @@
           </div>
         </div>
       </div>
-      <div class="traveling-details-wrapper">
-        <div class="traveling-details-title">Когда вы путешествовали? *</div>
-        <div class="traveling-details-container">
-          <div class="traveling-datails-row">
-            <div class="traveling-datails-block">
-              <input type="text" name="date-departure" value="1 апреля 2015" id="date-departure">
-            </div>
-            <label for="date-departure">дата выезда</label>
+      <div class="form-container-wrapper">
+        <div class="form-title">Когда вы путешествовали?</div>
+        <div class="form-container">
+          <div class="form-block">
+            <input type="text" name="date-departure" value="1 апреля 2015" id="date-departure">
           </div>
-          <div class="traveling-datails-row">
-            <div class="traveling-datails-block">
-              <button>-</button>
-              <input type="text" value="10 дней" id="duration">
-              <button>+</button>
-            </div>
-            <label for="duration">Продолжительность</label>
+          <label for="date-departure">дата выезда</label>
+        </div>
+        <div class="form-container">
+          <div class="form-block">
+            <button>-</button>
+            <input type="text" value="10 дней" id="duration">
+            <button>+</button>
           </div>
-          <div class="traveling-datails-row">
-            <div class="traveling-datails-block">
-              <input type="text" name="date-arrived" value="1 апреля 2015" id="date-arrived">
-            </div>
-            <label for="date-arrived">дата возвращения</label>
+          <label for="duration">Продолжительность</label>
+        </div>
+        <div class="form-container">
+          <div class="form-block">
+            <input type="text" name="date-arrived" value="1 апреля 2015" id="date-arrived">
           </div>
+          <label for="date-arrived">дата возвращения</label>
         </div>
       </div>
-      <div class="fellow-traveler-wrapper">
-        <div class="fellow-traveler-container">
-          <label for="fellow-traveler-number">Количество попутчиков *</label>
-
-          <div class="fellow-traveler-count-block">
+      <div class="form-container-wrapper">
+        <div class="form-container">
+          <label for="fellow-traveler-number">Количество попутчиков</label>
+          <div class="form-block">
             <button>-</button>
             <input type="text" name="fellow-traveler-number" value="2 чел" id="fellow-traveler-number">
             <button>+</button>
           </div>
         </div>
         <hr>
-        <div class="fellow-traveler-name-wrapper">
-          <div class="fellow-traveler-name-block">
+        <div class="form-container">
+          <div class="form-block">
             <div class="fellow-number-block">
-              <div class="fellow-number">№</div>
-              <div class="fellow-number-area">1</div>
+              <div class="fellow-number-title">№</div>
+              <div class="fellow-number">1</div>
             </div>
-            <div class="fellow-name-block">
-              <label for="fellow-name-1">Имя: *</label>
-
-              <div class="fellow-name-area">
+            <div class="fellow-block-container">
+              <label for="fellow-name-1">Имя:</label>
+              <div class="fellow-block">
                 <input type="text" id="fellow-name-1" value="Введите Ваше имя" name="fellow-name-1">
               </div>
             </div>
-            <div class="fellow-name-block">
-              <label for="fellow-nickname-1">Прозвище:</label>
-
-              <div class="fellow-name-area">
-                <input type="text" id="fellow-nickname-1" value="Ну как же без этого" name="fellow-nickname-1">
-              </div>
+          </div>
+          <div class="fellow-container">
+            <label for="fellow-nickname-1">Прозвище:</label>
+            <div class="fellow-block">
+              <input type="text" id="fellow-nickname-1" value="Ну как же без этого" name="fellow-nickname-1">
             </div>
           </div>
-          <div class="fellow-traveler-name-block">
-            <div class="fellow-number-block">
-              <div class="fellow-number">№</div>
-              <div class="fellow-number-area">2</div>
-            </div>
-            <div class="fellow-name-block">
-              <label for="fellow-name-2">Имя: *</label>
-
-              <div class="fellow-name-area">
-                <input type="text" id="fellow-name-2" value="Введите Ваше имя" name="fellow-name-2">
+        </div>
+        <div class="form-container-wrapper">
+          <div class="form-container">
+            <div class="form-block">
+              <div class="fellow-number-block">
+                <div class="fellow-number-title">№</div>
+                <div class="fellow-number">2</div>
+              </div>
+              <div class="fellow-block-container">
+                <label for="fellow-name-2">Имя:</label>
+                <div class="fellow-block">
+                  <input type="text" id="fellow-name-2" value="Введите Ваше имя" name="fellow-name-2">
+                </div>
               </div>
             </div>
-            <div class="fellow-name-block">
+            <div class="fellow-block-container">
               <label for="fellow-nickname-2">Прозвище:</label>
-
-              <div class="fellow-name-area">
-                <input type="text" id="fellow-nickname-2" value="Ну как же без этого" name="fellow-name-2">
+              <div class="fellow-block">
+                <input type="text" id="fellow-nickname-2" value="Ну как же без этого" name="fellow-nickname-2">
               </div>
             </div>
           </div>
@@ -194,7 +191,7 @@
         </div>
       </div>
       <div class="your-photo-wrapper">
-        <div class="your-photo-title">Ваши фотографии из поездки *</div>
+        <div class="your-photo-title">Ваши фотографии из поездки</div>
         <div class="your-photo-download">
           <button>Загрузить фото</button>
         </div>
@@ -251,7 +248,7 @@
       <div class="submit-wrapper">
         <input type="submit" value="Отправить форму" name="submit-form">
       </div>
-      <div class="attention"><span>*</span> — обязательные поля</div>
+    <div class="attention">— обязательные поля</div>
     </form>
   </div>
 </main>
@@ -259,16 +256,16 @@
   <div class="footer-wrapper">
     <div class="footer-row">
       <div class="glasses"></div>
-      <div class="logo">PINK</div>
+      <a class="logo" href="#">PINK</a>
     </div>
     <div class="footer-row">
-      <a class="sotial" href="#"></a>
-      <a class="sotial" href="#"></a>
-      <a class="sotial" href="#"></a>
+      <a class="social" href="#"></a>
+      <a class="social" href="#"></a>
+      <a class="social" href="#"></a>
     </div>
     <div class="footer-row">
       <div class="develop">Разработано</div>
-      <div class="academy-logo"></div>
+      <a class="academy-logo" href="#"></a>
     </div>
   </div>
 </footer>
