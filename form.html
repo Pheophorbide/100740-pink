@@ -8,34 +8,38 @@
 </head>
 <body>
 <header class="page-header">
-  <div class="page-header__wrapper"> <!--Вспомогательные элементы для разметки сетки-->
-    <div class="page-header__column"> <!--Вспомогательные элементы для разметки сетки-->
-      <div class="logo"> <!--блок-->
-        <a href="#">PINK</a>
+  <div class="page-header__layout">
+    <div class="header-menu">
+      <div class="header-menu__row"> <!--Вспомогательные элементы для разметки сетки-->
+        <div class="header-menu__column"> <!--Вспомогательные элементы для разметки сетки-->
+          <div class="logo"> <!--блок-->
+            <a href="#">PINK</a>
+          </div>
+        </div>
+        <div class="header-menu__column">
+          <a class="toggle toggle--open" href="#"> <!--Блок с Модификатором?-->
+            <img src="img/burger-icon.png" alt="">
+          </a>
+        </div>
+      </div>
+      <div class="header-menu__row">
+        <div class="header-menu__menu-inner">
+          <nav class="main-menu">
+            <a class="main-menu__item" href="#">Информация</a>
+            <a class="main-menu__item" href="#">Блог</a>
+            <a class="main-menu__item" href="#">Отзывы</a>
+            <a class="main-menu__item" href="#">Конкурс</a>
+          </nav>
+        </div>
       </div>
     </div>
-    <div class="page-header__column">
-      <a class="toggle toggle--open" href="#"> <!--Блок с Модификатором?-->
-        <img src="img/burger-icon.png" alt="">
-      </a>
-    </div>
   </div>
-  <div class="page-header__wrapper">
-    <div class="page-header__menu">
-      <nav class="main-menu">
-        <a class="main-menu__item" href="#">Информация</a>
-        <a class="main-menu__item" href="#">Блог</a>
-        <a class="main-menu__item" href="#">Отзывы</a>
-        <a class="main-menu__item" href="#">Конкурс</a>
-      </nav>
-    </div>
-  </div>
-  <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
+  <div class="page-header__title"><h1>Конкурс на самое безбашеное путешествие с Пинк</h1></div>
 </header>
 <main>
   <div class="page-content">
     <div class="page-content__title">
-      Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+      <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
     </div>
     <form action="#" method="get">
       <div class="form-container"> <!--Блок-обертка-->
@@ -114,40 +118,40 @@
         <hr>
         <div class="form-block">
           <div class="fellow-count">  <!--блок c номером-->
-            <div class="fellow-count__fellow-title">№</div>
-            <div class="fellow-count__fellow-number">1</div>
+            <div class="fellow-count__title">№</div>
+            <div class="fellow-count__number">1</div>
           </div>
-          <div class="fellow-name-block"> <!--Использовать в прозвище/возможно тоже form-block с модификатором??-->
+          <div class="fellow-name"> <!--Использовать в прозвище/возможно тоже form-block с модификатором??-->
             <label class="form-block__label"  for="fellow-name-1">Имя:</label>
-            <div class="fellow-name-block__fellow-input">
+            <div class="fellow-name__input">
               <input type="text" id="fellow-name-1" value="Введите Ваше имя" name="fellow-name-1">
             </div>
           </div>
         </div>
         <div class="form-block form-block--less">
-          <div class="fellow-name-block">
+          <div class="fellow-name">
             <label class="form-block__label" for="fellow-nickname-1">Прозвище:</label>
-            <div class="fellow-name-block__fellow-input">
+            <div class="fellow-name__input">
               <input type="text" id="fellow-nickname-1" value="Ну как же без этого" name="fellow-nickname-1">
             </div>
           </div>
         </div>
         <div class="form-block">
           <div class="fellow-count">  <!--блока-->
-            <div class="fellow-count__fellow-title">№</div>
-            <div class="fellow-count__fellow-number">2</div>
+            <div class="fellow-count__title">№</div>
+            <div class="fellow-count__number">2</div>
           </div>
-          <div class="fellow-name-block">
+          <div class="fellow-name">
               <label class="form-block__label" for="fellow-name-2">Имя:</label>
-              <div class="fellow-name-block__fellow-input">
+              <div class="fellow-name__input">
                 <input type="text" id="fellow-name-2" value="Введите Ваше имя" name="fellow-name-2">
               </div>
             </div>
         </div>
         <div class="form-block form-block--less">
-          <div class="fellow-name-block">
+          <div class="fellow-name">
             <label class="form-block__label"  for="fellow-nickname-2">Прозвище:</label>
-            <div class="fellow-name-block__fellow-input">
+            <div class="fellow-name__input">
               <input type="text" id="fellow-nickname-2" value="Ну как же без этого" name="fellow-nickname-2">
             </div>
           </div>
@@ -155,51 +159,51 @@
       </div>
       <div class="form-container">
         <div class="form-container__title">Ваши безбашенные достижения в путешествии</div>
-        <div class="checkbox-block">
-          <div class="checkbox-block__item">
+        <div class="checkbox">
+          <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-1" name="achievement-check-1" checked>
           </div>
-          <label class="checkbox-block_label" for="achievement-check-1">Сделал селфи с акулой</label>
+          <label class="checkbox_label" for="achievement-check-1">Сделал селфи с акулой</label>
         </div>
-        <div class="checkbox-block">
-          <div class="checkbox-block__item">
+        <div class="checkbox">
+          <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-2" name="achievement-check-2" checked>
           </div>
-          <label class="checkbox-block_label" for="achievement-check-2">Обгорел на пляже</label>
+          <label class="checkbox_label" for="achievement-check-2">Обгорел на пляже</label>
         </div>
-        <div class="checkbox-block">
-          <div class="checkbox-block__item">
+        <div class="checkbox">
+          <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-3" name="achievement-check-3">
           </div>
-          <label class="checkbox-block_label" for="achievement-check-3">Видел Чака Нориса</label>
+          <label class="checkbox_label" for="achievement-check-3">Видел Чака Нориса</label>
         </div>
-        <div class="checkbox-block">
-          <div class="checkbox-block__item">
+        <div class="checkbox">
+          <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-4" name="achievement-check-4">
           </div>
-          <label class="checkbox-block_label" for="achievement-check-4">Накупил сувениров</label>
+          <label class="checkbox_label" for="achievement-check-4">Накупил сувениров</label>
         </div>
-        <div class="checkbox-block">
-          <div class="checkbox-block__item">
+        <div class="checkbox">
+          <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-5" name="achievement-check-5" checked>
           </div>
-          <label class="checkbox-block_label" for="achievement-check-5">Удержал башню</label>
+          <label class="checkbox_label" for="achievement-check-5">Удержал башню</label>
         </div>
-        <div class="checkbox-block">
-          <div class="checkbox-block__item">
+        <div class="checkbox">
+          <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-6" name="achievement-check-6">
           </div>
-          <label class="checkbox-block_label" for="achievement-check-6">Разгромил отель</label>
+          <label class="checkbox_label" for="achievement-check-6">Разгромил отель</label>
         </div>
       </div>
       <div class="form-container form-container--gray">
-        <div class="orm-container__title">Ваши фотографии из поездки</div>
+        <div class="form-container__title">Ваши фотографии из поездки</div>
         <div class="download-btn">
           <button>Загрузить фото</button>
         </div>
         <hr>
-        <div class="galery-container">
-          <div class="galery-container__row"> <!--Вспомогательный элемент блока-контэйнера?-->
+        <div class="galery">
+          <div class="galery__row"> <!--Вспомогательный элемент блока-контэйнера?-->
             <div class="galery-column"> <!--Отдельный блок с фото-->
               <button>x</button>
               <div class="galery-column__photo"></div>
@@ -216,7 +220,7 @@
                <div class="galery-column__description"></div>
             </div>
           </div>
-          <div class="galery-container__row">
+          <div class="galery__row">
             <div class="galery-column">
               <button>x</button>
               <div class="galery-column__photo"></div>
@@ -233,7 +237,7 @@
                <div class="galery-column__description"></div>
             </div>
           </div>
-          <div class="galery-container__row">
+          <div class="galery__row">
             <div class="galery-column">
               <button>x</button>
               <div class="galery-column__photo"></div>
@@ -255,22 +259,22 @@
   </div>
 </main>
 <footer>
-  <div class="footer-container">
-    <div class="footer-container__row"> <!--Вспомогательный Элемент?-->
+  <div class="page-footer">
+    <div class="page-footer__row"> <!--Вспомогательный Элемент?-->
       <div class="glasses"><img src="#" alt="glasses-icon"></div>
       <a class="logo" href="#">PINK</a>
     </div>
-    <div class="footer-container__row">
+    <div class="page-footer__row">
       <div class="social">
         <a class="social__item-twitter" href="#"></a>
         <a class="social__item-fb" href="#"></a>
         <a class="social__item-Gplay" href="#"></a> <!--Google play?-->
       </div>
     </div>
-    <div class="footer-container__row">
-      <div class="developer-container">
-        <div class="developer-container__title">Разработано</div>
-        <a class="developer-container__logo" href="#"></a> <!--Блок?-->
+    <div class="page-footer__row">
+      <div class="develop">
+        <div class="developr__title">Разработано</div>
+        <a class="develop__logo" href="#"></a> <!--Блок?-->
       </div>
     </div>
   </div>

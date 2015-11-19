@@ -8,91 +8,101 @@
   </head>
   <body>
   <header class="page-header">
-    <div class="page-header__wrapper"> <!--Вспомогательные элементы для разметки сетки-->
-      <div class="page-header__column"> <!--Вспомогательные элементы для разметки сетки-->
-        <div class="logo"> <!--блок-->
-          <a href="#">PINK</a>
-        </div>
-      </div>
-      <div class="page-header__column">
-        <a class="toggle toggle--open" href="#"> <!--Блок с Модификатором?-->
-          <img src="img/burger-icon.png" alt="">
-        </a>
-      </div>
-    </div>
-    <div class="page-header__wrapper">
-      <div class="page-header__menu">
-        <nav class="main-menu">
-          <a class="main-menu__item" href="#">Информация</a>
-          <a class="main-menu__item" href="#">Блог</a>
-          <a class="main-menu__item" href="#">Отзывы</a>
-          <a class="main-menu__item" href="#">Конкурс</a>
-        </nav>
-      </div>
-    </div>
-      <h1>Взгляни на жизнь иначе!</h1>
-      <div class="apps-container">
-        <div class="apps-container__row"> <!--Вспомогательный элемент для сетки-->
-          <div class="shape-block"> <!--Блок Скачать приложение-->
-            <a class="shape-block__download-btn">Скачать приложение</a>
+    <div class="page-header__layout">
+      <div class="header-menu">
+        <div class="header-menu__row"> <!--Вспомогательные элементы для разметки сетки-->
+          <div class="header-menu__column"> <!--Вспомогательные элементы для разметки сетки-->
+            <div class="logo"> <!--блок-->
+              <a href="#">PINK</a>
+            </div>
+          </div>
+          <div class="header-menu__column">
+            <a class="toggle toggle--open" href="#"> <!--Блок с Модификатором?-->
+              <img src="img/burger-icon.png" alt="">
+            </a>
           </div>
         </div>
-        <div class="apps-container__row">
+        <div class="header-menu__row">
+          <div class="header-menu__menu-inner">
+            <nav class="main-menu">
+              <a class="main-menu__item" href="#">Информация</a>
+              <a class="main-menu__item" href="#">Блог</a>
+              <a class="main-menu__item" href="#">Отзывы</a>
+              <a class="main-menu__item" href="#">Конкурс</a>
+            </nav>
+          </div>
+        </div>
+        <h1>Взгляни на жизнь иначе!</h1>
+      </div>
+      <div class="apps">
+        <div class="apps__row"> <!--Вспомогательный элемент для сетки-->
+          <div class="download"> <!--Блок Скачать приложение-->
+            <a class="download__btn">Скачать приложение</a>
+          </div>
+        </div>
+        <div class="apps__row">
           <ul class="apps-icons"> <!--Блок с доступными приложениями-->
             <li class="apps-icons__item"><img src="#" alt="apple-logo"></li>
             <li class="apps-icons__item"><img src="#" alt="android-logo"></li>
             <li class="apps-icons__item"><img src="#" alt="windows-logo"></li>
           </ul>
         </div>
-        <div class="apps-container__row">
-          <p>Доступно для iPhone, iPad, Android, <br>Windows Phone, OS X, Window</p>
-        </div>
+        <div class="apps__row apps__row--text"> Доступно для iPhone, iPad, Android, <br>Windows Phone, OS X, Window</div>
       </div>
+    </div>
     </header>
     <main>
       <div class="info-container info-container--bg-1"> <!--Блок-центровщик с модификатором фона-->
-        <section class="info-container_title">
-          <h1>Устали от серости мегаполиса?</h1>
-          <h1>Нам есть, что вам предложить!</h1>
-        </section>
-        <section class="about-container">
-          <div class="info-text">
-            <h2>Поднимает настроение</h2>
-            <p>Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+        <div class="about">
+          <div class="about__wrapper">
+            <div class="about__header">
+              <h1>Устали от серости мегаполиса?</h1>
+              <h1>Нам есть, что вам предложить!</h1>
+            </div>
+            <section class="about__inner">
+              <div class="about__item">
+                <div class="about__title"><h2>Поднимает настроение</h2></div>
+                <div class="about__text">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</div>
+              </div>
+              <div class="about__item">
+                <div class="about__title"><h2>Меняет мир вокруг</h2></div>
+                <div class="about-text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</div>
+              </div>
+              <div class="about__item">
+                <div class="about__title"><h2>Заводит новых друзей</h2></div>
+                <div class="about__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</div>
+              </div>
+            </section>
+            <div class="iPhone-screen-container"></div>
           </div>
-          <div class="info-text">
-            <h2>Меняет мир вокруг</h2>
-            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
-          </div>
-          <div class="info-text">
-            <h2>Заводит новых друзей</h2>
-            <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
-          </div>
-        </section>
-        <div class="iPhone-screen-container"></div>
+        </div>
       </div>
       <div class="info-container info-container--bg-2">
-          <section class="review-carousel">
-            <div class="info-text"> <!--Стиль блоков как у промо-информации-->
-              <h2>Николай Петров</h2>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+        <section class="reviews">
+          <div class="reviews__carousel">
+            <div class="slider-reviews">
+              <article class="slider-reviews__item">
+                <div class="slider-reviews__title"><h2>Николай Петров</h2></div>
+                <div class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
                 серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-              </p>
-            </div>
-            <div class="info-text">
-              <h2>Николай Петров</h2>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+                </div>
+              </article>
+              <article class="slider-reviews__item">
+                <div class="slider-reviews__title"><h2>Николай Петров</h2></div>
+                <div class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
                 серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-              </p>
-            </div>
-            <div class="info-text">
-              <h2>Николай Петров</h2>
-              <p>«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+                </div>
+              </article>
+              <article class="slider-reviews__item">
+                <div class="slider-reviews__title"><h2>Николай Петров</h2></div>
+                <div class="slider-reviews__text">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
                 серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»
-              </p>
+                </div>
+              </article>
             </div>
-          </section>
-        <div class="navigation-container">
+          </div>
+        </section>
+        <div class="reviews__nav">
           <ul class="navigator">
             <li class="navigator__item navigator__item--active"><a href="#"></a></li>
             <li class="navigator__item"><a href="#"></a></li>
@@ -100,136 +110,148 @@
           </ul>
         </div>
       </div>
-      <div class="tariff-wrapper"> <!--блок-обертка прайса-->
-        <div class="tariff-carousel"> <!--карусель-->
-          <!--прайс 1-->
-          <div class="tariff-container"> <!--блок-контейнер для таблицы-->
-            <div class="tariff-header"> <!--строка-заголовок-->
-              <div class="tariff-header__title">Стандарт</div>
-              <div class="tariff-header__price">3,99 USD</div>
-            </div>
-            <div class="offers-block-wrapper">
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Розовый фильтр</div>
-                </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
-                </div>
+      <div class="tariff">
+        <div class="tariff__layout"> <!--элемент-обертка прайса-->
+          <div class="tariff__carousel"> <!--эелемент-карусель-->
+            <!--прайс 1-->
+            <div class="tariff-table"> <!--блок-таблица-->
+              <div class="tariff-table__header"> <!--элемент - строка-заголовок-->
+                <div class="tariff-table__header-title">Стандарт</div>
+                <div class="tariff-table__header-price">3,99 USD</div>
               </div>
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Смайлики</div>
+              <div class="tariff-table__row-wrapper">
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Розовый фильтр</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
                 </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Смайлики</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Комментарии</div>
-                </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <!--прайс-2-->
-          <div class="tariff-container"> <!--блок-контейнер для таблицы-->
-            <div class="tariff-header"> <!--строка-заголовок-->
-              <div class="tariff-header__title">Стандарт</div>
-              <div class="tariff-header__price">3,99 USD</div>
-            </div>
-            <div class="offers-block-wrapper">
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Розовый фильтр</div>
-                </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
-                </div>
-              </div>
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Смайлики</div>
-                </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
-                </div>
-              </div>
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Комментарии</div>
-                </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Комментарии</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <!--прайс 3-->
-          <div class="tariff-container"> <!--блок-контейнер для таблицы-->
-            <div class="tariff-header"> <!--строка-заголовок-->
-              <div class="tariff-header__title">Стандарт</div>
-              <div class="tariff-header__price">3,99 USD</div>
+            <!--прайс-2-->
+            <div class="tariff-table">
+              <div class="tariff-table__header"> <!--блок - строка-заголовок-->
+                <div class="tariff-table__header-title">Стандарт</div>
+                <div class="tariff-table__header-price">3,99 USD</div>
+              </div>
+              <div class="tariff-table__row-wrapper">
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Розовый фильтр</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
+                </div>
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Смайлики</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
+                </div>
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Комментарии</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="offers-block-wrapper">
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Розовый фильтр</div>
-                </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
-                </div>
+            <!--прайс 3-->
+            <div class="tariff-table">
+              <div class="tariff-table__header">
+                <div class="tariff-table__header-title">Стандарт</div>
+                <div class="tariff-table__header-price">3,99 USD</div>
               </div>
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Смайлики</div>
+              <div class="tariff-table__row-wrapper">
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Розовый фильтр</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
                 </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Смайлики</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
                 </div>
-              </div>
-              <div class="offers-block">
-                <div class="offers-block__column">
-                  <div class="offers-block__text">Комментарии</div>
-                </div>
-                <div class="offers-block__column">
-                  <div class="offers-block__icon"></div>
+                <div class="tariff-table__row">
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-text">Комментарии</div>
+                  </div>
+                  <div class="tariff-table__cell">
+                    <div class="tariff-table__cell-icon"></div>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-            <div class="navigation-container">
+            <div class="tariff__nav">
               <ul class="navigator">
                 <li class="navigator__item"><a href="#"></a></li>
                 <li class="navigator__item navigator__item--active"><a href="#"></a></li>
                 <li class="navigator__item"><a href="#"></a></li>
               </ul>
             </div>
+          </div>
         </div>
       </div>
     </main>
-    <footer class="page-footer">
-      <h1>Остались вопросы?
-        <br>Свяжитесь с нами!
-      </h1>
-      <div class="contacts">
-        <div class="contact-block">
-          <div class="contact-block__title">Звоните:</div>
-          <div class="contact-block__text"><a href="#">+7 (812) 555-66-66</a></div>
+  <footer class="page-footer">
+    <div class="page-footer__inner">
+      <div class="page-footer_title">
+        <h1>Остались вопросы?
+          <br>Свяжитесь с нами!
+        </h1>
+      </div>
+      <div class="page-footer__contacts">
+        <div class="page-footer__contacts-row">
+          <div class="phone">
+            <div class="phone__title">Звоните:</div>
+            <div class="phone__text"><a href="#">+7 (812) 555-66-66</a></div>
+          </div>
         </div>
-        <div class="contact-block">
-          <div class="contact-block__title">Пишите:</div>
-          <div class="contact-block__text"><a href="#">mail@htmlacademy.ru</a></div>
+        <div class="page-footer__contacts-row">
+          <div class="mail">
+            <div class="mail__title">Пишите:</div>
+            <div class="mail__text"><a href="#">mail@htmlacademy.ru</a></div>
+          </div>
         </div>
-        <div class="contact-block">
-          <div class="contact-block__title">Приезжайте в гости:</div>
-          <div class="contact-block__text"><a href="#">ул. Большая Конюшенная, 19/8</a></div>
+        <div class="page-footer__contacts-row">
+          <div class="address">
+            <div class="address__title">Приезжайте в гости:</div>
+            <div class="address__text"><a href="#">ул. Большая Конюшенная, 19/8</a></div>
+          </div>
         </div>
       </div>
-      <div class="map"></div>
-    </footer>
+      <div class="page-footer__map"></div>
+    </div>
+  </footer>
   </body>
 </html>
