@@ -17,14 +17,15 @@
           </div>
         </div>
         <div class="header-menu__column">
-          <a class="toggle toggle--open" href="#"> <!--Блок с Модификатором?-->
-            <img src="img/burger-icon.png" alt="">
-          </a>
+         <div class="toggle">
+           <a class="toggle__burger" href="#"><img src="img/burger-icon.png" alt=""></a>
+           <a class="toggle__close  toggle__close--hidden"><img src="img/close-btn.png" alt=""></a>
+          </div>
         </div>
       </div>
       <div class="header-menu__row">
         <div class="header-menu__menu-inner">
-          <nav class="main-menu">
+          <nav class="main-menu  main-menu--open">
             <a class="main-menu__item" href="#">Информация</a>
             <a class="main-menu__item" href="#">Блог</a>
             <a class="main-menu__item" href="#">Отзывы</a>
@@ -42,121 +43,126 @@
       <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
     </div>
     <form action="#" method="get">
-      <div class="form-container"> <!--Блок-обертка-->
-        <div class="form-block">  <!--Блок с инпутом-->
-          <label class="form-block__label" for="login-name">Имя:</label>
-          <div class="form-block__control"> <!--Элемент блока с инпутом-->
+      <!--Форма регистрации-->
+      <div class="form-container">
+        <div class="form-container__form">
+          <label class="form-container__label" for="login-name">Имя:</label>
+          <div class="form-container__control"> <!--Элемент блока с инпутом-->
             <input type="text" id="login-name" value="Введите ваше имя" name="login-name">
           </div>
         </div>
-        <div class="form-block">
-          <label class="form-block__label"  for="login-surname">Фамилия:</label>
-          <div class="form-block__control">
+        <div class="form-container__form">
+          <label class="form-container__label"  for="login-surname">Фамилия:</label>
+          <div class="form-container__control">
             <input type="text" id="login-surname" value="Укажите фамилию" name="login-surname">
           </div>
         </div>
-        <div class="form-block">
-          <label class="form-block__label"  for="login-patronymic">Отчество:</label>
-          <div class="form-block__control">
+        <div class="form-container__form">
+          <label class="form-container__label"  for="login-patronymic">Отчество:</label>
+          <div class="form-container__control">
             <input type="text" id="login-patronymic" value="Ну и отчество тоже" name="login-patronymic">
           </div>
         </div>
       </div>
-      <div class="form-container form-container--gray">
+      <!--Форма-опросник-->
+      <div class="form-container  form-container--gray">
         <div class="form-container__title">С каким приложением путешествовали?</div> <!--Элемент контейнера?-->
-        <div class="form-block form-block--radio">
-          <div class="form-block__control">
+        <div class="form-container__form  form-container__form--radio">
+          <div class="form-container__control">
             <input class="apps-radio" type="radio" id="apps-iOS" name="apps-radio" value="rad1" checked>
           </div>
-          <label class="form-block__label" for="apps-iOS">Pink для iOS</label>
+          <label class="form-container__label" for="apps-iOS">Pink для iOS</label>
         </div>
-        <div class="form-block form-block--radio">
-          <div class="form-block__control">
+        <div class="form-container__form  form-container__form--radio">
+          <div class="form-container__control">
             <input class="apps-radio" type="radio" id="apps-Android" name="apps-radio" value="rad2">
           </div>
-          <label class="form-block__label" for="apps-Android">Pink на Android</label>
+          <label class="form-container__label" for="apps-Android">Pink на Android</label>
         </div>
-        <div class="form-block form-block--radio">
-          <div class="form-block__control">
+        <div class="form-container__form  form-container__form--radio">
+          <div class="form-container__control">
             <input class="apps-radio" type="radio" id="apps-Windows" name="apps-radio" value="rad3">
           </div>
-          <label class="form-block__label" for="apps-Windows">Windows Phone</label>
+          <label class="form-container__label" for="apps-Windows">Windows Phone</label>
         </div>
       </div>
+      <!--Форма "Когда путешествовали"-->
       <div class="form-container">
         <div class="form-container__title">Когда вы путешествовали?</div>
-        <div class="form-block">
-          <div class="form-block__control">
+        <div class="form-container__form">
+          <div class="form-container__control">
             <input type="text" name="date-departure" value="1 апреля 2015" id="date-departure">
           </div>
-          <label class="form-block__label" for="date-departure">дата выезда</label>
+          <label class="form-container__label" for="date-departure">дата выезда</label>
         </div>
-        <div class="form-block">
-          <div class="form-block__control">
+        <div class="form-container__form">
+          <div class="form-container__control">
             <button>-</button>
             <input type="text" value="10 дней" id="duration">
             <button>+</button>
           </div>
-          <label class="form-block__label" for="duration">Продолжительность</label>
+          <label class="form-container__label" for="duration">Продолжительность</label>
         </div>
-        <div class="form-block form-block--gray">
-          <div class="form-block__control">
+        <div class="form-container__form  form-container__form--gray">
+          <div class="form-container__control">
             <input type="text" name="date-arrived" value="1 апреля 2015" id="date-arrived">
           </div>
-          <label class="form-block__label" for="date-arrived">дата возвращения</label>
+          <label class="form-container__label" for="date-arrived">дата возвращения</label>
         </div>
       </div>
-      <div class="form-container form-container--gray">
-        <div class="form-block">
-          <label class="form-block__label" for="fellow-traveler-number">Количество попутчиков</label>
-          <div class="form-block__control form-block__control--transparent"> <!--input прозрачный?-->
+      <!--Попутчики-->
+      <div class="form-container  form-container--gray">
+        <div class="form-container__form">
+          <label class="form-container__label" for="fellow-traveler-number">Количество попутчиков</label>
+          <div class="form-container__control  form-container__control--transparent"> <!--input прозрачный?-->
             <button>-</button>
             <input type="text" name="fellow-traveler-number" value="2 чел" id="fellow-traveler-number">
             <button>+</button>
           </div>
         </div>
         <hr>
-        <div class="form-block">
+        <div class="form-container__form">
           <div class="fellow-count">  <!--блок c номером-->
             <div class="fellow-count__title">№</div>
             <div class="fellow-count__number">1</div>
           </div>
-          <div class="fellow-name"> <!--Использовать в прозвище/возможно тоже form-block с модификатором??-->
-            <label class="form-block__label"  for="fellow-name-1">Имя:</label>
+          <div class="fellow-name"> <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
+            <label class="form-container__label"  for="fellow-name-1">Имя:</label>
             <div class="fellow-name__input">
               <input type="text" id="fellow-name-1" value="Введите Ваше имя" name="fellow-name-1">
             </div>
           </div>
         </div>
-        <div class="form-block form-block--less">
+        <div class="form-container__form  form-container__form--less">
           <div class="fellow-name">
-            <label class="form-block__label" for="fellow-nickname-1">Прозвище:</label>
+            <label class="form-container__label" for="fellow-nickname-1">Прозвище:</label>
             <div class="fellow-name__input">
               <input type="text" id="fellow-nickname-1" value="Ну как же без этого" name="fellow-nickname-1">
             </div>
           </div>
         </div>
-        <div class="form-block">
+        <div class="form-container__form">
           <div class="fellow-count">  <!--блока-->
             <div class="fellow-count__title">№</div>
             <div class="fellow-count__number">2</div>
           </div>
           <div class="fellow-name">
-            <label class="form-block__label" for="fellow-name-2">Имя:</label>
+            <label class="form-container__label" for="fellow-name-2">Имя:</label>
             <div class="fellow-name__input">
               <input type="text" id="fellow-name-2" value="Введите Ваше имя" name="fellow-name-2">
             </div>
           </div>
         </div>
-        <div class="form-block form-block--less">
+        <div class="form-container__form  form-container--less">
           <div class="fellow-name">
-            <label class="form-block__label"  for="fellow-nickname-2">Прозвище:</label>
+            <label class="form-container__label"  for="fellow-nickname-2">Прозвище:</label>
             <div class="fellow-name__input">
               <input type="text" id="fellow-nickname-2" value="Ну как же без этого" name="fellow-nickname-2">
             </div>
           </div>
         </div>
       </div>
+      <!--Чекбоксы с достижениями-->
       <div class="form-container">
         <div class="form-container__title">Ваши безбашенные достижения в путешествии</div>
         <div class="checkbox">
@@ -196,7 +202,8 @@
           <label class="checkbox_label" for="achievement-check-6">Разгромил отель</label>
         </div>
       </div>
-      <div class="form-container form-container--gray">
+      <!--Галерея-->
+      <div class="form-container  form-container--gray">
         <div class="form-container__title">Ваши фотографии из поездки</div>
         <div class="download-btn">
           <button>Загрузить фото</button>
