@@ -6,10 +6,12 @@
   <meta name="keywords" content="Мобильное приложение, фото, обработка фотографий">
   <meta name="discription" content="">
   <link rel="stylesheet" href="css/style.css">
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+  <link
+    href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic,cyrillic-ext,latin-ext'
+    rel='stylesheet' type='text/css'>
 </head>
 <body>
-<div class="wrapper">
+<div class="main-wrapper">
   <header class="page-header">
     <div class="page-header__layout">
       <div class="header-menu">
@@ -62,6 +64,7 @@
         <div class="about__wrapper">
           <div class="about__header">
             <p>Устали от серости мегаполиса?</p>
+
             <p>Нам есть, что вам предложить!</p>>
           </div>
           <section class="about__inner">
@@ -122,15 +125,19 @@
       </div>
     </div>
     <div class="tariff">
-      <div class="tariff__layout"> <!--элемент-обертка прайса-->
-        <div class="tariff__carousel"> <!--эелемент-карусель-->
-          <!--прайс 1-->
-          <div class="tariff-table"> <!--блок-таблица-->
-            <div class="tariff-table__header"> <!--элемент - строка-заголовок-->
-              <div class="tariff-table__header-title">Стандарт</div>
-              <div class="tariff-table__header-price">3,99 USD</div>
-            </div>
-            <div class="tariff-table__row-wrapper">
+      <!--элемент-обертка прайса-->
+      <div class="tariff__carousel"> <!--эелемент-карусель-->
+        <!--прайс 1-->
+        <div class="tariff__layout">
+          <div class="tariff-table">
+            <div class="tariff-table__wrapper tariff-table__wrapper--first">
+              <div class="tariff-table__row"> <!--блок-таблица-->
+                <div class="tariff-table__header"> <!--элемент - строка-заголовок-->
+                  <div class="tariff-table__header-title">Стандарт</div>
+                  <div class="tariff-table__header-price">3,99 USD</div>
+                </div>
+              </div>
+
               <div class="tariff-table__row">
                 <div class="tariff-table__cell">
                   <div class="tariff-table__cell-text">Розовый фильтр</div>
@@ -152,18 +159,23 @@
                   <div class="tariff-table__cell-text">Комментарии</div>
                 </div>
                 <div class="tariff-table__cell">
-                  <div class="tariff-table__cell-icon"></div>
+                  <div class="tariff-table__cell-icon tariff-table__cell-icon--no"></div>
                 </div>
               </div>
             </div>
           </div>
+
           <!--прайс-2-->
+
           <div class="tariff-table">
-            <div class="tariff-table__header"> <!--блок - строка-заголовок-->
-              <div class="tariff-table__header-title">Стандарт</div>
-              <div class="tariff-table__header-price">3,99 USD</div>
-            </div>
-            <div class="tariff-table__row-wrapper">
+            <div class="tariff-table__wrapper">
+              <div class="tariff-table__row"> <!--блок-таблица-->
+                <div class="tariff-table__header tariff-table__header--hit"> <!--элемент - строка-заголовок-->
+                  <div class="tariff-table__header-title">Стандарт</div>
+                  <div class="tariff-table__header-price">3,99 USD</div>
+                </div>
+              </div>
+
               <div class="tariff-table__row">
                 <div class="tariff-table__cell">
                   <div class="tariff-table__cell-text">Розовый фильтр</div>
@@ -185,18 +197,23 @@
                   <div class="tariff-table__cell-text">Комментарии</div>
                 </div>
                 <div class="tariff-table__cell">
-                  <div class="tariff-table__cell-icon"></div>
+                  <div class="tariff-table__cell-icon tariff-table__cell-icon--no"></div>
                 </div>
               </div>
             </div>
           </div>
-          <!--прайс 3-->
+
+          <!--прайс-3-->
+
           <div class="tariff-table">
-            <div class="tariff-table__header">
-              <div class="tariff-table__header-title">Стандарт</div>
-              <div class="tariff-table__header-price">3,99 USD</div>
-            </div>
-            <div class="tariff-table__row-wrapper">
+            <div class="tariff-table__wrapper">
+              <div class="tariff-table__row"> <!--блок-таблица-->
+                <div class="tariff-table__header"> <!--элемент - строка-заголовок-->
+                  <div class="tariff-table__header-title">Стандарт</div>
+                  <div class="tariff-table__header-price">3,99 USD</div>
+                </div>
+              </div>
+
               <div class="tariff-table__row">
                 <div class="tariff-table__cell">
                   <div class="tariff-table__cell-text">Розовый фильтр</div>
@@ -218,47 +235,54 @@
                   <div class="tariff-table__cell-text">Комментарии</div>
                 </div>
                 <div class="tariff-table__cell">
-                  <div class="tariff-table__cell-icon"></div>
+                  <div class="tariff-table__cell-icon tariff-table__cell-icon--no"></div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="tariff__nav">
-            <ul class="navigator">
-              <li class="navigator__item"><a href="#"></a></li>
-              <li class="navigator__item navigator__item--active"><a href="#"></a></li>
-              <li class="navigator__item"><a href="#"></a></li>
-            </ul>
-          </div>
+
         </div>
       </div>
+      <div class="tariff__nav">
+        <ul class="navigator">
+          <li class="navigator__item"><a href="#"></a></li>
+          <li class="navigator__item navigator__item--active"><a href="#"></a></li>
+          <li class="navigator__item"><a href="#"></a></li>
+        </ul>
+      </div>
+
     </div>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__inner">
-      <div class="page-footer_title">Остались вопросы?<br>Свяжитесь с нами!</div>
-      <div class="page-footer__contacts">
-        <div class="page-footer__contacts-row">
-          <div class="phone">
-            <div class="phone__title">Звоните:</div>
-            <div class="phone__text"><a href="tel:+78125556666">+7 (812) 555-66-66"</a></div>
-          </div>
-        </div>
-        <div class="page-footer__contacts-row">
-          <div class="mail">
-            <div class="mail__title">Пишите:</div>
-            <div class="mail__text"><a href="#">mail@htmlacademy.ru</a></div>
-          </div>
-        </div>
-        <div class="page-footer__contacts-row">
-          <div class="address">
-            <div class="address__title">Приезжайте в гости:</div>
-            <div class="address__text"><a href="#">ул. Большая Конюшенная, 19/8</a></div>
+    <div class="page-footer__wrapper">
+      <div class="page-footer__container">
+        <div class="page-footer__inner">
+          <div class="page-footer__title">Остались вопросы?<br>Свяжитесь с нами!</div>
+          <div class="page-footer__contacts">
+            <div class="page-footer__contacts-row">
+              <div class="phone">
+                <div class="phone__title">Звоните:</div>
+                <div class="phone__text"><a href="tel:+78125556666">+7 (812) 555-66-66"</a></div>
+              </div>
+            </div>
+            <div class="page-footer__contacts-row">
+              <div class="mail">
+                <div class="mail__title">Пишите:</div>
+                <div class="mail__text"><a href="#">mail@htmlacademy.ru</a></div>
+              </div>
+            </div>
+            <div class="page-footer__contacts-row">
+              <div class="address">
+                <div class="address__title">Приезжайте в гости:</div>
+                <div class="address__text"><a href="#">ул. Большая Конюшенная, 19/8</a></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="page-footer__map"></div>
     </div>
+    <div class="page-footer__map"></div>
+
   </footer>
 </div>
 </body>
