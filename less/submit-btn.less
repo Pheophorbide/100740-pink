@@ -1,0 +1,17 @@
+@import "variables";
+
+.submit-btn {
+  padding: @padding - 5;
+  text-align: center;
+
+  & input[type=submit] {
+    background: transparent;
+    padding: @padding - 3 @padding + 30;
+    background: @submit-color;
+    color: white;
+    text-transform: uppercase;
+    border: 1px solid @submit-color;
+    border-radius: 5px;
+  }
+}
+

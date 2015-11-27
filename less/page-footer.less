@@ -1,0 +1,41 @@
+@import "variables";
+
+.page-footer {
+  &__map {
+    background: url("../img/map.png") no-repeat;
+    min-height: 200px;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      border: 30px solid;
+      border-color: white transparent white transparent;
+      border-right-width: 161px;
+      border-left-width: 159px;
+      border-bottom-width: 0;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      background: url("../img/marker.png");
+      min-height: 36px;
+      min-width: 36px;
+      top: 95px;
+      left: 143px;
+    }
+  }
+  &__inner {
+    padding: @padding;
+    text-align: center;
+  }
+  &__title {
+    font-size: @title-font-size;
+    padding: @padding;
+  }
+  &__contacts {
+    &-row {
+      display: block;
+      padding: 10px;
+    }
+  }
+}

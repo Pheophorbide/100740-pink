@@ -1,0 +1,12 @@
+@import "variables";
+@import "mixins";
+
+.attention {
+  .text-style;
+  color: @text-color;
+  padding: @padding;
+  &:before {
+    content: '* ';
+    color: @contacts-color;
+  }
+}

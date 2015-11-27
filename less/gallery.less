@@ -1,0 +1,28 @@
+@import "variables";
+@import "mixins";
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: @padding + 10 0 @padding - 10;
+  justify-content: space-between;
+  align-content: space-between;
+  &__column {
+    position: relative;
+    padding-bottom: @padding + 6;
+    button {
+      position: absolute;
+      left: 76%;
+      top: -13%;
+      border-radius: 50%;
+      .main-border;
+      width: 35px;
+      height: 35px;
+      background: white url("../img/x.png") center no-repeat;
+    }
+    &__description {
+      font-size: @text-font-size;
+    }
+  }
+}

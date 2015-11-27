@@ -1,0 +1,40 @@
+@import "variables";
+@import "mixins";
+
+.checkbox {
+  display: flex;
+  font-size: @base-font-size;
+  color: @text-color;
+  align-items: center;
+  padding-bottom: @padding;
+  &__control {
+    padding: @padding - 2;
+    position: relative;
+    .main-border;
+    & input[type=checkbox] {
+      display: none;
+      width: 100px;
+    }
+  }
+  &__label {
+    padding: @padding;
+  }
+  &__check {
+    width: 22px;
+    height: 16px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    #achievement-check-1:checked ~ &[for="achievement-check-1"],
+    #achievement-check-2:checked ~ &[for="achievement-check-2"],
+    #achievement-check-3:checked ~ &[for="achievement-check-3"],
+    #achievement-check-4:checked ~ &[for="achievement-check-4"],
+    #achievement-check-5:checked ~ &[for="achievement-check-5"],
+    #achievement-check-6:checked ~ &[for="achievement-check-6"] {
+      background: url("../img/check.png") no-repeat;
+      cursor: pointer;
+
+    }
+  }
+}

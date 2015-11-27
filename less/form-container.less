@@ -1,0 +1,157 @@
+@import "variables";
+@import "mixins";
+
+.form-container {
+  padding: @padding;
+  &--fellow {
+    background: @bg-gray-color;
+    padding: @padding + 5 @padding @padding+25;
+  }
+  &--gray {
+    background: linear-gradient(@bg-gray-color 95%, white 95%);
+  }
+  &__title {
+    .text-style;
+    text-align: center;
+    padding-top: @padding - 11;
+    margin-bottom: @margin*2;
+    &--important {
+      &:after {
+        content: " *";
+      }
+    }
+    &--padding {
+      padding: 20px;
+      margin-bottom: 0;
+    }
+  }
+  &--check {
+    padding-bottom: @padding/2;
+  }
+}
+
+.form-container {
+  &__label {
+    .text-style;
+    padding: 6px @padding;
+    vertical-align: bottom;
+    &--radio {
+      color: @text-color;
+      text-transform: none;
+      font-size: @base-font-size;
+    }
+    &--important {
+      &:after {
+        content: ' *';
+      }
+    }
+    &--center {
+      text-align: center;
+    }
+  }
+
+}
+
+.form-container {
+  &__control {
+    padding: @padding - 5;
+    .main-border;
+    & input[type=text] {
+      border: none;
+      background-color: transparent;
+
+    }
+    &--radio {
+      border: none;
+      position: relative;
+    }
+    & input[type=radio] {
+      display: none;
+    }
+    &--btn {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      padding: 0;
+      border: none;
+
+      height: 63px;
+      button {
+        width: 60px;
+        background-color: white;
+        .main-border;
+        background: url("../img/plus.png") center no-repeat;
+        &:first-child {
+          background-image: url("../img/minus.png");
+        }
+
+      }
+    }
+    &--gray {
+      background-color: @bg-gray-color;
+    }
+    &--fellow-count {
+      width: 216px;
+      background-color: white;
+    }
+
+  }
+  &__btn-item {
+    width: 160px;
+    border-top: 2px solid @input-border-color;
+    border-bottom: 2px solid @input-border-color;
+    padding: 15px 46px;;
+
+  }
+}
+
+.form-container {
+  &__form {
+    margin-bottom: @margin + 5;
+    &--radio {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-bottom: @margin*2;
+    }
+    &--fellow {
+      border-bottom: 2px solid @input-border-color;
+      padding-bottom: @padding*2 + 15;
+    }
+    &--fellow-inner {
+      display: flex;
+      justify-content: flex-end;
+      align-items: stretch;
+    }
+  }
+}
+
+.form-container {
+  &__check {
+    position: absolute;
+    background-color: white;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 10px solid white;
+    box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+
+    #apps-iOS:checked ~ &[for="apps-iOS"] {
+      background-color: @radio-color;
+      cursor: pointer;
+    }
+    #apps-Android:checked ~ &[for="apps-Android"] {
+      background-color: @radio-color;
+      cursor: pointer;
+    }
+    #apps-Windows:checked ~ &[for="apps-Windows"] {
+      background-color: @radio-color;
+      cursor: pointer;
+    }
+  }
+
+}
+
+
