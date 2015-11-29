@@ -1,44 +1,46 @@
-@import "variables";
-@import "mixins";
-
 .form-container {
   padding: @padding;
   &--fellow {
-    background: @bg-gray-color;
     padding: @padding + 5 @padding @padding+25;
   }
   &--gray {
-    background: linear-gradient(@bg-gray-color 95%, white 95%);
+    background: @bg-gray-color;
   }
   &__title {
-    .text-style;
+    .text-style ();
     text-align: center;
-    padding-top: @padding - 11;
-    margin-bottom: @margin*2;
+    padding-top: @padding;
+    margin-bottom: @margin + 10;
     &--important {
       &:after {
         content: " *";
       }
     }
     &--padding {
-      padding: 20px;
-      margin-bottom: 0;
+      padding: @padding + 8 @padding 0;
+    }
+    &--margin-bottom{
+      margin-bottom: @margin + 22;
+      padding:@padding + 16 0 @padding - 16;
     }
   }
   &--check {
-    padding-bottom: @padding/2;
+    padding-bottom: @padding;
   }
 }
 
 .form-container {
   &__label {
-    .text-style;
-    padding: 6px @padding;
+    .text-style ();
+    padding: 12px @padding;
     vertical-align: bottom;
     &--radio {
       color: @text-color;
       text-transform: none;
       font-size: @base-font-size;
+      & label {
+      cursor: pointer;
+      }
     }
     &--important {
       &:after {
@@ -49,24 +51,45 @@
       text-align: center;
     }
   }
-
+  &__fellow-number{
+    padding: 0;
+  }
 }
 
 .form-container {
   &__control {
-    padding: @padding - 5;
-    .main-border;
+    padding: @padding - 3;
+    .main-border ();
     & input[type=text] {
       border: none;
       background-color: transparent;
-
+      width: 100%;
     }
     &--radio {
       border: none;
-      position: relative;
+      padding-left: 60px;
+      & label{
+        cursor: pointer;
+        &::before{
+          content: '';
+          position: absolute;
+          background-color: white;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          left: 6%;
+          transform: translate(-50%, -15%);
+          border: 10px solid white;
+          box-shadow: 0 0 2px rgba(0, 0, 0, .8);
+        }
+      }
     }
     & input[type=radio] {
       display: none;
+      &:checked + label::before{
+        content: '';
+        background: @radio-color;
+      }
     }
     &--btn {
       display: flex;
@@ -90,12 +113,22 @@
     &--gray {
       background-color: @bg-gray-color;
     }
-    &--fellow-count {
-      width: 216px;
-      background-color: white;
-    }
 
   }
+
+  .form-container {
+    &__control{
+      &--fellow-count {
+        width: 216px;
+        background-color: white;
+      }
+      &--fellow-number{
+        padding: @padding - 2 @padding + 5;
+        border-right: none;
+      }
+    }
+  }
+
   &__btn-item {
     width: 160px;
     border-top: 2px solid @input-border-color;
@@ -107,48 +140,26 @@
 
 .form-container {
   &__form {
-    margin-bottom: @margin + 5;
+    margin-bottom: @margin - 11;
     &--radio {
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin-bottom: @margin*2;
+      position: relative;
+      margin-bottom: @margin - 7;
     }
     &--fellow {
       border-bottom: 2px solid @input-border-color;
-      padding-bottom: @padding*2 + 15;
+      padding-bottom: @padding*2 + 12;
+      margin-bottom: @padding;
     }
     &--fellow-inner {
       display: flex;
       justify-content: flex-end;
       align-items: stretch;
     }
-  }
-}
-
-.form-container {
-  &__check {
-    position: absolute;
-    background-color: white;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 10px solid white;
-    box-shadow: 0 0 2px rgba(0, 0, 0, .8);
-
-    #apps-iOS:checked ~ &[for="apps-iOS"] {
-      background-color: @radio-color;
-      cursor: pointer;
-    }
-    #apps-Android:checked ~ &[for="apps-Android"] {
-      background-color: @radio-color;
-      cursor: pointer;
-    }
-    #apps-Windows:checked ~ &[for="apps-Windows"] {
-      background-color: @radio-color;
-      cursor: pointer;
+    &--wrapper{
+      margin-bottom: @margin + 5;
     }
   }
 }

@@ -5,6 +5,7 @@
   <title>HTML Academy: Пинк</title>
   <meta name="keywords" content="Мобильное приложение, фото, обработка фотографий">
   <meta name="discription" content="Мобильная приложение для обработки фото,позволяет делиться фотографиями с пользователями, оставлять комментаррии и лайки.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link
     href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic,cyrillic-ext,latin-ext'
@@ -28,7 +29,7 @@
           </div>
         </div>
       </div>
-      <div class="header-menu__row header-menu__row  header-menu__row--hidden">
+      <div class="header-menu__row  header-menu__row--hidden">
         <div class="header-menu__menu-inner">
           <nav class="main-menu  main-menu--open">
             <a class="main-menu__item" href="#">Информация</a>
@@ -54,19 +55,19 @@
         <div class="form-container__form">
           <div class="form-container__label form-container__label--important"><label for="login-name">Имя:</label></div>
           <div class="form-container__control"> <!--Элемент блока с инпутом-->
-            <input type="text" id="login-name" value="Введите ваше имя" name="login-name">
+            <input type="text" id="login-name" placeholder="Введите ваше имя" name="login-name">
           </div>
         </div>
         <div class="form-container__form">
           <div class="form-container__label form-container__label--important"><label for="login-surname">Фамилия:</label></div>
           <div class="form-container__control">
-            <input type="text" id="login-surname" value="Укажите фамилию" name="login-surname">
+            <input type="text" id="login-surname" placeholder="Укажите фамилию" name="login-surname">
           </div>
         </div>
         <div class="form-container__form">
           <div class="form-container__label"><label for="login-patronymic">Отчество:</label></div>
           <div class="form-container__control">
-            <input type="text" id="login-patronymic" value="Ну и отчество тоже" name="login-patronymic">
+            <input type="text" id="login-patronymic" placeholder="Ну и отчество тоже" name="login-patronymic">
           </div>
         </div>
       </div>
@@ -76,73 +77,66 @@
         <div class="form-container__form  form-container__form--radio">
           <div class="form-container__control form-container__control--radio">
             <input class="apps-radio" type="radio" id="apps-iOS" name="apps-radio" value="rad1" checked>
-            <label class="form-container__check" for="apps-iOS"></label>
-          </div>
-          <div class="form-container__label form-container__label--radio"><label for="apps-iOS">Pink для iOS</label>
+            <label for="apps-iOS">Pink для iOS</label>
           </div>
         </div>
         <div class="form-container__form  form-container__form--radio">
           <div class="form-container__control form-container__control--radio">
             <input class="apps-radio" type="radio" id="apps-Android" name="apps-radio" value="rad2">
-            <label class="form-container__check" for="apps-Android"></label>
+            <label for="apps-Android">Pink на Android</label>
           </div>
-          <div class="form-container__label form-container__label--radio"><label for="apps-Android">Pink на
-            Android</label></div>
         </div>
         <div class="form-container__form  form-container__form--radio">
           <div class="form-container__control form-container__control--radio">
             <input class="apps-radio" type="radio" id="apps-Windows" name="apps-radio" value="rad3">
-            <label class="form-container__check" for="apps-Windows"></label>
-          </div>
-          <div class="form-container__label form-container__label--radio"><label for="apps-Windows">Windows
-            Phone</label>
+            <label for="apps-Windows">Windows Phone</label>
           </div>
         </div>
         </div>
-
     <!--Форма "Когда путешествовали"-->
     <div class="form-container">
-        <div class="form-container__title form-container__title--important">Когда вы путешествовали?</div>
+        <div class="form-container__title form-container__title--important form-container__title--margin-bottom">Когда вы путешествовали?</div>
         <div class="form-container__form">
           <div class="form-container__control">
-            <input type="text" name="date-departure" value="1 апреля 2015" id="date-departure">
+            <input type="text" name="date-departure" placeholder="1 апреля 2015" id="date-departure">
           </div>
           <div class="form-container__label form-container__label--center"><label  for="date-departure">дата выезда</label></div>
         </div>
         <div class="form-container__form">
           <div class="form-container__control form-container__control--btn">
             <button></button>
-            <div class="form-container__btn-item"><input type="text" value="10 дней" id="duration"></div>
+            <div class="form-container__btn-item"><input type="text" placeholder="10 дней" id="duration"></div>
             <button></button>
           </div>
           <div class="form-container__label form-container__label--center"><label for="duration">Продолжительность</label></div>
         </div>
         <div class="form-container__form">
           <div class="form-container__control form-container__control--gray">
-            <input type="text" name="date-arrived" value="1 апреля 2015" id="date-arrived">
+            <input type="text" name="date-arrived" placeholder="1 апреля 2015" id="date-arrived">
           </div>
           <div class="form-container__label form-container__label--center"><label for="date-arrived">дата возвращения</label></div>
         </div>
       </div>
       <!--Попутчики-->
-      <div class="form-container  form-container--fellow">
+      <div class="form-container  form-container--gray">
         <div class="form-container__form  form-container__form--fellow">
           <div class="form-container__title form-container__title--important"><label for="fellow-traveler-number">Количество попутчиков</label></div>
           <div class="form-container__control form-container__control--btn"> <!--input прозрачный?-->
             <button></button>
-            <div class="form-container__btn-item"><input type="text" name="fellow-traveler-number" value="2 чел" id="fellow-traveler-number"></div>
+            <div class="form-container__btn-item"><input type="text" name="fellow-traveler-number" placeholder="2 чел" id="fellow-traveler-number"></div>
             <button></button>
           </div>
         </div>
+        <div class="form-container__form form-container__form--wrapper">
         <div class="form-container__form  form-container__form--fellow-inner">
-          <div class="fellow-count">  <!--блок c номером-->
-            <div class="fellow-count__title">№</div>
-            <div class="fellow-count__text">1</div>
+          <div class="form-container__fellow-number">  <!--блок c номером-->
+            <div class="form-container__label  form-container__label--fellow-number">№</div>
+            <div class="form-container__control  form-container__control--fellow-number">1</div>
           </div>
           <div class="form-container__fellow-name"> <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
             <div class="form-container__label form-container__label--important"><label for="fellow-name-1">Имя:</label></div>
             <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-name-1" value="Введите Ваше имя" name="fellow-name-1">
+              <input type="text" id="fellow-name-1" placeholder="Введите Ваше имя" name="fellow-name-1">
             </div>
           </div>
         </div>
@@ -150,19 +144,21 @@
           <div class="form-container__fellow-name">
             <div class="form-container__label"><label for="fellow-nickname-1">Прозвище:</label></div>
             <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-nickname-1" value="Ну как же без этого" name="fellow-nickname-1">
+              <input type="text" id="fellow-nickname-1" placeholder="Ну как же без этого" name="fellow-nickname-1">
             </div>
           </div>
         </div>
+        </div>
+        <div class="form-container__form form-container__form--wrapper">
         <div class="form-container__form  form-container__form--fellow-inner">
-          <div class="fellow-count">  <!--блок c номером-->
-            <div class="fellow-count__title">№</div>
-            <div class="fellow-count__text">2</div>
+          <div class="form-container__fellow-number">  <!--блок c номером-->
+            <div class="form-container__label  form-container__label--fellow-number">№</div>
+            <div class="form-container__control  form-container__control--fellow-number">2</div>
           </div>
           <div class="form-container__fellow-name"> <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
             <div class="form-container__label form-container__label--important"><label for="fellow-name-2">Имя:</label></div>
             <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-name-2" value="Введите Ваше имя" name="fellow-name-2">
+              <input type="text" id="fellow-name-2" placeholder="Введите Ваше имя" name="fellow-name-2">
             </div>
           </div>
         </div>
@@ -170,56 +166,51 @@
           <div class="form-container__fellow-name">
             <div class="form-container__label"><label for="fellow-nickname-2">Прозвище:</label></div>
             <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-nickname-2" value="Ну как же без этого" name="fellow-nickname-2">
+              <input type="text" id="fellow-nickname-2" placeholder="Ну как же без этого" name="fellow-nickname-2">
             </div>
           </div>
+        </div>
         </div>
       </div>
       <!--Чекбоксы с достижениями-->
       <div class="form-container form-container--check">
-        <div class="form-container__title form-container__title--padding">Ваши безбашенные достижения в путешествии</div>
+        <div
+          class="form-container__title form-container__title--padding">Ваши безбашенные достижения в путешествии</div>
         <div class="checkbox">
           <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-1" name="achievement-check-1" checked>
-            <label class="checkbox__check" for="achievement-check-1"></label>
+            <label for="achievement-check-1">Сделал селфи с акулой</label>
           </div>
-          <div class="checkbox__label"><label  for="achievement-check-1">Сделал селфи с акулой</label></div>
-
         </div>
         <div class="checkbox">
           <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-2" name="achievement-check-2" checked>
-            <label class="checkbox__check" for="achievement-check-2"></label>
+            <label for="achievement-check-2">Обгорел на пляже</label>
           </div>
-          <div class="checkbox__label"><label  for="achievement-check-2">Обгорел на пляже</label></div>
         </div>
         <div class="checkbox">
           <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-3" name="achievement-check-3">
-            <label class="checkbox__check" for="achievement-check-3"></label>
+            <label for="achievement-check-3">Видел Чака Нориса</label>
           </div>
-          <div class="checkbox__label"><label  for="achievement-check-3">Видел Чака Нориса</label></div>
         </div>
         <div class="checkbox">
           <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-4" name="achievement-check-4">
-            <label class="checkbox__check" for="achievement-check-4"></label>
+            <label for="achievement-check-4">Накупил сувениров</label>
           </div>
-          <div class="checkbox__label"><label  for="achievement-check-4">Накупил сувениров</label></div>
         </div>
         <div class="checkbox">
           <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-5" name="achievement-check-5" checked>
-            <label class="checkbox__check" for="achievement-check-5"></label>
+            <label for="achievement-check-5">Удержал башню</label>
           </div>
-          <div class="checkbox__label"><label  for="achievement-check-5">Удержал башню</label></div>
         </div>
         <div class="checkbox">
           <div class="checkbox__control">
             <input type="checkbox" id="achievement-check-6" name="achievement-check-6">
-            <label class="checkbox__check" for="achievement-check-6"></label>
+            <label for="achievement-check-6">Разгромил отель</label>
           </div>
-          <div class="checkbox__label"><label  for="achievement-check-6">Разгромил отель</label></div>
         </div>
       </div>
       <!--Галерея-->
