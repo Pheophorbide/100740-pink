@@ -1,0 +1,41 @@
+.apps {
+  width: 100%;
+  min-height: 270px;
+  background: @apps-color;
+  &__row {
+    display: block;
+    text-align: center;
+    vertical-align: middle;
+    padding: @padding+8 @padding 0;
+    &--text {
+      font-size: @text-font-size;
+      color: white;
+      line-height: 1.5;
+    }
+  }
+  &__download {
+    border: 3px solid white;
+    border-radius: 30px;
+    padding: 13px;
+  }
+  &__download-btn {
+    font-size: @base-font-size;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.apps-icons {
+  display: block;
+  margin: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 0;
+  padding: 0 20px;
+
+  &__item {
+    display: inline-block;
+    width: 33.3%;
+    vertical-align: bottom;
+  }
+}

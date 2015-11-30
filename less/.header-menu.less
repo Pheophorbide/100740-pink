@@ -1,0 +1,49 @@
+.header-menu {
+  background: url("../img/header-bg.png") no-repeat;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  &--main-bg {
+    min-height: 460px;
+    position: relative;
+    background-position: bottom;
+    &:after {
+      content: '';
+      background: url("../img/phone-in-hand.png") bottom no-repeat;
+      position: absolute;
+      min-height: 312px;
+      min-width: 256px;
+      bottom: -24px;
+
+    }
+  }
+  &--form-bg {
+    min-height: 235px;
+    background-position: top;
+  }
+  &__row {
+    display: block;
+    width: 100%;
+    font-size: 0;
+    padding: 12px @padding;
+    margin-bottom: @margin;
+    .opacity-color(black, 70%);
+    &--hidden {
+      display: none;
+    }
+  }
+  &__column {
+    display: inline-block;
+    vertical-align: middle;
+    width: 50%;
+  }
+  h1 {
+    font-size: @title-font-size;
+    color: white;
+    text-align: center;
+    font-weight: normal;
+    margin: 0;
+    line-height: 1.3;
+    padding: 0 @padding;
+  }
+}
