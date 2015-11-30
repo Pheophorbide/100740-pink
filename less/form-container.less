@@ -38,7 +38,7 @@
       color: @text-color;
       text-transform: none;
       font-size: @base-font-size;
-      & label {
+      label {
       cursor: pointer;
       }
     }
@@ -60,7 +60,7 @@
   &__control {
     padding: @padding - 3;
     .main-border ();
-    & input[type=text] {
+      input[type=text] {
       border: none;
       background-color: transparent;
       width: 100%;
@@ -68,7 +68,7 @@
     &--radio {
       border: none;
       padding-left: 60px;
-      & label{
+        label{
         cursor: pointer;
         &::before{
           content: '';
@@ -84,7 +84,7 @@
         }
       }
     }
-    & input[type=radio] {
+      input[type=radio] {
       display: none;
       &:checked + label::before{
         content: '';
@@ -102,7 +102,7 @@
       button {
         width: 60px;
         background-color: white;
-        .main-border;
+        .main-border ();
         background: url("../img/plus.png") center no-repeat;
         &:first-child {
           background-image: url("../img/minus.png");
