@@ -2,29 +2,43 @@
   width: 100%;
   min-height: 270px;
   background: @apps-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: @padding + 10 @padding;
+  z-index: 1;
+  @media (min-width: 660px) {
+    width: 53%;
+    background: transparent;
+    min-height: 300px;
+  }
   &__row {
     display: block;
     text-align: center;
     vertical-align: middle;
-    padding: @padding+8 @padding 0;
     &--text {
       font-size: @text-font-size;
       color: white;
       line-height: 1.5;
+      @media  (min-width: 660px){
+        font-size: @base-font-size;
+      }
     }
   }
   &__download {
-    border: 3px solid white;
-    border-radius: 30px;
-    padding: 13px;
+    text-align: left;
   }
   &__download-btn {
     font-size: @base-font-size;
     color: white;
     font-weight: bold;
+    border: 2px solid white;
+    border-radius: 30px;
+    background: transparent;
+    width: 280px;
+    height: 53px;
   }
 }
-
 .apps-icons {
   display: block;
   margin: 0;
@@ -32,10 +46,14 @@
   width: 100%;
   font-size: 0;
   padding: 0 20px;
+  @media (min-width: 660px){
+    padding: @padding - 7 @padding*2 0;
+  }
 
   &__item {
     display: inline-block;
-    width: 33.3%;
     vertical-align: bottom;
+    width: 33.3%;
+
   }
 }

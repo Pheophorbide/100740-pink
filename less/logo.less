@@ -1,9 +1,29 @@
 .logo {
-  display: block;
+  display: inline-block;
   text-align: left;
-  a {
-    font-size: @logo-font-size;
-    color: white;
+  vertical-align: middle;
+  &__item{
+    &--mobile{
+      @media (min-width: 660px){
+        display: none;
+      }
+    }
+    &--tablet{
+      display: none;
+      @media (min-width: 660px) and (max-width: 1199px) {
+      &{
+        display: inline-block;
+      }
+    }
+    }
+    &--desktop{
+      display: none;
+      @media (min-width: 1200px) {
+        &{
+          display: inline-block;
+        }
+      }
+    }
   }
   &--footer
   a {

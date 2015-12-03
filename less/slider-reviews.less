@@ -1,25 +1,46 @@
 .slider-reviews {
-  display: block;
+  display: flex;
   position: absolute;
   left: 50%;
   transform: translate(-50%, 0);
-  white-space: nowrap;
-  font-size: 0;
-  text-align: center;
-  vertical-align: middle;
   overflow: hidden;
-  &__item {
-    display: inline-block;
-    width: 320px;
-    padding: @padding+12 @padding;
-    font-size: initial;
-    white-space: initial;
+  @media (min-width:660px ) {
+    top: 15%;
   }
-  &__title h2 {
+  &__item {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 320px;
+    padding: @padding - 17 @padding;
+    font-size: initial;
+    @media (min-width: 660px) {
+      width: 660px;
+      justify-content: flex-end;
+    }
+  }
+  &__title{
+    h2
+  {
     font-size: @base-font-size;
+  }
+    @media (min-width: 660px)
+  {
+    order: 1;
+    padding: @padding - 1;
+      font-size: @text-font-size;
+      &:after{
+        content: '25 лет, водитель трамвая';
+      }
+      h2{
+    font-size: @reviews-tablet-font-size;}
+  }
   }
   &__text {
     font-size: @text-font-size;
     line-height: 2.2;
+    @media (min-width: 660px) {
+    font-size: @base-font-size;
+    line-height: 1.7; }
   }
 }
