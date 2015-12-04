@@ -3,7 +3,16 @@
   flex-direction: column;
   align-items: center;
   padding: @padding;
+  &--main-page{
+    display: none;
+
+  }
   &__row {
     padding: @padding;
   }
+  @media (min-width: 660px) {
+  display: flex;
+  justify-content: space-between;
+    flex-direction: row;
+}
 }

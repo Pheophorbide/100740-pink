@@ -1,8 +1,15 @@
 .tariff-table {
   display: inline-block;
-  width: 280px;
   font-size: initial;
   white-space: initial;
+  background: white;
+  &--hidden{
+    display: none;
+    @media (min-width: 660px) {
+      display: inline-block;
+      background: @bg-gray-color;
+    }
+  }
   &__wrapper {
     display: flex;
     width: 100%;
@@ -18,10 +25,22 @@
     flex-direction: row;
     justify-content: space-between;
     border-bottom: 2px solid @table-border-color;
+    background: white;
+    &--hidden{
+      opacity: 0;
+    }
+    &--tablet{
+      @media (min-width: 660px) {
+
+
+      justify-content: center; }
+    }
   }
+
 }
 
 .tariff-table {
+
   &__header {
     display: block;
     width: 100%;
@@ -29,23 +48,45 @@
     padding: @padding;
     background: @tariff-header-color;
     color: white;
-    &--hit {
-      background: @tariff-header-color url("../img/hit.png") no-repeat;
-    }
+
     &-title {
       text-transform: uppercase;
       font-size: @base-font-size;
       font-weight: bold;
+      @media (min-width: 660px) {
+        font-size: @table-font-size;
+      }
+
     }
     &-price {
       font-size: @title-font-size;
+      @media (min-width: 660px) {
+        font-size: @table-font-size;
+      }
+    }
+    &--hit {
+      background: @tariff-header-color url("../img/hit.png") no-repeat;
+    }
+    @media (min-width: 660px) {
+      padding: 18px;
     }
   }
   &__cell {
-    padding: 18px;
+    padding: 19px;
     text-transform: uppercase;
     font-size: @text-font-size;
     vertical-align: middle;
+    &--hidden{
+    @media (min-width: 660px)  {
+display:none;
+    }
+    }
+    &-text{
+      margin-right: 36px;
+      @media (min-width: 660px) {
+        margin: 0;
+      }
+    }
     &-icon {
       background: url("../img/yes.png") no-repeat;
       min-height: 22px;
@@ -53,6 +94,23 @@
       &--no {
         background: url("../img/no.png") no-repeat;
       }
+
+    }
+    &--tablet{
+      font-size: @text-font-size;
+      text-transform: none;
+      padding: @padding;
+    }
+    @media (min-width: 660px) {
+      padding: 11px 61px;
+    }
+    &--tablet-text{
+      @media (min-width: 660px) {
+        font-size: @text-font-size;
+        text-transform: none;
+        padding: 12.5px 19px;
+      }
     }
   }
+
 }
