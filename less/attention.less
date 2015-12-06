@@ -1,9 +1,13 @@
 .attention {
   .text-style ();
   color: @text-color;
-  padding: @padding;
+  padding: @padding 0;
+  text-align: center;
   &:before {
     content: '* ';
     color: @contacts-color;
+  }
+  @media (min-width: 660px) {
+    display: inline-block;
   }
 }

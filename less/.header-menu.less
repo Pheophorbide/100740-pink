@@ -17,7 +17,7 @@
       position: absolute;
       min-height: 312px;
       min-width: 256px;
-      top:148px;
+      top: 148px;
       z-index: 0;
       @media (min-width: 660px) {
         background: url("../img/iphone-hand-tablet@1x.png") right no-repeat;
@@ -26,7 +26,7 @@
         height: 545px;
         top: 185px;
       }
-  }
+    }
   }
   &--form-bg {
     min-height: 235px;
@@ -57,16 +57,16 @@
   &__title {
     padding: 0 @padding;
     align-self: flex-start;
-    &--form{
-      @media (min-width: 660px){
+    &--form {
+      @media (min-width: 660px) {
         margin-top: 0;
         width: 100%;
         padding: 50px 53px;
         text-align: center;
 
       }
-      h1{
-        @media  (min-width: 660px){
+      h1 {
+        @media (min-width: 660px) {
           font-size: @form-tablet-title-font-size;
         }
       }
@@ -89,6 +89,19 @@
         line-height: 1.2;
       }
     }
-
+  }
+  &__form-title {
+    h1 {
+      color: white;
+      font-size: @title-font-size;
+      font-weight: normal;
+      text-align: center;
+      padding: 0 @padding;
+      @media (min-width: 660px) {
+        font-size: @form-tablet-title-font-size;
+        padding: 34px @padding;
+        line-height: 1.2;
+      }
+    }
   }
 }

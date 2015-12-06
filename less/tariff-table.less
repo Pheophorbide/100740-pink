@@ -3,7 +3,7 @@
   font-size: initial;
   white-space: initial;
   background: white;
-  &--hidden{
+  &--hidden {
     display: none;
     @media (min-width: 660px) {
       display: inline-block;
@@ -26,17 +26,16 @@
     justify-content: space-between;
     border-bottom: 2px solid @table-border-color;
     background: white;
-    &--hidden{
+    &--hidden {
       opacity: 0;
     }
-    &--tablet{
+    &--tablet {
       @media (min-width: 660px) {
 
-
-      justify-content: center; }
+        justify-content: center;
+      }
     }
   }
-
 }
 
 .tariff-table {
@@ -56,7 +55,6 @@
       @media (min-width: 660px) {
         font-size: @table-font-size;
       }
-
     }
     &-price {
       font-size: @title-font-size;
@@ -76,12 +74,12 @@
     text-transform: uppercase;
     font-size: @text-font-size;
     vertical-align: middle;
-    &--hidden{
-    @media (min-width: 660px)  {
-display:none;
+    &--hidden {
+      @media (min-width: 660px) {
+        display: none;
+      }
     }
-    }
-    &-text{
+    &-text {
       margin-right: 36px;
       @media (min-width: 660px) {
         margin: 0;
@@ -94,9 +92,8 @@ display:none;
       &--no {
         background: url("../img/no.png") no-repeat;
       }
-
     }
-    &--tablet{
+    &--tablet {
       font-size: @text-font-size;
       text-transform: none;
       padding: @padding;
@@ -104,7 +101,7 @@ display:none;
     @media (min-width: 660px) {
       padding: 11px 61px;
     }
-    &--tablet-text{
+    &--tablet-text {
       @media (min-width: 660px) {
         font-size: @text-font-size;
         text-transform: none;
@@ -112,5 +109,4 @@ display:none;
       }
     }
   }
-
 }
