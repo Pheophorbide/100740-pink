@@ -2,10 +2,13 @@
   &__carousel {
     width: 100%;
     position: relative;
-    height: 300px;
+    height: 279px;
     overflow: hidden;
   }
   &__nav {
     padding-bottom: @padding+116;
+    @media (min-width: 660px) {
+      padding-bottom: 103px;
+    }
   }
 }

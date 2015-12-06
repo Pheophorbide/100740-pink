@@ -6,15 +6,15 @@
   padding-bottom: @padding - 3;
   position: relative;
   &__control {
-      padding: @padding 0 @padding @padding*3;
-      input[type=checkbox] {
+    padding: @padding 0 @padding @padding*3;
+    input[type=checkbox] {
       display: none;
       &:checked + label::before {
         background: url("../img/check.png") center no-repeat;
       }
     }
   }
-    label {
+  label {
     cursor: pointer;
     &:before {
       content: '';
@@ -24,6 +24,9 @@
       padding: @padding - 2;
       height: auto;
       .main-border ();
+      @media (min-width: 660px) {
+        left: 4%;
+      }
     }
   }
 }

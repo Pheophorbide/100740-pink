@@ -36,7 +36,7 @@ module.exports = function(grunt) {
       }
     }
   };
-  
+
 
 
   // Не редактируйте эту строку

@@ -1,8 +1,12 @@
 .page-footer {
+  background: white;
   &__map {
     background: url("../img/map.png") no-repeat;
     min-height: 200px;
     position: relative;
+    @media (min-width: 660px) {
+      min-height: 377px;
+    }
     &:before {
       content: '';
       position: absolute;
@@ -11,6 +15,13 @@
       border-right-width: 161px;
       border-left-width: 159px;
       border-bottom-width: 0;
+      @media (min-width: 660px) {
+        border: 71px solid;
+        border-right-width: 348px;
+        border-left-width: 329px;
+        border-color: white transparent white transparent;
+        border-bottom-width: 0;
+      }
     }
     &:after {
       content: '';
@@ -21,6 +32,7 @@
       top: 95px;
       left: 143px;
     }
+
   }
   &__inner {
     padding: @padding;
@@ -29,11 +41,34 @@
   &__title {
     font-size: @title-font-size;
     padding: @padding;
+    @media (min-width: 660px) {
+      font-size: @tablet-title-font-size;
+    }
+  }
+  &__row {
+    display: block;
+    padding: 10px;
+    @media (min-width: 660px) {
+      padding: 16px 10px 30px;
+    }
+    &--padding {
+
+      @media (min-width: 660px) {
+        padding-bottom: 0;
+      }
+    }
   }
   &__contacts {
-    &-row {
-      display: block;
-      padding: 10px;
+    @media (min-width: 660px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
     }
+  }
+  @media (min-width: 660px) {
+    width: 660px;
+  }
+  @media (min-width: 1200px) {
+    width: 1200px;
   }
 }
