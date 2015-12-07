@@ -1,35 +1,52 @@
 .header-menu {
-  background: url("../img/header-bg.png") no-repeat;
+  background: url("../img/background-mobile@1x.jpg") top no-repeat;
   width: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 729px;
+  @media (min-width: 660px) {
+    justify-content: flex-start;
+    background: url("../img/background-tablet@1x.jpg") top center no-repeat;
+  }
   &--main-bg {
-    min-height: 460px;
     position: relative;
-    background-position: bottom;
-    &:after {
+    *&:after {
       content: '';
-      background: url("../img/phone-in-hand.png") bottom no-repeat;
+      background: url("../img/iphone-hand-mobile.png") bottom no-repeat;
       position: absolute;
       min-height: 312px;
       min-width: 256px;
-      bottom: -24px;
-
+      top: 148px;
+      z-index: 0;
+      @media (min-width: 660px) {
+        background: url("../img/iphone-hand-tablet@1x.png") right no-repeat;
+        right: -3%;
+        width: 520px;
+        height: 545px;
+        top: 185px;
+      }
     }
   }
   &--form-bg {
     min-height: 235px;
     background-position: top;
+    @media (min-width: 660px) {
+      min-height: 439px;
+    }
   }
   &__row {
     display: block;
     width: 100%;
     font-size: 0;
-    padding: 12px @padding;
+    padding: @padding + 2 @padding;
     margin-bottom: @margin;
     .opacity-color(black, 70%);
     &--hidden {
       display: none;
+    }
+    @media (min-width: 660px) {
+      padding: @padding + 8 @padding @padding*2 + 2;
     }
   }
   &__column {
@@ -37,13 +54,54 @@
     vertical-align: middle;
     width: 50%;
   }
-  h1 {
-    font-size: @title-font-size;
-    color: white;
-    text-align: center;
-    font-weight: normal;
-    margin: 0;
-    line-height: 1.3;
+  &__title {
     padding: 0 @padding;
+    align-self: flex-start;
+    &--form {
+      @media (min-width: 660px) {
+        margin-top: 0;
+        width: 100%;
+        padding: 50px 53px;
+        text-align: center;
+
+      }
+      h1 {
+        @media (min-width: 660px) {
+          font-size: @form-tablet-title-font-size;
+        }
+      }
+    }
+    @media (min-width: 660px) {
+      padding: 0 @padding*3 + 5;
+      width: 50%;
+      margin-top: 94px;
+    }
+
+    h1 {
+      font-size: @title-font-size;
+      color: white;
+      text-align: center;
+      font-weight: normal;
+      margin: 0;
+      line-height: 1.3;
+      @media (min-width: 660px) {
+        font-size: @tablet-title-font-size;
+        line-height: 1.2;
+      }
+    }
+  }
+  &__form-title {
+    h1 {
+      color: white;
+      font-size: @title-font-size;
+      font-weight: normal;
+      text-align: center;
+      padding: 0 @padding;
+      @media (min-width: 660px) {
+        font-size: @form-tablet-title-font-size;
+        padding: 34px @padding;
+        line-height: 1.2;
+      }
+    }
   }
 }

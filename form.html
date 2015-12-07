@@ -4,7 +4,8 @@
   <meta charset="utf-8">
   <title>HTML Academy: Пинк</title>
   <meta name="keywords" content="Мобильное приложение, фото, обработка фотографий">
-  <meta name="discription" content="Мобильная приложение для обработки фото,позволяет делиться фотографиями с пользователями, оставлять комментаррии и лайки.">
+  <meta name="discription"
+        content="Мобильная приложение для обработки фото,позволяет делиться фотографиями с пользователями, оставлять комментаррии и лайки.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link
@@ -14,291 +15,347 @@
 <body>
 <div class="page-wrapper">
   <header class="page-header">
-  <div class="page-header__layout">
-    <div class="header-menu  header-menu--form-bg">
-      <div class="header-menu__row"> <!--Вспомогательные элементы для разметки сетки-->
-        <div class="header-menu__column"> <!--Вспомогательные элементы для разметки сетки-->
-          <div class="logo"> <!--блок-->
-            <a href="#">PINK</a>
+    <div class="page-header__layout">
+      <div class="header-menu  header-menu--form-bg">
+        <div class="header-menu__layout">
+          <div class="header-menu__row"> <!--Вспомогательные элементы для разметки сетки-->
+            <div class="header-menu__column"> <!--Вспомогательные элементы для разметки сетки-->
+              <div class="logo"> <!--блок-->
+                <a class="logo__item logo__item--mobile" href="#"><img width="74" src="img/logotype-white-mobile.svg"
+                                                                        alt="glasses-icon"></a>
+                <a class="logo__item logo__item--tablet" href="#"><img width="146" src="img/logotype-white-tablet.svg"
+                                                                        alt="glasses-icon"></a>
+                <a class="logo__item logo__item--desktop" href="#"><img width="146"
+                                                                        src="img/logotype-white-desktop.svg"
+                                                                        alt="glasses-icon"></a>
+              </div>
+            </div>
+            <div class="header-menu__column">
+              <div class="toggle">
+                <a class="toggle__burger" href="#"><img width="50" src="img/menu-burger.svg" alt=""></a>
+                <a class="toggle__close  toggle__close--hidden"><img width="50" src="img/menu-burger.svg" alt=""></a>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="header-menu__column">
-          <div class="toggle">
-            <a class="toggle__burger" href="#"><img src="img/burger-icon.png" alt=""></a>
-            <a class="toggle__close  toggle__close--hidden"><img src="img/close-btn.png" alt=""></a>
+          <div class="header-menu__row  header-menu__row--hidden">
+            <div class="header-menu__menu-inner">
+              <nav class="main-menu  main-menu--open">
+                <a class="main-menu__item" href="#">Информация</a>
+                <a class="main-menu__item" href="#">Блог</a>
+                <a class="main-menu__item" href="#">Отзывы</a>
+                <a class="main-menu__item" href="#">Конкурс</a>
+              </nav>
+            </div>
           </div>
+          <div class="header-menu__form-title"><h1> Конкурс на самое безбашеное путешествие с Пинк</h1></div>
         </div>
       </div>
-      <div class="header-menu__row  header-menu__row--hidden">
-        <div class="header-menu__menu-inner">
-          <nav class="main-menu  main-menu--open">
-            <a class="main-menu__item" href="#">Информация</a>
-            <a class="main-menu__item" href="#">Блог</a>
-            <a class="main-menu__item" href="#">Отзывы</a>
-            <a class="main-menu__item" href="#">Конкурс</a>
-          </nav>
-        </div>
-      </div>
-
-  <h1>Конкурс на самое безбашеное путешествие с Пинк</h1>
     </div>
-  </div>
-</header>
+  </header>
   <main>
-  <div class="page-content">
-    <div class="page-content__title">
-      <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+    <div class="page-content">
+      <div class="page-content__title  page-content__title--tablet">
+        <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
+      </div>
+      <div class="page-content__text">
+        <h2>Пожалуйста, заполните форму ниже:</h2>
+      </div>
+      <form action="#" method="get">
+        <!--Форма регистрации-->
+        <div class="form-container">
+          <fieldset class="form-container__group  form-container__group--border-none">
+            <div class="form-container__form">
+              <div class="form-container__label form-container__label--important"><label for="login-name">Имя:</label>
+              </div>
+              <div class="form-container__control"> <!--Элемент блока с инпутом-->
+                <input type="text" id="login-name" placeholder="Введите ваше имя" name="login-name">
+              </div>
+            </div>
+            <div class="form-container__form">
+              <div class="form-container__label form-container__label--important"><label
+                for="login-surname">Фамилия:</label></div>
+              <div class="form-container__control">
+                <input type="text" id="login-surname" placeholder="Укажите фамилию" name="login-surname">
+              </div>
+            </div>
+            <div class="form-container__form">
+              <div class="form-container__label"><label for="login-patronymic">Отчество:</label></div>
+              <div class="form-container__control">
+                <input type="text" id="login-patronymic" placeholder="Ну и отчество тоже" name="login-patronymic">
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--Форма-опросник-->
+        <div class="form-container   form-container--gray">
+          <fieldset class="form-container__group  form-container__group--radio">
+            <legend class="form-container__title form-container__title--important">С каким приложением путешествовали?
+            </legend>
+            <div class="form-container__form  form-container__form--radio">
+              <div class="form-container__control form-container__control--radio">
+                <input class="apps-radio" type="radio" id="apps-iOS" name="apps-radio" value="rad1" checked>
+                <label for="apps-iOS">Pink для iOS</label>
+              </div>
+            </div>
+            <div class="form-container__form  form-container__form--radio">
+              <div class="form-container__control form-container__control--radio">
+                <input class="apps-radio" type="radio" id="apps-Android" name="apps-radio" value="rad2">
+                <label for="apps-Android">Pink на Android</label>
+              </div>
+            </div>
+            <div class="form-container__form  form-container__form--radio">
+              <div class="form-container__control form-container__control--radio">
+                <input class="apps-radio" type="radio" id="apps-Windows" name="apps-radio" value="rad3">
+                <label for="apps-Windows">Windows Phone</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--Форма "Когда путешествовали"-->
+        <div class="form-container  form-container--padding">
+          <fieldset class="form-container__group">
+            <legend class="form-container__title form-container__title--important form-container__title--margin-bottom">
+              Когда вы путешествовали?
+            </legend>
+            <div class="form-container__layout">
+              <div class="form-container__form  form-container__form--inline">
+                <div class="form-container__control">
+                  <input type="text" name="date-departure" placeholder="1 апреля 2015" id="date-departure">
+                </div>
+                <div class="form-container__label form-container__label--center"><label for="date-departure">дата
+                  выезда</label></div>
+              </div>
+              <div class="form-container__form  form-container__form--inline">
+                <div class="form-container__control form-container__control--btn">
+                  <button></button>
+                  <div class="form-container__btn-item"><input type="text" placeholder="10 дней" id="duration"></div>
+                  <button></button>
+                </div>
+                <div class="form-container__label form-container__label--center"><label
+                  for="duration">Продолжительность</label></div>
+              </div>
+            </div>
+            <div class="form-container__layout">
+              <div class="form-container__form   form-container__form--inline">
+                <div class="form-container__control form-container__control--gray">
+                  <input type="text" name="date-arrived" placeholder="1 апреля 2015" id="date-arrived" readonly>
+                </div>
+                <div class="form-container__label form-container__label--center"><label for="date-arrived">дата
+                  возвращения</label></div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--Попутчики-->
+        <div class="form-container  form-container--gray">
+          <fieldset class="form-container__group  form-container__group--fellow">
+            <legend class="form-container__title form-container__title--important">Количество попутчиков</legend>
+            <div class="form-container__form  form-container__form--fellow">
+              <div class="form-container__control  form-container__control--btn  form-container__control--border-none">
+                <!--input прозрачный?-->
+                <button></button>
+                <div class="form-container__btn-item  form-container__btn-item--border-none"><input type="text"
+                                                                                                    name="fellow-traveler-number"
+                                                                                                    placeholder="2 чел"
+                                                                                                    id="fellow-traveler-number"
+                                                                                                    readonly>
+                  <label for="fellow-traveler-number"></label>
+                </div>
+                <button></button>
+              </div>
+            </div>
+            <div class="form-container__form form-container__form--wrapper">
+              <div class="form-container__form  form-container__form--fellow-inner">
+                <div class="form-container__fellow-number">  <!--блок c номером-->
+                  <div class="form-container__label  form-container__label--fellow-number">№</div>
+                  <div class="form-container__control  form-container__control--fellow-number">1</div>
+                </div>
+                <div class="form-container__fellow-name">
+                  <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
+                  <div class="form-container__label form-container__label--important"><label
+                    for="fellow-name-1">Имя:</label></div>
+                  <div class="form-container__control  form-container__control--fellow-count">
+                    <input type="text" id="fellow-name-1" placeholder="Введите Ваше имя" name="fellow-name-1">
+                  </div>
+                </div>
+                <div class="form-container__delete"><a href="#">Удалить</a></div>
+              </div>
+              <div class="form-container__form  form-container__form--fellow-inner">
+                <div class="form-container__fellow-name  form-container__fellow-name--margin-left">
+                  <div class="form-container__label"><label for="fellow-nickname-1">Прозвище:</label></div>
+                  <div class="form-container__control  form-container__control--fellow-count">
+                    <input type="text" id="fellow-nickname-1" placeholder="Ну как же без этого"
+                            name="fellow-nickname-1">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-container__form form-container__form--wrapper">
+              <div class="form-container__form  form-container__form--fellow-inner">
+                <div class="form-container__fellow-number">  <!--блок c номером-->
+                  <div class="form-container__label  form-container__label--fellow-number">№</div>
+                  <div class="form-container__control  form-container__control--fellow-number">2</div>
+                </div>
+                <div class="form-container__fellow-name">
+                  <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
+                  <div class="form-container__label form-container__label--important"><label
+                    for="fellow-name-2">Имя:</label></div>
+                  <div class="form-container__control  form-container__control--fellow-count">
+                    <input type="text" id="fellow-name-2" placeholder="Введите Ваше имя" name="fellow-name-2">
+                  </div>
+                </div>
+                <div class="form-container__delete"><a href="#">Удалить</a></div>
+              </div>
+              <div class="form-container__form  form-container__form--fellow-inner">
+                <div class="form-container__fellow-name    form-container__fellow-name--margin-left">
+                  <div class="form-container__label"><label for="fellow-nickname-2">Прозвище:</label></div>
+                  <div class="form-container__control  form-container__control--fellow-count">
+                    <input type="text" id="fellow-nickname-2" placeholder="Ну как же без этого"
+                            name="fellow-nickname-2">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--Чекбоксы с достижениями-->
+        <div class="form-container form-container--check">
+          <fieldset class="form-container__group  form-container__group--check">
+            <legend
+              class="form-container__title">Ваши безбашенные достижения в путешествии
+            </legend>
+            <div class="checkbox">
+              <div class="checkbox__control">
+                <input type="checkbox" id="achievement-check-1" name="achievement-check-1" checked>
+                <label for="achievement-check-1">Сделал селфи с акулой</label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <div class="checkbox__control">
+                <input type="checkbox" id="achievement-check-2" name="achievement-check-2" checked>
+                <label for="achievement-check-2">Обгорел на пляже</label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <div class="checkbox__control">
+                <input type="checkbox" id="achievement-check-3" name="achievement-check-3">
+                <label for="achievement-check-3">Видел Чака Нориса</label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <div class="checkbox__control">
+                <input type="checkbox" id="achievement-check-4" name="achievement-check-4">
+                <label for="achievement-check-4">Накупил сувениров</label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <div class="checkbox__control">
+                <input type="checkbox" id="achievement-check-5" name="achievement-check-5" checked>
+                <label for="achievement-check-5">Удержал башню</label>
+              </div>
+            </div>
+            <div class="checkbox">
+              <div class="checkbox__control">
+                <input type="checkbox" id="achievement-check-6" name="achievement-check-6">
+                <label for="achievement-check-6">Разгромил отель</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--Галерея-->
+        <div class="form-container  form-container--gray  form-container  form-container--gallery">
+          <fieldset class="form-container__group  form-container__group--gallery">
+            <legend class="form-container__title form-container__title--important form-container__title--padding">Ваши
+              фотографии из поездки
+            </legend>
+            <div class="download-btn">
+              <button>Загрузить фото</button>
+            </div>
+            <div class="gallery">
+              <!--Вспомогательный элемент блока-контэйнера?-->
+              <div class="gallery__row">
+                <div class="gallery__column"> <!--Отдельный блок с фото-->
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-1.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-1.JPG</div>
+                </div>
+                <div class="gallery__column">
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-2.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-2.JPG</div>
+                </div>
+                <div class="gallery__column">
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-2.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-3.JPG</div>
+                </div>
+              </div>
+              <div class="gallery__row">
+                <div class="gallery__column">
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-4.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-4.JPG</div>
+                </div>
+                <div class="gallery__column">
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-5.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-5.JPG</div>
+                </div>
+                <div class="gallery__column">
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-6.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-6.JPG</div>
+                </div>
+              </div>
+              <div class="gallery__row  gallery__row--last">
+                <div class="gallery__column">
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-7.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-7.JPG</div>
+                </div>
+                <div class="gallery__column">
+                  <button></button>
+                  <div class="gallery__column--photo"><img width="120" src="img/jpg-8.png" alt=""></div>
+                  <div class="gallery__column--description">IMG-8.JPG</div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <div class="form-container  form-container--submit">
+          <div class="submit-btn">
+            <input type="submit" value="Отправить форму" name="submit-form">
+          </div>
+          <div class="attention">— обязательные поля</div>
+        </div>
+      </form>
     </div>
-    <form action="#" method="get">
-      <!--Форма регистрации-->
-      <div class="form-container">
-        <div class="form-container__form">
-          <div class="form-container__label form-container__label--important"><label for="login-name">Имя:</label></div>
-          <div class="form-container__control"> <!--Элемент блока с инпутом-->
-            <input type="text" id="login-name" placeholder="Введите ваше имя" name="login-name">
-          </div>
-        </div>
-        <div class="form-container__form">
-          <div class="form-container__label form-container__label--important"><label for="login-surname">Фамилия:</label></div>
-          <div class="form-container__control">
-            <input type="text" id="login-surname" placeholder="Укажите фамилию" name="login-surname">
-          </div>
-        </div>
-        <div class="form-container__form">
-          <div class="form-container__label"><label for="login-patronymic">Отчество:</label></div>
-          <div class="form-container__control">
-            <input type="text" id="login-patronymic" placeholder="Ну и отчество тоже" name="login-patronymic">
-          </div>
+  </main>
+  <footer>
+    <div class="form-footer">
+      <div class="form-footer__row"> <!--Вспомогательный Элемент?-->
+        <div class="logo"> <!--блок-->
+          <a class="logo__footer logo__footer--tablet" href="#"><img width="146" src="img/logotype-blue-tablet.svg"
+                                                                      alt="glasses-icon"></a>
+          <a class="logo__footer logo__footer--desktop" href="#"><img width="146" src="img/logotype-blue-desktop.svg"
+                                                                      alt="glasses-icon"></a>
         </div>
       </div>
-      <!--Форма-опросник-->
-      <div class="form-container   form-container--gray">
-        <div class="form-container__title form-container__title--important">С каким приложением путешествовали?</div>
-        <div class="form-container__form  form-container__form--radio">
-          <div class="form-container__control form-container__control--radio">
-            <input class="apps-radio" type="radio" id="apps-iOS" name="apps-radio" value="rad1" checked>
-            <label for="apps-iOS">Pink для iOS</label>
-          </div>
-        </div>
-        <div class="form-container__form  form-container__form--radio">
-          <div class="form-container__control form-container__control--radio">
-            <input class="apps-radio" type="radio" id="apps-Android" name="apps-radio" value="rad2">
-            <label for="apps-Android">Pink на Android</label>
-          </div>
-        </div>
-        <div class="form-container__form  form-container__form--radio">
-          <div class="form-container__control form-container__control--radio">
-            <input class="apps-radio" type="radio" id="apps-Windows" name="apps-radio" value="rad3">
-            <label for="apps-Windows">Windows Phone</label>
-          </div>
-        </div>
-        </div>
-    <!--Форма "Когда путешествовали"-->
-    <div class="form-container">
-        <div class="form-container__title form-container__title--important form-container__title--margin-bottom">Когда вы путешествовали?</div>
-        <div class="form-container__form">
-          <div class="form-container__control">
-            <input type="text" name="date-departure" placeholder="1 апреля 2015" id="date-departure">
-          </div>
-          <div class="form-container__label form-container__label--center"><label  for="date-departure">дата выезда</label></div>
-        </div>
-        <div class="form-container__form">
-          <div class="form-container__control form-container__control--btn">
-            <button></button>
-            <div class="form-container__btn-item"><input type="text" placeholder="10 дней" id="duration"></div>
-            <button></button>
-          </div>
-          <div class="form-container__label form-container__label--center"><label for="duration">Продолжительность</label></div>
-        </div>
-        <div class="form-container__form">
-          <div class="form-container__control form-container__control--gray">
-            <input type="text" name="date-arrived" placeholder="1 апреля 2015" id="date-arrived" readonly>
-          </div>
-          <div class="form-container__label form-container__label--center"><label for="date-arrived">дата возвращения</label></div>
+      <div class="form-footer__row">
+        <div class="social">
+          <a class="social__item" href="#"><img width="18" src="img/twitter.svg" alt=""></a>
+          <a class="social__item" href="#"><img width="9" src="img/facebook.svg" alt=""></a>
+          <a class="social__item" href="#"><img width="15" src="img/youtube.svg" alt=""></a>
         </div>
       </div>
-      <!--Попутчики-->
-      <div class="form-container  form-container--gray">
-        <div class="form-container__form  form-container__form--fellow">
-          <div class="form-container__title form-container__title--important"><label for="fellow-traveler-number">Количество попутчиков</label></div>
-          <div class="form-container__control form-container__control--btn"> <!--input прозрачный?-->
-            <button></button>
-            <div class="form-container__btn-item"><input type="text" name="fellow-traveler-number" placeholder="2 чел" id="fellow-traveler-number" readonly></div>
-            <button></button>
-          </div>
+      <div class="form-footer__row">
+        <div class="develop">
+          <div class="develop__title">Разработано</div>
+          <a class="develop__logo" href="#"><img width="27" src="img/academy-logo.png" alt=""></a> <!--Блок?-->
         </div>
-        <div class="form-container__form form-container__form--wrapper">
-        <div class="form-container__form  form-container__form--fellow-inner">
-          <div class="form-container__fellow-number">  <!--блок c номером-->
-            <div class="form-container__label  form-container__label--fellow-number">№</div>
-            <div class="form-container__control  form-container__control--fellow-number">1</div>
-          </div>
-          <div class="form-container__fellow-name"> <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
-            <div class="form-container__label form-container__label--important"><label for="fellow-name-1">Имя:</label></div>
-            <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-name-1" placeholder="Введите Ваше имя" name="fellow-name-1">
-            </div>
-          </div>
-        </div>
-        <div class="form-container__form  form-container__form--fellow-inner">
-          <div class="form-container__fellow-name">
-            <div class="form-container__label"><label for="fellow-nickname-1">Прозвище:</label></div>
-            <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-nickname-1" placeholder="Ну как же без этого" name="fellow-nickname-1">
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="form-container__form form-container__form--wrapper">
-        <div class="form-container__form  form-container__form--fellow-inner">
-          <div class="form-container__fellow-number">  <!--блок c номером-->
-            <div class="form-container__label  form-container__label--fellow-number">№</div>
-            <div class="form-container__control  form-container__control--fellow-number">2</div>
-          </div>
-          <div class="form-container__fellow-name"> <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
-            <div class="form-container__label form-container__label--important"><label for="fellow-name-2">Имя:</label></div>
-            <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-name-2" placeholder="Введите Ваше имя" name="fellow-name-2">
-            </div>
-          </div>
-        </div>
-        <div class="form-container__form  form-container__form--fellow-inner">
-          <div class="form-container__fellow-name">
-            <div class="form-container__label"><label for="fellow-nickname-2">Прозвище:</label></div>
-            <div class="form-container__control  form-container__control--fellow-count">
-              <input type="text" id="fellow-nickname-2" placeholder="Ну как же без этого" name="fellow-nickname-2">
-            </div>
-          </div>
-        </div>
-        </div>
-      </div>
-      <!--Чекбоксы с достижениями-->
-      <div class="form-container form-container--check">
-        <div
-          class="form-container__title form-container__title--padding">Ваши безбашенные достижения в путешествии</div>
-        <div class="checkbox">
-          <div class="checkbox__control">
-            <input type="checkbox" id="achievement-check-1" name="achievement-check-1" checked>
-            <label for="achievement-check-1">Сделал селфи с акулой</label>
-          </div>
-        </div>
-        <div class="checkbox">
-          <div class="checkbox__control">
-            <input type="checkbox" id="achievement-check-2" name="achievement-check-2" checked>
-            <label for="achievement-check-2">Обгорел на пляже</label>
-          </div>
-        </div>
-        <div class="checkbox">
-          <div class="checkbox__control">
-            <input type="checkbox" id="achievement-check-3" name="achievement-check-3">
-            <label for="achievement-check-3">Видел Чака Нориса</label>
-          </div>
-        </div>
-        <div class="checkbox">
-          <div class="checkbox__control">
-            <input type="checkbox" id="achievement-check-4" name="achievement-check-4">
-            <label for="achievement-check-4">Накупил сувениров</label>
-          </div>
-        </div>
-        <div class="checkbox">
-          <div class="checkbox__control">
-            <input type="checkbox" id="achievement-check-5" name="achievement-check-5" checked>
-            <label for="achievement-check-5">Удержал башню</label>
-          </div>
-        </div>
-        <div class="checkbox">
-          <div class="checkbox__control">
-            <input type="checkbox" id="achievement-check-6" name="achievement-check-6">
-            <label for="achievement-check-6">Разгромил отель</label>
-          </div>
-        </div>
-      </div>
-      <!--Галерея-->
-      <div class="form-container  form-container--gray">
-        <div class="form-container__title form-container__title--important">Ваши фотографии из поездки</div>
-        <div class="download-btn">
-          <button>Загрузить фото</button>
-        </div>
-        <div class="gallery">
-          <!--Вспомогательный элемент блока-контэйнера?-->
-          <div class="gallery__row">
-            <div class="gallery__column"> <!--Отдельный блок с фото-->
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-1.png" alt=""></div>
-              <div class="gallery__column__description">IMG-1.jpg</div>
-            </div>
-            <div class="gallery__column">
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-2.png" alt=""></div>
-              <div class="gallery__column__description">IMG-2.jpg</div>
-            </div>
-          <div class="gallery__column">
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-2.png" alt=""></div>
-              <div class="gallery__column__description">IMG-3.jpg</div>
-            </div>
-          </div>
-          <div class="gallery__row">
-            <div class="gallery__column">
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-4.png" alt=""></div>
-              <div class="gallery__column__description">IMG-4.jpg</div>
-            </div>
-            <div class="gallery__column">
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-5.png" alt=""></div>
-              <div class="gallery__column__description">IMG-5.jpg</div>
-            </div>
-          <div class="gallery__column">
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-6.png" alt=""></div>
-              <div class="gallery__column__description">IMG-6.jpg</div>
-            </div>
-            </div>
-          <div class="gallery__row">
-            <div class="gallery__column">
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-7.png" alt=""></div>
-              <div class="gallery__column__description">IMG-7.jpg</div>
-            </div>
-          <div class="gallery__column">
-              <button></button>
-              <div class="gallery__column__photo"><img src="img/jpg-8.png" alt=""></div>
-              <div class="gallery__column__description">IMG-8.jpg</div>
-            </div>
-            </div>
-        </div>
-      </div>
-      <div class="submit-btn">
-        <input type="submit" value="Отправить форму" name="submit-form">
-      </div>
-      <div class="attention">— обязательные поля</div>
-    </form>
-  </div>
-</main>
-<footer>
-  <div class="form-footer">
-    <div class="form-footer__row"> <!--Вспомогательный Элемент?-->
-      <div class="logo logo--footer">
-        <a href="#"><img src="img/glasses.png" alt="glasses-icon"></a>
-        <a class="logo__text" href="#">PINK</a>
       </div>
     </div>
-    <div class="form-footer__row">
-      <div class="social">
-        <a class="social__item" href="#"><img src="img/twitter.png"></a>
-        <a class="social__item"  href="#"><img src="img/facebook.png"></a>
-        <a class="social__item" href="#"><img src="img/gplay.png"></a>
-      </div>
-    </div>
-    <div class="form-footer__row">
-      <div class="develop">
-        <div class="develop__title">Разработано</div>
-        <a class="develop__logo" href="#"><img src="img/academy-logo.png" alt=""></a> <!--Блок?-->
-      </div>
-    </div>
-  </div>
-</footer>
-  </div>
+  </footer>
+</div>
 </body>
 </html>
