@@ -18,8 +18,9 @@
     <div class="page-header__layout">
       <div class="header-menu  header-menu--form-bg">
         <div class="header-menu__layout">
-          <div class="header-menu__row"> <!--Вспомогательные элементы для разметки сетки-->
-            <div class="header-menu__column"> <!--Вспомогательные элементы для разметки сетки-->
+          <div class="header-menu__row">
+
+            <div class="header-menu__column">
               <div class="logo"> <!--блок-->
                 <a class="logo__item logo__item--mobile" href="#"><img width="74" src="img/logotype-white-mobile.svg"
                                                                         alt="glasses-icon"></a>
@@ -35,16 +36,14 @@
                 <a class="toggle__burger" href="#"><img width="50" src="img/menu-burger.svg" alt=""></a>
                 <a class="toggle__close  toggle__close--hidden"><img width="50" src="img/menu-burger.svg" alt=""></a>
               </div>
-            </div>
-          </div>
-          <div class="header-menu__row  header-menu__row--hidden">
-            <div class="header-menu__menu-inner">
-              <nav class="main-menu  main-menu--open">
-                <a class="main-menu__item" href="#">Информация</a>
-                <a class="main-menu__item" href="#">Блог</a>
-                <a class="main-menu__item" href="#">Отзывы</a>
-                <a class="main-menu__item" href="#">Конкурс</a>
-              </nav>
+              <div class="header-menu__menu-inner">
+                <nav class="main-menu  main-menu--open">
+                  <a class="main-menu__item" href="#">Информация</a>
+                  <a class="main-menu__item" href="#">Блог</a>
+                  <a class="main-menu__item" href="#">Отзывы</a>
+                  <a class="main-menu__item" href="#">Конкурс</a>
+                </nav>
+              </div>
             </div>
           </div>
           <div class="header-menu__form-title"><h1> Конкурс на самое безбашеное путешествие с Пинк</h1></div>
@@ -55,30 +54,28 @@
   <main>
     <div class="page-content">
       <div class="page-content__title  page-content__title--tablet">
-        <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!</h2>
-      </div>
-      <div class="page-content__text">
-        <h2>Пожалуйста, заполните форму ниже:</h2>
+        <h2>Поделитесь своей историей и получите шанс выиграть ценный приз — 1000 миль на вашу бонусную карту!
+          <span class="page-content__text">Пожалуйста, заполните форму ниже:</span></h2>
       </div>
       <form action="#" method="get">
         <!--Форма регистрации-->
         <div class="form-container">
           <fieldset class="form-container__group  form-container__group--border-none">
-            <div class="form-container__form">
+            <div class="form-container__form  form-container__form--inline-desktop">
               <div class="form-container__label form-container__label--important"><label for="login-name">Имя:</label>
               </div>
               <div class="form-container__control"> <!--Элемент блока с инпутом-->
                 <input type="text" id="login-name" placeholder="Введите ваше имя" name="login-name">
               </div>
             </div>
-            <div class="form-container__form">
+            <div class="form-container__form  form-container__form--inline-desktop  form-container__form--center">
               <div class="form-container__label form-container__label--important"><label
                 for="login-surname">Фамилия:</label></div>
               <div class="form-container__control">
                 <input type="text" id="login-surname" placeholder="Укажите фамилию" name="login-surname">
               </div>
             </div>
-            <div class="form-container__form">
+            <div class="form-container__form  form-container__form--inline-desktop">
               <div class="form-container__label"><label for="login-patronymic">Отчество:</label></div>
               <div class="form-container__control">
                 <input type="text" id="login-patronymic" placeholder="Ну и отчество тоже" name="login-patronymic">
@@ -91,19 +88,19 @@
           <fieldset class="form-container__group  form-container__group--radio">
             <legend class="form-container__title form-container__title--important">С каким приложением путешествовали?
             </legend>
-            <div class="form-container__form  form-container__form--radio">
+            <div class="form-container__form  form-container__form--radio  form-container__form--inline-desktop">
               <div class="form-container__control form-container__control--radio">
                 <input class="apps-radio" type="radio" id="apps-iOS" name="apps-radio" value="rad1" checked>
                 <label for="apps-iOS">Pink для iOS</label>
               </div>
             </div>
-            <div class="form-container__form  form-container__form--radio">
+            <div class="form-container__form  form-container__form--radio  form-container__form--inline-desktop">
               <div class="form-container__control form-container__control--radio">
                 <input class="apps-radio" type="radio" id="apps-Android" name="apps-radio" value="rad2">
                 <label for="apps-Android">Pink на Android</label>
               </div>
             </div>
-            <div class="form-container__form  form-container__form--radio">
+            <div class="form-container__form  form-container__form--radio    form-container__form--inline-desktop">
               <div class="form-container__control form-container__control--radio">
                 <input class="apps-radio" type="radio" id="apps-Windows" name="apps-radio" value="rad3">
                 <label for="apps-Windows">Windows Phone</label>
@@ -131,11 +128,12 @@
                   <div class="form-container__btn-item"><input type="text" placeholder="10 дней" id="duration"></div>
                   <button></button>
                 </div>
-                <div class="form-container__label form-container__label--center"><label
-                  for="duration">Продолжительность</label></div>
+                <div
+                  class="form-container__label form-container__label--center  form-container__label form-container__label--desktop-center">
+                  <label
+                    for="duration">Продолжительность</label></div>
               </div>
-            </div>
-            <div class="form-container__layout">
+
               <div class="form-container__form   form-container__form--inline">
                 <div class="form-container__control form-container__control--gray">
                   <input type="text" name="date-arrived" placeholder="1 апреля 2015" id="date-arrived" readonly>
@@ -179,8 +177,6 @@
                   </div>
                 </div>
                 <div class="form-container__delete"><a href="#">Удалить</a></div>
-              </div>
-              <div class="form-container__form  form-container__form--fellow-inner">
                 <div class="form-container__fellow-name  form-container__fellow-name--margin-left">
                   <div class="form-container__label"><label for="fellow-nickname-1">Прозвище:</label></div>
                   <div class="form-container__control  form-container__control--fellow-count">
@@ -205,8 +201,6 @@
                   </div>
                 </div>
                 <div class="form-container__delete"><a href="#">Удалить</a></div>
-              </div>
-              <div class="form-container__form  form-container__form--fellow-inner">
                 <div class="form-container__fellow-name    form-container__fellow-name--margin-left">
                   <div class="form-container__label"><label for="fellow-nickname-2">Прозвище:</label></div>
                   <div class="form-container__control  form-container__control--fellow-count">
@@ -224,42 +218,49 @@
             <legend
               class="form-container__title">Ваши безбашенные достижения в путешествии
             </legend>
-            <div class="checkbox">
-              <div class="checkbox__control">
-                <input type="checkbox" id="achievement-check-1" name="achievement-check-1" checked>
-                <label for="achievement-check-1">Сделал селфи с акулой</label>
+            <div class="form-container__checkbox-layout">
+              <div class="checkbox">
+                <div class="checkbox__control">
+                  <input type="checkbox" id="achievement-check-1" name="achievement-check-1" checked>
+                  <label for="achievement-check-1">Сделал селфи с акулой</label>
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="checkbox__control">
+                  <input type="checkbox" id="achievement-check-2" name="achievement-check-2" checked>
+                  <label for="achievement-check-2">Обгорел на пляже</label>
+                </div>
               </div>
             </div>
-            <div class="checkbox">
-              <div class="checkbox__control">
-                <input type="checkbox" id="achievement-check-2" name="achievement-check-2" checked>
-                <label for="achievement-check-2">Обгорел на пляже</label>
+            <div class="form-container__checkbox-layout">
+              <div class="checkbox">
+                <div class="checkbox__control">
+                  <input type="checkbox" id="achievement-check-3" name="achievement-check-3">
+                  <label for="achievement-check-3">Видел Чака Нориса</label>
+                </div>
+              </div>
+              <div class="checkbox">
+                <div class="checkbox__control">
+                  <input type="checkbox" id="achievement-check-4" name="achievement-check-4">
+                  <label for="achievement-check-4">Накупил сувениров</label>
+                </div>
               </div>
             </div>
-            <div class="checkbox">
-              <div class="checkbox__control">
-                <input type="checkbox" id="achievement-check-3" name="achievement-check-3">
-                <label for="achievement-check-3">Видел Чака Нориса</label>
+            <div class="form-container__checkbox-layout">
+              <div class="checkbox  checkbox--margin">
+                <div class="checkbox__control">
+                  <input type="checkbox" id="achievement-check-5" name="achievement-check-5" checked>
+                  <label for="achievement-check-5">Удержал башню</label>
+                </div>
+              </div>
+              <div class="checkbox  checkbox--margin">
+                <div class="checkbox__control">
+                  <input type="checkbox" id="achievement-check-6" name="achievement-check-6">
+                  <label for="achievement-check-6">Разгромил отель</label>
+                </div>
               </div>
             </div>
-            <div class="checkbox">
-              <div class="checkbox__control">
-                <input type="checkbox" id="achievement-check-4" name="achievement-check-4">
-                <label for="achievement-check-4">Накупил сувениров</label>
-              </div>
-            </div>
-            <div class="checkbox">
-              <div class="checkbox__control">
-                <input type="checkbox" id="achievement-check-5" name="achievement-check-5" checked>
-                <label for="achievement-check-5">Удержал башню</label>
-              </div>
-            </div>
-            <div class="checkbox">
-              <div class="checkbox__control">
-                <input type="checkbox" id="achievement-check-6" name="achievement-check-6">
-                <label for="achievement-check-6">Разгромил отель</label>
-              </div>
-            </div>
+
           </fieldset>
         </div>
         <!--Галерея-->
@@ -284,13 +285,11 @@
                   <div class="gallery__column--photo"><img width="120" src="img/jpg-2.png" alt=""></div>
                   <div class="gallery__column--description">IMG-2.JPG</div>
                 </div>
-                <div class="gallery__column">
+                <div class="gallery__column  gallery__column--margin">
                   <button></button>
                   <div class="gallery__column--photo"><img width="120" src="img/jpg-2.png" alt=""></div>
                   <div class="gallery__column--description">IMG-3.JPG</div>
                 </div>
-              </div>
-              <div class="gallery__row">
                 <div class="gallery__column">
                   <button></button>
                   <div class="gallery__column--photo"><img width="120" src="img/jpg-4.png" alt=""></div>
@@ -301,13 +300,11 @@
                   <div class="gallery__column--photo"><img width="120" src="img/jpg-5.png" alt=""></div>
                   <div class="gallery__column--description">IMG-5.JPG</div>
                 </div>
-                <div class="gallery__column">
+                <div class="gallery__column    gallery__column--margin">
                   <button></button>
                   <div class="gallery__column--photo"><img width="120" src="img/jpg-6.png" alt=""></div>
                   <div class="gallery__column--description">IMG-6.JPG</div>
                 </div>
-              </div>
-              <div class="gallery__row  gallery__row--last">
                 <div class="gallery__column">
                   <button></button>
                   <div class="gallery__column--photo"><img width="120" src="img/jpg-7.png" alt=""></div>
@@ -326,7 +323,7 @@
           <div class="submit-btn">
             <input type="submit" value="Отправить форму" name="submit-form">
           </div>
-          <div class="attention">— обязательные поля</div>
+          <div class="attention">— обязательные <span class="attention__hidden">для заполнения</span> поля</div>
         </div>
       </form>
     </div>

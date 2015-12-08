@@ -3,6 +3,9 @@
   @media (min-width: 660px) {
     padding-bottom: 19px;
   }
+  @media (min-width: 1200px) {
+    padding: 0;
+  }
   &__group {
     border: none;
     padding: 0;
@@ -13,28 +16,54 @@
         border: none;
         padding: 0;
         margin: 0;
+        @media (min-width: 1200px) {
+          display: block;
+          white-space: nowrap;
+          padding-bottom: 48px;
+        }
       }
 
       &--radio {
         padding: 6px 56px 31px;
         margin-bottom: 10px;
+        @media (min-width: 1200px) {
+          display: block;
+          white-space: nowrap;
+          margin-bottom: 54px;
+        }
+        @media (min-width: 1200px) {
+          padding: 6px 0 31px 67px;
+        }
       }
 
       &--fellow {
         @media (min-width: 660px) {
-          padding: 6px 56px 25px;
+          padding: 6px 0 25px 56px;
           margin-bottom: 17px;
+        }
+        @media (min-width: 1200px) {
+          padding: 6px 56px 45px;
+          margin-bottom: 57px;
         }
       }
 
       &--check {
         padding: 6px 56px 25px;
+        @media (min-width: 1200px) {
+          padding: 6px 0 25px 68px;
+          margin-bottom: 56px;
+        }
       }
 
       &--gallery {
         padding: 6px 56px 0;
         margin-bottom: 27px;
+        @media (min-width: 1200px) {
+          padding: 6px 0 0 56px;
+          margin-bottom: 58px;
+        }
       }
+
     }
   }
   &--fellow {
@@ -49,13 +78,18 @@
   &--padding {
     padding-bottom: 40px;
     @media (min-width: 660px) {
-      padding-bottom: 29px;
+      padding-bottom: 30px;
     }
-
+    @media (min-width: 1200px) {
+      padding-bottom: 58px;
+    }
   }
   &--gallery {
-    padding-bottom: 0;
     margin-bottom: 11px;
+    padding: 26px 14px 0 20px;
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
   }
   &--submit {
     padding-bottom: 0;
@@ -63,9 +97,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 47px;
+      padding: 25px 20px 38px;
     }
-
+    @media (min-width: 1200px) {
+      padding-bottom: 13px;
+      padding-left: 0;
+    }
   }
   &__title {
     .text-style ();
@@ -86,16 +123,26 @@
       @media (min-width: 660px) {
         margin-bottom: 32px;
       }
+      @media (min-width: 1200px) {
+        margin-bottom: 34px;
+      }
     }
   }
   &--check {
     padding: 19px 20px 30px;
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
   }
   &__layout {
     @media (min-width: 660px) {
       display: block;
+      padding: 0 50px 7px;
+    }
+    @media (min-width: 1200px) {
       white-space: nowrap;
-      padding: 0 50px 17px;
+      padding: 0 34px 0 42px;
+
     }
   }
 }
@@ -124,22 +171,41 @@
         text-align: left;
       }
     }
+    &--desktop-center {
+      text-align: center;
+    }
   }
   &__fellow-number {
     display: inline-block;
+    margin-bottom: 8px;
     @media (min-width: 660px) {
       margin-right: 12px;
+      margin-bottom: 0;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 19px;
+      margin-bottom: 0;
     }
   }
   &__fellow-name {
     display: inline-block;
+    width: 77%;
+    margin-bottom: 8px;
     @media (min-width: 660px) {
       margin-right: 46px;
+      width: 54%;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 22px;
+      margin-bottom: 0;
     }
     &--margin-left {
       margin-left: 61px;
       @media (min-width: 660px) {
         margin-left: 81px;
+      }
+      @media (min-width: 1200px) {
+        margin: 0 50px 0 0;
       }
     }
   }
@@ -175,6 +241,9 @@
           }
         }
       }
+      @media (min-width: 1200px) {
+        padding-left: 52px;
+      }
     }
     input[type=radio] {
       display: none;
@@ -192,7 +261,7 @@
       height: 63px;
       button {
         width: 28px;
-        padding: 0 27px;
+        padding: 0 30px;
         background-color: white;
         .main-border ();
         background: url("../img/plus.png") center no-repeat;
@@ -226,6 +295,10 @@
         @media (min-width: 660px) {
           width: 50%;
         }
+        @media (min-width: 1200px) {
+          width: 31.9%;
+          padding-right: 8px;
+        }
       }
     }
 
@@ -233,8 +306,7 @@
       border-top: 2px solid @input-border-color;
       border-bottom: 2px solid @input-border-color;
       padding: 15px 0;
-      @media (min-width: 660px) {
-      }
+      width: 47%;
       &--border-none {
         @media (min-width: 660px) {
           border: none;
@@ -243,7 +315,6 @@
       input[type=text] {
         text-align: center;
       }
-
     }
   }
 }
@@ -256,7 +327,11 @@
       flex-direction: row;
       align-items: center;
       position: relative;
-      margin-bottom: 17px
+      margin-bottom: 17px;
+      @media (min-width: 1200px) {
+        padding: 0;
+        margin-right: 30px;
+      }
     }
     &--fellow {
       border-bottom: 2px solid @input-border-color;
@@ -271,12 +346,17 @@
       justify-content: flex-end;
       flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
       @media (min-width: 660px) {
         display: block;
-        text-align: start;
-        white-space: nowrap;
+        text-align: left;
+        white-space: normal;
       }
-
+      @media (min-width: 1200px) {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: -5px;
+      }
     }
     &--wrapper {
       margin-bottom: @margin + 1;
@@ -285,14 +365,31 @@
       align-items: stretch;
       flex-direction: column;
       @media (min-width: 660px) {
-        margin-bottom: 17px;
+        margin-bottom: 12px;
       }
     }
     &--inline {
       @media (min-width: 660px) {
         display: inline-block;
-        width: 50%;
-        padding: 0 10px;
+        width: 49%;
+        padding: 0 6px 13px 13px;
+      }
+      @media (min-width: 1200px) {
+        width: 31.9%;
+        padding: 0 16px 0 13px;
+        margin-right: 12px;
+      }
+    }
+    &--inline-desktop {
+      @media (min-width: 1200px) {
+        display: inline-block;
+        width: 31.9%;
+        padding: 0;
+      }
+    }
+    &--center {
+      @media (min-width: 1200px) {
+        margin: 0 14px;
       }
     }
   }
@@ -301,12 +398,21 @@
     @media (min-width: 660px) {
       display: inline-block;
     }
+    @media (min-width: 1200px) {
+      order: 5;
+      padding-top: 35px;
+    }
     a {
       @media (min-width: 660px) {
         color: black;
         text-transform: uppercase;
         font-size: @text-font-size;
       }
+    }
+  }
+  &__checkbox-layout {
+    @media (min-width: 1200px) {
+      display: inline-block;
     }
   }
 }
