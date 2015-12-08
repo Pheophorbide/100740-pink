@@ -1,6 +1,10 @@
 .about {
   &__wrapper {
     padding: @padding  @padding 0;
+    @media (min-width: 1200px) {
+      padding: 0;
+      margin-bottom: 21px;
+    }
   }
   &__header {
     font-size: @title-font-size;
@@ -11,70 +15,135 @@
     line-height: 1.2;
     @media (min-width: 660px) {
       padding-bottom: 55px;
+      font-size: @tablet-title-font-size;
+    }
+    @media (min-width: 1200px) {
+      font-size: @form-tablet-title-font-size;
+      padding: 24px 0 76px;
     }
     &--first {
       padding: 26px 0;
       @media (min-width: 660px) {
-        font-size: 50px;
         padding-bottom: 0;
       }
     }
     &--last {
       @media (min-width: 660px) {
         padding: 0 @padding;
-        font-size: 50px;
       }
+      @media (min-width: 1200px) {
+        padding: 0 218px;
+      }
+    }
+  }
+}
+
+.about {
+  &__layout {
+    display: flex;
+    justify-content: flex-end;
+    padding: @padding 0 @padding + 6;
+    flex-direction: column;
+    @media (min-width: 660px) {
+      padding-bottom: 46px;
+    }
+    @media (min-width: 1200px) {
+      flex-direction: row;
+      padding: 0;
+    }
+  }
+  &__inner {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: 660px) {
+      flex-direction: row;
+      padding-bottom: 0;
+    }
+    @media (min-width: 1200px) {
+      flex-direction: column;
+    }
+  }
+  &__item {
+    display: block;
+    text-align: center;
+    padding-bottom: 18px;
+    @media (min-width: 660px) {
+      padding: 0 0 @padding + 3 @padding;
+      text-align: left;
+    }
+    @media (min-width: 1200px) {
+      text-align: center;
+      line-height: 1;
+      width: 33.3%;
+      padding: 0 16px;
+
+    }
+  }
+  &__title {
+    h2 {
+      font-size: @base-font-size;
+      @media (min-width: 1200px) {
+        font-size: @logo-font-size;
+        padding: 0 16px;
+      }
+    }
+  }
+  &__text {
+    font-size: @text-font-size;
+    line-height: 1.6;
+    @media (min-width: 1200px) {
+      font-size: @base-font-size;
+      padding: 0 22px;
+      &--padding {
+        padding: 0 16px;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    display: flex;
+    @media (min-width: 660px) {
+      order: -1;
     }
     @media (min-width: 660px) {
-      font-size: @tablet-title-font-size;
+      padding-bottom: 26px;
     }
-
-  }
-  .about {
-    &__layout {
-      display: flex;
-      justify-content: flex-end;
-      padding: @padding 0 @padding + 6;
-      flex-direction: column;
-      @media (min-width: 660px) {
-        padding: 0 0 @padding @padding - 13;
-      }
-    }
-    &__inner {
-      padding-bottom: 20px;
-      display: flex;
-      flex-direction: column;
-      @media (min-width: 660px) {
-        flex-direction: row;
-      }
-    }
-    &__item {
-      display: block;
-      text-align: center;
-      padding-bottom: 18px;
-      @media (min-width: 660px) {
-        padding: 0 0 @padding + 3 @padding;
-        text-align: left;
-      }
-    }
-    &__title {
-      h2 {
-        font-size: @base-font-size;
-      }
-    }
-    &__text {
-      font-size: @text-font-size;
-      line-height: 1.6;
-    }
-    &__image {
+    &-item {
       background: url("../img/iPhone-screen.png") center top no-repeat;
       min-height: 279px;
       width: 100%;
-      @media (min-width: 660px) {
-        background: url("../img/iphone-screen-tablet-3@1x.png") no-repeat;
-        width: 100%;
-        height: 481px;
-        order: -1;
+      @media (min-width: 1200px) {
+        height: 302px;
+      }
+      &--left {
+        display: none;
+        @media (min-width: 1200px) {
+          display: block;
+          background: url("../img/iphone-screen-desktop-1@1x.png") center no-repeat;
+
+        }
+      }
+      &--middle {
+        display: none;
+        @media (min-width: 1200px) {
+          display: block;
+          background: url("../img/iphone-screen-desktop-2@1x.png") center no-repeat;
+        }
+      }
+      &--right {
+
+        @media (min-width: 660px) {
+          background: url("../img/iphone-screen-tablet-3@1x.png") no-repeat;
+          order: -1;
+          height: 481px;
+        }
+        @media (min-width: 1200px) {
+          display: block;
+          background: url("../img/iphone-screen-desktop-3@1x.png") center no-repeat;
+          order: 3;
+          height: 302px;
+        }
       }
     }
   }

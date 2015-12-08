@@ -1,7 +1,7 @@
 .logo {
   display: inline-block;
   text-align: left;
-  vertical-align: middle;
+  vertical-align: super;
   &__item {
     &--mobile {
       @media (min-width: 660px) {
@@ -27,14 +27,17 @@
   }
   &__footer {
     &--tablet {
-
       width: 146px;
       height: 40px;
       img {
         background-position: bottom;
       }
+      @media (min-width: 1200px) {
+        display: none;
 
+      }
     }
+
     &--desktop {
       display: none;
       @media (min-width: 1200px) {

@@ -1,4 +1,13 @@
 .social {
+  display: block;
+  width: 100%;
+  @media (min-width: 660px) {
+    padding: 6px 14px 0 0;
+  }
+  @media (min-width: 1200px) {
+    padding: 6px 0 0 11px;
+  }
+
   &__item {
     display: inline-block;
     width: 45px;
@@ -7,8 +16,6 @@
     border: 10px solid white;
     box-shadow: 0 0 2px rgba(0, 0, 0, .8);
     text-align: center;
-    &--facebook {
-      margin: 0 12px;
-    }
+    margin: 0 7px;
   }
 }

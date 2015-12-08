@@ -17,8 +17,9 @@
     <div class="page-header__layout">
       <div class="header-menu header-menu--main-bg">
         <div class="header-menu__layout">
-          <div class="header-menu__row"> <!--Вспомогательные элементы для разметки сетки-->
-            <div class="header-menu__column"> <!--Вспомогательные элементы для разметки сетки-->
+          <div class="header-menu__row">
+
+            <div class="header-menu__column">
               <div class="logo"> <!--блок-->
                 <a class="logo__item logo__item--mobile" href="#"><img width="74" src="img/logotype-white-mobile.svg"
                                                                         alt="glasses-icon"></a>
@@ -34,16 +35,14 @@
                 <a class="toggle__burger" href="#"><img width="50" src="img/menu-burger.svg" alt=""></a>
                 <a class="toggle__close  toggle__close--hidden"><img width="50" src="img/menu-burger.svg" alt=""></a>
               </div>
-            </div>
-          </div>
-          <div class="header-menu__row  header-menu__row--hidden">
-            <div class="header-menu__menu-inner">
-              <nav class="main-menu  main-menu--open">
-                <a class="main-menu__item" href="#">Информация</a>
-                <a class="main-menu__item" href="#">Блог</a>
-                <a class="main-menu__item" href="#">Отзывы</a>
-                <a class="main-menu__item" href="#">Конкурс</a>
-              </nav>
+              <div class="header-menu__menu-inner">
+                <nav class="main-menu  main-menu--open">
+                  <a class="main-menu__item" href="#">Информация</a>
+                  <a class="main-menu__item" href="#">Блог</a>
+                  <a class="main-menu__item" href="#">Отзывы</a>
+                  <a class="main-menu__item" href="#">Конкурс</a>
+                </nav>
+              </div>
             </div>
           </div>
           <div class="header-menu__title"><h1> Взгляните на жизнь иначе!</h1></div>
@@ -88,13 +87,18 @@
                 <div
                   class="about__text">Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</div>
               </div>
-              <div class="about__item">
+              <div class="about__item  about__item">
                 <div class="about__title"><h2>Заводит новых друзей</h2></div>
                 <div
-                  class="about__text">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</div>
+                  class="about__text  about__text--padding">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</div>
               </div>
             </div>
-            <div class="about__image"></div>
+            <div class="about__image">
+
+              <div class="about__image-item  about__image-item--left"></div>
+              <div class="about__image-item  about__image-item--middle"></div>
+              <div class="about__image-item  about__image-item--right"></div>
+            </div>
           </section>
         </div>
       </div>
@@ -103,17 +107,17 @@
       <div class="research">
         <div class="research__img"></div>
         <div class="research__inner">
-          <div class="research__title">Эффект<br>
-            на 24 часа!
-          </div>
+          <div class="research__title">Эффект на 24 часа!</div>
           <div class="research__text">Британские ученые провели исследования
-          и доказали, что положительный эффект
+          и доказали,что положительный эффект
           от использования приложения длится
           целые сутки!</div>
           <div class="research__link"><a href="#">Узнать больше об исследовании</a></div>
         </div>
       </div>
       <div class="reviews">
+        <div class="reviews__image"><img src="img/quotes.svg" alt=""></div>
+        <a href="#" class="reviews__arrow  reviews__arrow--left"></a>
         <div class="reviews__carousel">
           <div class="slider-reviews">
             <article class="slider-reviews__item">
@@ -139,6 +143,7 @@
             </article>
           </div>
         </div>
+        <a href="#" class="reviews__arrow  reviews__arrow--right"></a>
       </div>
       <div class="reviews__nav">
         <ul class="navigator">
@@ -153,7 +158,7 @@
         <!--прайс 0-->
         <div class="tariff__layout">
           <div class="tariff-table  tariff-table--hidden">
-            <div class="tariff-table__wrapper tariff-table__wrapper--hidden">
+            <div class="tariff-table__wrapper  tariff-table__wrapper--hidden">
               <div class="tariff-table__row tariff-table__row--hidden">
                 <div class="tariff-table__header">
                   <div class="tariff-table__header-title">Стандарт</div>
@@ -244,7 +249,7 @@
                   <div class="tariff-table__cell-text">Смайлики</div>
                 </div>
                 <div class="tariff-table__cell">
-                  <div class="tariff-table__cell-icon tariff-table__cell-icon--no"></div>
+                  <div class="tariff-table__cell-icon tariff-table__cell-icon"></div>
                 </div>
               </div>
               <div class="tariff-table__row tariff-table__row--tablet">
@@ -287,7 +292,7 @@
                   <div class="tariff-table__cell-text">Комментарии</div>
                 </div>
                 <div class="tariff-table__cell">
-                  <div class="tariff-table__cell-icon tariff-table__cell-icon--no"></div>
+                  <div class="tariff-table__cell-icon tariff-table__cell-icon"></div>
                 </div>
               </div>
             </div>
@@ -315,7 +320,7 @@
                 <div class="phone__text"><a href="tel:+78125556666">+7 (812) 555-66-66"</a></div>
               </div>
             </div>
-            <div class="page-footer__row">
+            <div class="page-footer__row  page-footer__row--right">
               <div class="mail">
                 <div class="mail__title">Пишите:</div>
                 <div class="mail__text"><a href="#">mail@htmlacademy.ru</a></div>
@@ -330,28 +335,29 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="page-footer__map"></div>
-    <div class="form-footer  form-footer--main-page">
-      <div class="form-footer__row"> <!--Вспомогательный Элемент?-->
-        <div class="logo"> <!--блок-->
-          <a class="logo__footer logo__footer--tablet" href="#"><img width="146" src="img/logotype-blue-tablet.svg"
-                                                                      alt="glasses-icon"></a>
-          <a class="logo__footer logo__footer--desktop" href="#"><img width="146" src="img/logotype-blue-desktop.svg"
-                                                                      alt="glasses-icon"></a>
+
+      <div class="page-footer__map"></div>
+      <div class="form-footer">
+        <div class="form-footer__row"> <!--Вспомогательный Элемент?-->
+          <div class="logo"> <!--блок-->
+            <a class="logo__footer logo__footer--tablet" href="#"><img width="146" src="img/logotype-blue-tablet.svg"
+                                                                        alt="glasses-icon"></a>
+            <a class="logo__footer logo__footer--desktop" href="#"><img width="146" src="img/logotype-blue-desktop.svg"
+                                                                        alt="glasses-icon"></a>
+          </div>
         </div>
-      </div>
-      <div class="form-footer__row">
-        <div class="social">
-          <a class="social__item" href="#"><img width="18" src="img/twitter.svg" alt=""></a>
-          <a class="social__item" href="#"><img width="9" src="img/facebook.svg" alt=""></a>
-          <a class="social__item" href="#"><img width="15" src="img/youtube.svg" alt=""></a>
+        <div class="form-footer__row">
+          <div class="social">
+            <a class="social__item" href="#"><img width="18" src="img/twitter.svg" alt=""></a>
+            <a class="social__item" href="#"><img width="9" src="img/facebook.svg" alt=""></a>
+            <a class="social__item" href="#"><img width="15" src="img/youtube.svg" alt=""></a>
+          </div>
         </div>
-      </div>
-      <div class="form-footer__row">
-        <div class="develop">
-          <div class="develop__title">Разработано</div>
-          <a class="develop__logo" href="#"><img width="30" src="img/htmlacademy.svg" alt=""></a> <!--Блок?-->
+        <div class="form-footer__row">
+          <div class="develop">
+            <div class="develop__title">Разработано</div>
+            <a class="develop__logo" href="#"><img width="27" src="img/academy-logo.png" alt=""></a> <!--Блок?-->
+          </div>
         </div>
       </div>
     </div>
