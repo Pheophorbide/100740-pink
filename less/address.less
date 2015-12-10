@@ -2,10 +2,16 @@
   &__title {
     font-size: @base-font-size;
     font-weight: bold;
+    @media (min-width: 1200px) {
+      padding-bottom: 20px;
+    }
   }
   &__text {
     @media (min-width: 660px) {
       padding: 0 161px;
+    }
+    @media (min-width: 1200px) {
+      padding: 0 47px;
     }
     a {
       color: @contacts-color;

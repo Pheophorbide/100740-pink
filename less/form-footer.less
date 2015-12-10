@@ -3,10 +3,6 @@
   flex-direction: column;
   align-items: center;
   padding: @padding 0;
-  &--main-page {
-    display: none;
-
-  }
   &__row {
     padding: @padding;
   }
@@ -14,5 +10,10 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+  }
+  @media (min-width: 1200px) {
+    padding: 20px 107px;
+    width: 1200px;
+    margin: 0 auto;
   }
 }

@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 * {
@@ -10,14 +11,18 @@ html {
 body {
   font-family: @base-font-family;
   font-size: @base-font-size;
+
 }
 
 .page-wrapper {
   width: 320px;
-  @media (min-width: 660px) {
+  @media (min-width: 660px) and (max-width: 1199px) {
     width: 660px;
   }
   @media (min-width: 1200px) {
-    width: 1200px;
+    width: 100%;
+  }
+  @media (min-width: 320px) and (max-width: 1199px) {
+    margin: 0 auto;
   }
 }

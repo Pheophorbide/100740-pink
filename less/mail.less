@@ -2,6 +2,9 @@
   &__title {
     font-size: @base-font-size;
     font-weight: bold;
+    @media (min-width: 1200px) {
+      padding-bottom: 21px;
+    }
   }
   &__text {
     @media (min-width: 660px) {
@@ -10,6 +13,12 @@
     a {
       color: @contacts-color;
       font-size: @title-font-size;
+      &:hover{
+        color:@mail-hover-color ;
+      }
+      &:active{
+        color: @mail-down-color;
+      }
     }
   }
 }

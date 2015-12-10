@@ -6,43 +6,64 @@
     position: relative;
     @media (min-width: 660px) {
       min-height: 377px;
+      margin-bottom: -6px;
+    }
+    @media (min-width: 1200px) {
+      min-height: 496px;
+      margin: 0 auto 31px auto;
     }
     &:before {
       content: '';
       position: absolute;
-      border: 30px solid;
+      border: 41px solid;
       border-color: white transparent white transparent;
-      border-right-width: 161px;
-      border-left-width: 159px;
+      border-right-width: 163px;
+      border-left-width: 169px;
       border-bottom-width: 0;
+      left: -3%;
       @media (min-width: 660px) {
-        border: 71px solid;
-        border-right-width: 348px;
-        border-left-width: 329px;
+        border: 69px solid;
+        border-right-width: 337px;
+        border-left-width: 352px;
         border-color: white transparent white transparent;
         border-bottom-width: 0;
       }
+      @media (min-width: 1200px) {
+        border: 101px solid;
+        border-right-width: 621px;
+        border-left-width: 637px;
+        border-color: white transparent white transparent;
+        border-bottom-width: 0;
+      }
+
     }
     &:after {
       content: '';
       position: absolute;
-      background: url("../img/marker.png");
+      background: url("../img/map-marker.svg") no-repeat;
       min-height: 36px;
       min-width: 36px;
-      top: 95px;
-      left: 143px;
+      top: 50%;
+      left: 50%;
     }
 
   }
   &__inner {
     padding: @padding;
     text-align: center;
+    @media (min-width: 1200px) {
+      padding: 20px 128px;
+    }
   }
   &__title {
     font-size: @title-font-size;
     padding: @padding;
     @media (min-width: 660px) {
       font-size: @tablet-title-font-size;
+    }
+    @media (min-width: 1200px) {
+      font-size: @form-tablet-title-font-size;
+      padding-bottom: 51px;
     }
   }
   &__row {
@@ -56,6 +77,19 @@
       @media (min-width: 660px) {
         padding-bottom: 0;
       }
+      @media (min-width: 1200px) {
+        padding: 0;
+      }
+    }
+    @media (min-width: 1200px) {
+      padding: 0;
+      width: 33.3%;
+    }
+    &--right {
+      @media (min-width: 1200px) {
+        order: 3;
+      }
+
     }
   }
   &__contacts {
@@ -70,5 +104,6 @@
   }
   @media (min-width: 1200px) {
     width: 1200px;
+    margin: 0 auto;
   }
 }

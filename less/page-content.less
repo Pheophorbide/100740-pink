@@ -22,8 +22,8 @@
         }
       }
     }
-    &--form {
-      margin: 0;
+    @media (min-width: 1200px) {
+      padding-bottom: 54px;
     }
   }
   &__text {
@@ -33,12 +33,22 @@
       text-align: center;
       padding-bottom: 6px;
     }
+    @media (min-width: 1200px) {
+      display: inline;
+    }
     h2 {
       @media (min-width: 660px) {
         margin: 0;
         font-size: @base-font-size;
         color: @text-color;
+        padding: 0;
       }
+
     }
+  }
+  @media (min-width: 1200px) {
+    padding: 0 128px;
+    width: 1200px;
+    margin: 0 auto;
   }
 }
