@@ -42,7 +42,7 @@
           margin-bottom: 17px;
         }
         @media (min-width: 1200px) {
-          padding: 6px 56px 45px;
+          padding: 6px 56px 49px;
           margin-bottom: 57px;
         }
       }
@@ -59,8 +59,8 @@
         padding: 6px 56px 0;
         margin-bottom: 27px;
         @media (min-width: 1200px) {
-          padding: 6px 0 0 56px;
-          margin-bottom: 58px;
+          padding: 6px 0 26px 56px;
+          margin-bottom: 30px;
         }
       }
 
@@ -198,6 +198,7 @@
     @media (min-width: 1200px) {
       margin-right: 22px;
       margin-bottom: 0;
+      width: 36%;
     }
     &--margin-left {
       margin-left: 61px;
@@ -205,7 +206,7 @@
         margin-left: 81px;
       }
       @media (min-width: 1200px) {
-        margin: 0 50px 0 0;
+        margin: 0 54px 0 0;
       }
     }
   }
@@ -213,12 +214,20 @@
 
 .form-container {
   &__control {
-    padding: @padding - 3;
-    .main-border ();
     input[type=text] {
-      border: none;
       background-color: transparent;
       width: 100%;
+      padding: 17.5px;
+      border: 2px solid #e5e5e5;
+      .main-border ();
+      cursor: pointer;
+
+      &:hover{
+        border: 2px solid @mail-hover-color;
+      }
+      &:active{
+        border: 2px solid @radio-color;
+      }
     }
     &--radio {
       border: none;
@@ -238,6 +247,16 @@
           box-shadow: 0 0 2px rgba(0, 0, 0, .8);
           @media (min-width: 660px) {
             left: 4%;
+          }
+        }
+        &:hover{
+          &:before{
+            box-shadow: 0 0 0 2px @mail-hover-color;
+          }
+        }
+        &:active{
+          &:before{
+            box-shadow: 0 0 0 2px @radio-color;
           }
         }
       }
@@ -285,8 +304,9 @@
         }
       }
       &--fellow-number {
-        padding: @padding - 2 @padding + 5;
-        border-right: none;
+        padding: 17.5px  25px;
+        .main-border ();
+        border-right:none ;
         @media (min-width: 660px) {
           border-right: 2px solid @input-border-color;
         }
@@ -303,17 +323,24 @@
     }
 
     &__btn-item {
-      border-top: 2px solid @input-border-color;
-      border-bottom: 2px solid @input-border-color;
-      padding: 15px 0;
       width: 47%;
       &--border-none {
+        input[type=text]{
         @media (min-width: 660px) {
           border: none;
         }
       }
+      }
       input[type=text] {
         text-align: center;
+        border-right: none;
+        border-left: none;
+        &:hover{
+          border: 2px solid @mail-hover-color;
+        }
+        &:active{
+          border: 2px solid @radio-color;
+        }
       }
     }
   }
@@ -407,6 +434,14 @@
         color: black;
         text-transform: uppercase;
         font-size: @text-font-size;
+      }
+      &:hover{
+        color: @radio-color;
+        text-decoration: underline;
+      }
+      &:active{
+        text-decoration: none;
+        opacity: 0.3;
       }
     }
   }
