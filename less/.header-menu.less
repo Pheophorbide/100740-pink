@@ -52,14 +52,17 @@
     }
   }
   &__row {
-    display: block;
+    display: flex;
     width: 100%;
     font-size: 0;
-    padding: 22px 20px;
-    margin-bottom: @margin;
+    padding: 13px 20px;
+    margin-bottom: 17px;
     .opacity-color(black, 70%);
+    justify-content: space-between;
+    align-items: center;
     @media (min-width: 660px) {
       padding: 28px 20px 42px;
+      align-items: flex-end;
     }
     @media (min-width: 1200px) {
       padding: 28px 128px 42px;
@@ -67,7 +70,7 @@
   }
   &__column {
     display: inline-block;
-    vertical-align: bottom;
+    vertical-align: middle;
     width: 47%;
   }
   &__title {
