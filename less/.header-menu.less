@@ -9,10 +9,20 @@
     justify-content: flex-start;
     background: url("../img/background-tablet@1x.jpg") top center no-repeat;
   }
+  @media (min-width: 660px) and (min-resolution: 2dppx){
+   background-image: url("../img/background-tablet@2x.jpg");
+  }
   @media (min-width: 1200px) {
     background: url("../img/background-fullsize.jpg") top center no-repeat;
     height: 849px;
     background-size: cover;
+  }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/background-mobile@2x.jpg");
+    background-size: cover;
+  }
+  @media (min-resolution: 3dppx) {
+    background-image: url("../img/background-mobile@3x.jpg");
   }
   &--main-bg {
     position: relative;
@@ -71,7 +81,7 @@
   &__column {
     display: inline-block;
     vertical-align: middle;
-    width: 47%;
+    width: 53%;
   }
   &__title {
     padding: 0 20px;
@@ -82,10 +92,10 @@
       margin-top: 94px;
     }
     @media (min-width: 1200px) {
-      padding: 0 20px 46px;
+      padding: 0 5% 4%;
       width: 30%;
-      margin-top: 106px;
-      margin-left: 103px;
+      margin-top: 9%;
+      margin-left: 8%;
     }
     h1 {
       font-size: @title-font-size;
@@ -105,8 +115,12 @@
   }
   &__form-title {
     @media (min-width: 1200px) {
-      padding: 0 128px;
-      margin: 28px;
+      padding: 0 2%;
+      width: 30%;
+      margin-top: 94px;
+      margin-left: 9%;
+      align-self: baseline;
+      margin-bottom: 42px;
     }
     h1 {
       color: white;
@@ -126,5 +140,11 @@
     @media (min-width: 1200px) {
       display: inline-block;
     }
+  }
+  &__layout{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
   }
 }
