@@ -72,7 +72,17 @@
       }
     }
     &--hit {
-      background: @tariff-header-color url("../img/hit.png") no-repeat;
+      position: relative;
+      &:after{
+        content: '';
+        background: transparent url("../img/hit.png") no-repeat;
+        position: absolute;
+        /* z-index: 3; */
+        width: 74px;
+        height: 74px;
+        top: 0;
+        left: 0;
+      }
     }
     @media (min-width: 660px) {
       padding: 18px;
