@@ -50,6 +50,7 @@
 
       }
     }
+
   }
   &--form-bg {
     min-height: 235px;
@@ -73,6 +74,7 @@
     @media (min-width: 660px) {
       padding: 28px 20px 42px;
       align-items: flex-end;
+      margin-bottom: 0;
     }
     @media (min-width: 1200px) {
       padding: 28px 128px 42px;
@@ -81,7 +83,6 @@
   &__column {
     display: inline-block;
     vertical-align: middle;
-    width: 53%;
   }
   &__title {
     padding: 0 20px;
@@ -90,6 +91,7 @@
       padding: 0 60px + 5;
       width: 50%;
       margin-top: 94px;
+      z-index: 10;
     }
     @media (min-width: 1200px) {
       padding: 0 5% 4%;
@@ -115,12 +117,7 @@
   }
   &__form-title {
     @media (min-width: 1200px) {
-      padding: 0 2%;
-      width: 30%;
-      margin-top: 94px;
-      margin-left: 9%;
-      align-self: baseline;
-      margin-bottom: 42px;
+      padding: 0 128px;
     }
     h1 {
       color: white;
@@ -133,18 +130,28 @@
         padding: 34px 20px;
         line-height: 1.2;
       }
+      @media (min-width: 1200px) {
+       margin: 12px;
+      }
     }
   }
   &__menu-inner{
   display: none;
     @media (min-width: 1200px) {
-      display: inline-block;
+      display: block;
     }
   }
   &__layout{
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @media (min-width: 660px) {
+      flex-direction: row;
+    }
+  }
+  &__apps-inner{
+    display: flex;
+    flex-direction: row-reverse;
   }
 }
