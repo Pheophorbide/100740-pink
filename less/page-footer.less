@@ -1,15 +1,17 @@
 .page-footer {
   background: white;
   &__map {
-    background: url("../img/map.png") no-repeat;
-    min-height: 200px;
+    width: 320px;
+    height: 200px;
     position: relative;
     @media (min-width: 660px) {
       min-height: 377px;
+      width: 660px;
       margin-bottom: -6px;
     }
     @media (min-width: 1200px) {
-      min-height: 496px;
+      min-height: 524px;
+      width: 1200px;
       margin: 0 auto 31px auto;
     }
     &:before {
@@ -21,6 +23,7 @@
       border-left-width: 169px;
       border-bottom-width: 0;
       left: -3%;
+      z-index: 10;
       @media (min-width: 660px) {
         border: 69px solid;
         border-right-width: 337px;
@@ -35,18 +38,7 @@
         border-color: white transparent white transparent;
         border-bottom-width: 0;
       }
-
     }
-    &:after {
-      content: '';
-      position: absolute;
-      background: url("../img/map-marker.svg") no-repeat;
-      min-height: 36px;
-      min-width: 36px;
-      top: 50%;
-      left: 50%;
-    }
-
   }
   &__inner {
     padding: @padding;
