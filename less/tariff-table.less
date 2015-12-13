@@ -15,16 +15,19 @@
     width: 100%;
     flex-direction: column;
     flex-wrap: nowrap;
-    border-right: 2px solid @table-border-color;
+    border-right: 2px solid @input-border-color;
     &--first {
-      border-left: 2px solid @table-border-color;
+      border-left: 2px solid @input-border-color;
+    }
+    &--hidden {
+      border-right: none;
     }
   }
   &__row {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: 2px solid @table-border-color;
+    border-bottom: 2px solid @input-border-color;
     background: white;
     &--hidden {
       opacity: 0;
@@ -34,6 +37,9 @@
 
         justify-content: center;
       }
+    }
+    &--border-none {
+      border-right: none;
     }
   }
 }
@@ -61,12 +67,28 @@
       @media (min-width: 660px) {
         font-size: @table-font-size;
       }
+      @media (min-width: 1200px) {
+        font-size: @title-font-size;
+      }
     }
     &--hit {
-      background: @tariff-header-color url("../img/hit.png") no-repeat;
+      position: relative;
+      &:after{
+        content: '';
+        background: transparent url("../img/hit.png") no-repeat;
+        position: absolute;
+        /* z-index: 3; */
+        width: 74px;
+        height: 74px;
+        top: 0;
+        left: 0;
+      }
     }
     @media (min-width: 660px) {
       padding: 18px;
+    }
+    @media (min-width: 1200px) {
+      padding: 22px 18px;
     }
   }
   &__cell {
@@ -86,11 +108,11 @@
       }
     }
     &-icon {
-      background: url("../img/yes.png") no-repeat;
+      background: url("../img/yes.png") center no-repeat;
       min-height: 22px;
-      min-width: 29px;
+      min-width: 30px;
       &--no {
-        background: url("../img/no.png") no-repeat;
+        background: url("../img/no.png") center no-repeat;
       }
     }
     &--tablet {
@@ -101,11 +123,18 @@
     @media (min-width: 660px) {
       padding: 11px 61px;
     }
+    @media (min-width: 1200px) {
+      padding: 18px 102px;
+    }
     &--tablet-text {
       @media (min-width: 660px) {
         font-size: @text-font-size;
         text-transform: none;
         padding: 12.5px 19px;
+      }
+      @media (min-width: 1200px) {
+        padding: 17px 65px 16.5px 23px;
+        font-size: @base-font-size;
       }
     }
   }

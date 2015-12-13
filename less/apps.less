@@ -5,12 +5,16 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: @padding + 10 @padding;
+  padding: 30px 20px;
   z-index: 1;
   @media (min-width: 660px) {
-    width: 53%;
+    width: 52%;
     background: transparent;
     min-height: 300px;
+  }
+  @media (min-width: 1200px) {
+    padding: 8px 74px 8px 0;
+    align-items: center;
   }
   &__row {
     display: block;
@@ -37,23 +41,21 @@
     background: transparent;
     width: 280px;
     height: 53px;
-  }
-}
+    outline: 0;
+    @media (min-width: 1200px) {
+      width: 300px;
+      font-size: @reviews-tablet-font-size;
+    }
+    &:hover{
+      border-color: transparent;
+      border-radius: 30px;
+      background: white;
+      color:@radio-color;
+    }
+    &:active{
+      border-color: transparent;
+      opacity: 0.3;
 
-.apps-icons {
-  display: block;
-  margin: 0;
-  text-align: center;
-  width: 100%;
-  font-size: 0;
-  padding: 0 20px;
-  @media (min-width: 660px) {
-    padding: @padding - 7 @padding*2 0;
-  }
-
-  &__item {
-    display: inline-block;
-    vertical-align: bottom;
-    width: 33.3%;
+    }
   }
 }

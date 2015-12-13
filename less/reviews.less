@@ -1,4 +1,9 @@
 .reviews {
+  @media (min-width: 1200px) {
+    position: relative;
+    padding-bottom: 120px;
+  }
+
   &__carousel {
     width: 100%;
     position: relative;
@@ -8,7 +13,45 @@
   &__nav {
     padding-bottom: @padding+116;
     @media (min-width: 660px) {
-      padding-bottom: 103px;
+      padding-bottom: 107px;
+    }
+    @media (min-width: 1200px) {
+      display: none;
+    }
+  }
+  &__image {
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+      text-align: center;
+    }
+  }
+  &__arrow {
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+      position: absolute;
+      width: 48px;
+      height: 58px;
+      top: 129px;
+      &:active{
+        opacity: 0.3;
+      }
+      &--left {
+        background: url("../img/review-arrow-left.svg") left no-repeat;
+        z-index: 3;
+        &:hover{
+          background: url("../img/review-arrow-left-hover.svg")left no-repeat;
+        }
+      }
+
+      &--right {
+        background: url("../img/review-arrow-right.svg") right no-repeat;
+        right: 0;
+        &:hover{
+          background: url("../img/review-arrow-right-hover.svg")right no-repeat;
+        }
+      }
     }
   }
 }

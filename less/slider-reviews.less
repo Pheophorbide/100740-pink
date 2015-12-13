@@ -18,6 +18,11 @@
       width: 660px;
       justify-content: flex-end;
     }
+    @media (min-width: 1200px) {
+      width: 692px;
+      padding: 0;
+      margin: 0 62px;
+    }
   }
   &__title {
     h2 {
@@ -33,6 +38,14 @@
 
       h2 {
         font-size: @reviews-tablet-font-size;
+        margin: 20px 0 9px;
+      }
+    }
+    @media (min-width: 1200px) {
+      font-size: @base-font-size;
+      h2 {
+        font-size: @title-font-size;
+        margin: 0 0 5px;
       }
     }
   }
@@ -42,6 +55,9 @@
     @media (min-width: 660px) {
       font-size: @base-font-size;
       line-height: 1.7;
+    }
+    @media (min-width: 1200px) {
+      padding-bottom: 20px;
     }
   }
 }
