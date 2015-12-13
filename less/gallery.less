@@ -1,31 +1,47 @@
 .gallery {
+  @media (min-width: 1200px) {
+    display: flex;
+  }
   &__row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
     &--last {
       padding-right: 103px;
       @media (min-width: 660px) {
         padding-right: 190px;
       }
     }
-    @media (min-width: 660px) {
-      padding-bottom: 24px;
-    }
   }
   &__column {
     position: relative;
-    padding-bottom: @padding + 3;
+    padding-bottom: 23px;
+    margin-right: 36px;
+    @media (min-width: 660px) {
+      padding-bottom: 47px;
+    }
     button {
       position: absolute;
       left: 76%;
       top: -13%;
       border-radius: 50%;
       .main-border ();
-      width: 46.4%;
-      height: 31.4%;
-      background: white url("../img/x.png") center no-repeat;
+      width: 29px;
+      height: 29px;
+      background: white url("../img/x-btn.png") center no-repeat;
+      background-size: 40%;
+      &:hover {
+        border-color: @social-hover-color;
+        background: url("../img/x-hover.png") center no-repeat;
+        background-color: white;
+      }
+      &:active {
+        background: @social-hover-color url("../img/x.png") center no-repeat;
+      }
+      @media (min-width: 660px) {
+      width: 57px;
+      height: 57px;
+      }
     }
     &--description {
       font-size: @text-font-size;
@@ -41,6 +57,21 @@
       }
       @media (min-width: 660px) {
         padding-bottom: 10px;
+
+      }
+    }
+
+    @media (min-width: 660px) {
+      margin-right: 70px;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 55px;
+      padding-bottom: 26px;
+    }
+    &--margin {
+      margin-right: 0;
+      @media (min-width: 1200px) {
+        margin-right: 55px;
       }
     }
   }

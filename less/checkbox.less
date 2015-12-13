@@ -13,6 +13,9 @@
         background: url("../img/check.png") center no-repeat;
       }
     }
+    @media (min-width: 1200px) {
+      padding: 20px 0 20px 48px;
+    }
   }
   label {
     cursor: pointer;
@@ -27,6 +30,26 @@
       @media (min-width: 660px) {
         left: 4%;
       }
+    }
+    &:hover{
+      &:before{
+        border: 2px solid @mail-hover-color;
+      }
+    }
+    &:active{
+      &:before{
+        border: 2px solid @radio-color;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    margin-right: 66px;
+  }
+  &--margin {
+    @media (min-width: 1200px) {
+      margin-right: 0;
+      margin-left: 10px;
     }
   }
 }

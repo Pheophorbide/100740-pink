@@ -3,6 +3,9 @@
   @media (min-width: 660px) {
     padding-bottom: 19px;
   }
+  @media (min-width: 1200px) {
+    padding: 0;
+  }
   &__group {
     border: none;
     padding: 0;
@@ -13,28 +16,54 @@
         border: none;
         padding: 0;
         margin: 0;
+        @media (min-width: 1200px) {
+          display: block;
+          white-space: nowrap;
+          padding-bottom: 48px;
+        }
       }
 
       &--radio {
         padding: 6px 56px 31px;
         margin-bottom: 10px;
+        @media (min-width: 1200px) {
+          display: block;
+          white-space: nowrap;
+          margin-bottom: 54px;
+        }
+        @media (min-width: 1200px) {
+          padding: 6px 0 31px 67px;
+        }
       }
 
       &--fellow {
         @media (min-width: 660px) {
-          padding: 6px 56px 25px;
+          padding: 6px 0 25px 56px;
           margin-bottom: 17px;
+        }
+        @media (min-width: 1200px) {
+          padding: 6px 56px 49px;
+          margin-bottom: 57px;
         }
       }
 
       &--check {
         padding: 6px 56px 25px;
+        @media (min-width: 1200px) {
+          padding: 6px 0 25px 68px;
+          margin-bottom: 56px;
+        }
       }
 
       &--gallery {
         padding: 6px 56px 0;
         margin-bottom: 27px;
+        @media (min-width: 1200px) {
+          padding: 6px 0 26px 56px;
+          margin-bottom: 30px;
+        }
       }
+
     }
   }
   &--fellow {
@@ -49,13 +78,18 @@
   &--padding {
     padding-bottom: 40px;
     @media (min-width: 660px) {
-      padding-bottom: 29px;
+      padding-bottom: 30px;
     }
-
+    @media (min-width: 1200px) {
+      padding-bottom: 58px;
+    }
   }
   &--gallery {
-    padding-bottom: 0;
     margin-bottom: 11px;
+    padding: 26px 14px 0 20px;
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
   }
   &--submit {
     padding-bottom: 0;
@@ -63,9 +97,12 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 47px;
+      padding: 25px 20px 38px;
     }
-
+    @media (min-width: 1200px) {
+      padding-bottom: 13px;
+      padding-left: 0;
+    }
   }
   &__title {
     .text-style ();
@@ -86,16 +123,26 @@
       @media (min-width: 660px) {
         margin-bottom: 32px;
       }
+      @media (min-width: 1200px) {
+        margin-bottom: 34px;
+      }
     }
   }
   &--check {
     padding: 19px 20px 30px;
+    @media (min-width: 1200px) {
+      padding: 0;
+    }
   }
   &__layout {
     @media (min-width: 660px) {
       display: block;
+      padding: 0 50px 7px;
+    }
+    @media (min-width: 1200px) {
       white-space: nowrap;
-      padding: 0 50px 17px;
+      padding: 0 34px 0 42px;
+
     }
   }
 }
@@ -124,22 +171,42 @@
         text-align: left;
       }
     }
+    &--desktop-center {
+      text-align: center;
+    }
   }
   &__fellow-number {
     display: inline-block;
+    margin-bottom: 8px;
     @media (min-width: 660px) {
       margin-right: 12px;
+      margin-bottom: 0;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 19px;
+      margin-bottom: 0;
     }
   }
   &__fellow-name {
     display: inline-block;
+    width: 77%;
+    margin-bottom: 8px;
     @media (min-width: 660px) {
       margin-right: 46px;
+      width: 54%;
+    }
+    @media (min-width: 1200px) {
+      margin-right: 22px;
+      margin-bottom: 0;
+      width: 36%;
     }
     &--margin-left {
       margin-left: 61px;
       @media (min-width: 660px) {
         margin-left: 81px;
+      }
+      @media (min-width: 1200px) {
+        margin: 0 54px 0 0;
       }
     }
   }
@@ -147,16 +214,24 @@
 
 .form-container {
   &__control {
-    padding: @padding - 3;
-    .main-border ();
     input[type=text] {
-      border: none;
       background-color: transparent;
       width: 100%;
+      padding: 18px;
+      border: 2px solid #e5e5e5;
+      .main-border ();
+      cursor: pointer;
+
+      &:hover{
+        border: 2px solid @mail-hover-color;
+      }
+      &:active{
+        border: 2px solid @radio-color;
+      }
     }
     &--radio {
       border: none;
-      padding-left: 60px;
+      padding: 20px 60px 9px;
       label {
         cursor: pointer;
         &::before {
@@ -174,6 +249,19 @@
             left: 4%;
           }
         }
+        &:hover{
+          &:before{
+            box-shadow: 0 0 0 2px @mail-hover-color;
+          }
+        }
+        &:active{
+          &:before{
+            box-shadow: 0 0 0 2px @radio-color;
+          }
+        }
+      }
+      @media (min-width: 1200px) {
+        padding-left: 52px;
       }
     }
     input[type=radio] {
@@ -190,16 +278,7 @@
       padding: 0;
       border: none;
       height: 63px;
-      button {
-        width: 28px;
-        padding: 0 27px;
-        background-color: white;
-        .main-border ();
-        background: url("../img/plus.png") center no-repeat;
-        &:first-child {
-          background-image: url("../img/minus.png");
-        }
-      }
+
     }
     &--gray {
       background-color: @bg-gray-color;
@@ -210,14 +289,11 @@
     &__control {
       &--fellow-count {
         background-color: white;
-        @media (min-width: 660px) {
-          padding: 17px 28px;
-
-        }
       }
       &--fellow-number {
-        padding: @padding - 2 @padding + 5;
-        border-right: none;
+        padding: 17.5px  25px;
+        .main-border ();
+        border-right:none ;
         @media (min-width: 660px) {
           border-right: 2px solid @input-border-color;
         }
@@ -226,24 +302,53 @@
         @media (min-width: 660px) {
           width: 50%;
         }
+        @media (min-width: 1200px) {
+          width: 31.9%;
+          padding-right: 8px;
+        }
       }
     }
 
     &__btn-item {
-      border-top: 2px solid @input-border-color;
-      border-bottom: 2px solid @input-border-color;
-      padding: 15px 0;
-      @media (min-width: 660px) {
-      }
+      width: 47%;
       &--border-none {
+        input[type=text]{
         @media (min-width: 660px) {
           border: none;
         }
       }
+      }
       input[type=text] {
         text-align: center;
+        border-right: none;
+        border-left: none;
+        &:hover{
+          border: 2px solid @mail-hover-color;
+        }
+        &:active{
+          border: 2px solid @radio-color;
+        }
       }
-
+    }
+    &__btn {
+      width: 28px;
+      height: 64px;
+      padding: 0 30px;
+      background-color: white;
+      .main-border ();
+      background: url("../img/plus.png") center no-repeat;
+      &--minus {
+        background-image: url("../img/minus.png");
+      }
+      &:hover{
+        border-color: @mail-hover-color;
+      }
+      &:active{
+        background: @mail-hover-color url("../img/plus-down.png") center no-repeat;
+        &:first-child{
+          background-image:url("../img/minus-down.png") ;
+        }
+      }
     }
   }
 }
@@ -256,7 +361,11 @@
       flex-direction: row;
       align-items: center;
       position: relative;
-      margin-bottom: 17px
+      margin-bottom: 22px;
+      @media (min-width: 1200px) {
+        padding: 0;
+        margin-right: 30px;
+      }
     }
     &--fellow {
       border-bottom: 2px solid @input-border-color;
@@ -271,12 +380,17 @@
       justify-content: flex-end;
       flex-direction: row;
       align-items: center;
+      flex-wrap: wrap;
       @media (min-width: 660px) {
         display: block;
-        text-align: start;
-        white-space: nowrap;
+        text-align: left;
+        white-space: normal;
       }
-
+      @media (min-width: 1200px) {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: -5px;
+      }
     }
     &--wrapper {
       margin-bottom: @margin + 1;
@@ -285,14 +399,31 @@
       align-items: stretch;
       flex-direction: column;
       @media (min-width: 660px) {
-        margin-bottom: 17px;
+        margin-bottom: 12px;
       }
     }
     &--inline {
       @media (min-width: 660px) {
         display: inline-block;
-        width: 50%;
-        padding: 0 10px;
+        width: 49%;
+        padding: 0 6px 13px;
+      }
+      @media (min-width: 1200px) {
+        width: 31.9%;
+        padding: 0 16px 0 13px;
+        margin-right: 12px;
+      }
+    }
+    &--inline-desktop {
+      @media (min-width: 1200px) {
+        display: inline-block;
+        width: 31.9%;
+        padding: 0;
+      }
+    }
+    &--center {
+      @media (min-width: 1200px) {
+        margin: 0 14px;
       }
     }
   }
@@ -301,12 +432,29 @@
     @media (min-width: 660px) {
       display: inline-block;
     }
+    @media (min-width: 1200px) {
+      order: 5;
+      padding-top: 35px;
+    }
     a {
       @media (min-width: 660px) {
         color: black;
         text-transform: uppercase;
         font-size: @text-font-size;
       }
+      &:hover{
+        color: @radio-color;
+        text-decoration: underline;
+      }
+      &:active{
+        text-decoration: none;
+        opacity: 0.3;
+      }
+    }
+  }
+  &__checkbox-layout {
+    @media (min-width: 1200px) {
+      display: inline-block;
     }
   }
 }

@@ -5,11 +5,22 @@
   @media (min-width: 660px) {
     margin-bottom: 63px;
   }
+  @media (min-width: 1200px) {
+    margin-right: 59px;
+  }
   button {
     .main-border ();
     padding: 18px 0;
     background: white;
     text-transform: uppercase;
     width: 100%;
+    &:hover {
+      border-color: @social-hover-color;
+    }
+    &:active{
+      background: @social-hover-color;
+      color: white;
+    }
   }
+
 }
