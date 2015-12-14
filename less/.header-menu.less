@@ -78,6 +78,7 @@
     }
   }
   &__row {
+
     display: flex;
     width: 100%;
     font-size: 0;
@@ -95,6 +96,32 @@
       padding: 28px 128px;
       align-items: inherit;
     }
+    &--menu{
+      position: absolute;
+      background: transparent;
+      top: 67px;
+      width: 100%;
+      padding: 0;
+      @media (min-width: 660px) {
+        top:111px;
+      }
+      @media (min-width: 1200px) {
+        width: 50%;
+        right: 100px;
+        top: 0;
+        background: transparent;
+        padding: 28px 0;
+        justify-content: flex-end;
+      }
+    }
+  /*  &--open{
+      @media (min-width: 320px) and (max-width: 1199px){
+      display: none;
+      background: @mail-hover-color;
+      z-index: 10;
+      border-top: 1px solid black;
+    }
+    }*/
   }
   &__column {
     display: inline-block;
@@ -150,7 +177,9 @@
     }
   }
   &__menu-inner{
-  display: none;
+  //display: none;
+    display: block;
+    width: 100%;
     @media (min-width: 1200px) {
       display: block;
     }
