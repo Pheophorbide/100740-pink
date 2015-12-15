@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 ( function () {
-=======
-window.onload = function () {
->>>>>>> module8-task1
   ymaps.ready(init);
   var myMap,
     myPlacemark;
