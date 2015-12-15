@@ -1,24 +1,24 @@
-window.onload = function () {
-  ymaps.ready(init);
-  var myMap,
-      myPlacemark;
-
-  function init(){
-    myMap = new ymaps.Map("map", {
-      center: [59.94, 30.32],
-      zoom: 15
-    });
-
-    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-
-    }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/map-marker.svg',
-      // Размеры метки.
-      iconImageSize: [35.983, 35.983],
-      iconImageOffset: [-3, -42]
-    });
-
-  myMap.geoObjects.add(myPlacemark);
+(function () {
+  if (!("FormData") in window) {
+    return;
   }
-}
+  var form = document.querySelector(".form");
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    var data = new FormData(form);
+    request(data, function (response) {
+      console.log(response);
+    });
+  });
+
+  function request(data, fn) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("post", "https://echo.htmlacademy.ru/adaptive?" + (new Date()).getTime());
+    xhr.addEventListener("readystatechange", function () {
+      if (xhr.readyState == 4) {
+        fn(xhr.responseText);
+      }
+    });
+    xhr.send(data);
+  }
+})();
