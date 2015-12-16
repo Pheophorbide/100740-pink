@@ -15,10 +15,10 @@
 <body>
 <div class="page-wrapper">
   <header class="page-header">
-    <div class="page-header__layout">
       <div class="header-menu  header-menu--form-bg">
         <div class="header-menu__layout">
           <div class="header-menu__row">
+            <div class="header-menu__row-layout  header-menu__row-layout--form">
             <div class="header-menu__column">
               <div class="logo"> <!--блок-->
                 <a class="logo__item" href="index.html">
@@ -82,9 +82,9 @@
                 </a>
               </div>
             </div>
-            <div class="header-menu__column">
+            <div class="header-menu__column  header-menu__column--js-open">
               <div class="toggle">
-                <a class="toggle__burger" href="#"><img width="50" src="img/menu-burger.svg" alt=""></a>
+                <a class="toggle__burger" href="#"><img id="toggle" width="50" src="img/menu-burger.svg" alt=""></a>
                 <a class="toggle__close  toggle__close--hidden"><img width="50" src="img/menu-burger.svg" alt=""></a>
               </div>
               <div class="header-menu__menu-inner">
@@ -96,11 +96,12 @@
                 </nav>
               </div>
             </div>
+            </div>
           </div>
           <div class="header-menu__form-title"><h1> Конкурс на самое безбашеное <br>путешествие с Пинк</h1></div>
-        </div>
+
+          </div>
       </div>
-    </div>
   </header>
   <main>
     <div class="page-content">

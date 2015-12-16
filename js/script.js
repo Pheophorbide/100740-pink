@@ -61,4 +61,16 @@
     return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
   }
 
+  var elem = document.querySelectorAll(".header-menu__column--js-open");
+  for (var a=0; a<elem.length; a++){
+    var parentMenu = elem[a];
+  }
+  var toggleBurger = document.getElementById("toggle");
+  var menu = parentMenu.querySelector(".header-menu__menu-inner").querySelector(".main-menu");
+
+  toggleBurger.onclick = function () {
+    menu.classList.toggle(".open");
+  };
+
+
 })();
