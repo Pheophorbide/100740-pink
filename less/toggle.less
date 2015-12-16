@@ -5,10 +5,16 @@
 
   &__burger{
     display: block;
+    &.open{
+      display: none;
+    }
   }
-  &__close--hidden {
+  &__close{
     display: none;
     height: 24px;
+    &.open{
+      display: block;
+    }
   }
   @media (min-width:1200px ) {
     display: none;

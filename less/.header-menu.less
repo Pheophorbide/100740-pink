@@ -169,9 +169,10 @@
     }
   }
   &__menu-inner{
-  //display: none;
-    display: block;
+display: none;
     width: 100%;
+    position: absolute;
+    top:41px;
     @media (min-width: 1200px) {
       display: block;
     }
@@ -181,5 +182,21 @@
     @media (min-width: 660px) {
       display: block;
     }
+  }
+}
+
+.js-mainMenu.open{
+  .toggle{
+    .toggle{
+      &__burger{
+        display: none;
+      }
+      &__close{
+        display: block;
+      }
+    }
+  }
+  .js-menu{
+    display: block;
   }
 }
