@@ -169,13 +169,20 @@
     }
   }
   &__menu-inner{
-display: none;
-    width: 100%;
-    position: absolute;
-    top:41px;
-    @media (min-width: 1200px) {
-      display: block;
+    display: none;
+    @media (min-width: 320px) and (max-width: 1199px){
+      width: 320px;
+      position: absolute;
+      top:44px;
+      right: -20px;
     }
+    @media (min-width: 660px) and (max-width: 1199px){
+      width: 660px;
+      top: 66px;
+    }
+    @media (min-width: 1200px) {
+    display: block;
+  }
   }
   &__nowrap{
     display: inline-block;
@@ -185,7 +192,10 @@ display: none;
   }
 }
 
-.js-mainMenu.open{
+
+.js-rowOpen.open{
+  background-color: @mail-hover-color;
+  .js-mainMenu{
   .toggle{
     .toggle{
       &__burger{
@@ -197,6 +207,7 @@ display: none;
     }
   }
   .js-menu{
-    display: block;
+    display: flex;
   }
+}
 }

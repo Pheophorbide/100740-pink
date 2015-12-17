@@ -1,13 +1,14 @@
 .main-menu {
   display: flex;
-  flex-direction: column;
   width: 100%;
-  align-items: center;
 
 @media (min-width: 320px) and (max-width: 1199px) {
-  display: block;
+  display: flex;
   position: absolute;
+  flex-direction: column;
   top:50%;
+  background-color:@mail-hover-color ;
+  z-index: 1;
   &__item{
     color: white;
     width: 100%;
