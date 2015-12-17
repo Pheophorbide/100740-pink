@@ -11,27 +11,20 @@
       display: block;
     }
   }
-  @media (min-width: 660px) {
-    &__stars {
-      display: none;
-      @media (min-width: 1200px) {
-        display: block;
+  &__stars {
+    display: none;
+    @media (min-width: 1200px) {
+      display: block;
+    }
+  }
+  &__glasses {
+    &-color {
+      &--footer {
+        fill: @radio-color;
       }
     }
-
-    &__glasses {
-      display: none;
-      &--footer {
-        display: block;
-      }
-      &-color {
-        &--footer {
-          fill: @radio-color;
-        }
-      }
-      @media (min-width: 660px) {
-        display: block;
-      }
+    @media (min-width: 660px) {
+      display: block;
     }
   }
 }
