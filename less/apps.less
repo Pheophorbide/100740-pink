@@ -1,25 +1,33 @@
 .apps {
-  width: 100%;
-  min-height: 270px;
-  background: @apps-color;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 30px 20px;
+  margin: 0 auto;
   z-index: 1;
   @media (min-width: 660px) {
-    width: 52%;
-    background: transparent;
-    min-height: 300px;
+    width: 660px;
   }
   @media (min-width: 1200px) {
-    padding: 8px 74px 8px 0;
+    width: 1200px;
+  }
+
+  &__layout{
+    width: 100%;
+    min-height: 270px;
+    background: @apps-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 31px 20px;
     align-items: center;
+    @media (min-width: 660px) {
+      background: transparent;
+      min-height: 300px;
+      align-items: flex-start;
+      padding: 27px 20px;
+    }
+    @media (min-width: 1200px) {
+      padding: 4px 128px;
+    }
   }
   &__row {
-    display: block;
-    text-align: center;
-    vertical-align: middle;
     &--text {
       font-size: @text-font-size;
       color: white;
@@ -28,9 +36,18 @@
         font-size: @base-font-size;
       }
     }
+    &--wrap{
+      display: block;
+      text-align: center;
+    }
   }
   &__download {
-    text-align: left;
+    @media (min-width: 660px) {
+      padding: 4px 0;
+    }
+    @media (min-width: 1200px) {
+      padding: 12px 0;
+    }
   }
   &__download-btn {
     font-size: @base-font-size;

@@ -3,8 +3,10 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+
 @media (min-width: 320px) and (max-width: 1199px) {
   display: none;
+  position: absolute;
   &__item{
     color: white;
     width: 100%;
@@ -23,6 +25,9 @@
       top:0;
       left: 0;
     }
+  }
+  &.open{
+    display: flex;
   }
 }
 
