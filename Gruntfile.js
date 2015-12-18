@@ -103,13 +103,6 @@ module.exports = function(grunt) {
       }
     }
   };
-
-
-
-  // Не редактируйте эту строку
-  config = require("./.gosha")(grunt, config);
-
-  grunt.initConfig(config);
   grunt.registerTask("build",[
     "copy",
     "less",
@@ -119,7 +112,13 @@ module.exports = function(grunt) {
     "imagemin",
     "htmlmin",
     "uglify"
-  ])
+  ]);
+
+
+
+  // Не редактируйте эту строку
+  config = require("./.gosha")(grunt, config);
+  grunt.initConfig(config);
 };
 
 
