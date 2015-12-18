@@ -1,8 +1,11 @@
 .apps {
   margin: 0 auto;
   z-index: 1;
+  width: 320px;
+  background: @apps-color;
   @media (min-width: 660px) {
     width: 660px;
+    background: transparent;
   }
   @media (min-width: 1200px) {
     width: 1200px;
@@ -11,14 +14,12 @@
   &__layout{
     width: 100%;
     min-height: 270px;
-    background: @apps-color;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 31px 20px;
+    padding: 27px 20px;
     align-items: center;
     @media (min-width: 660px) {
-      background: transparent;
       min-height: 300px;
       align-items: flex-start;
       padding: 27px 20px;
@@ -32,8 +33,10 @@
       font-size: @text-font-size;
       color: white;
       line-height: 1.5;
+      padding-bottom: 5px;
       @media (min-width: 660px) {
         font-size: @base-font-size;
+        padding-bottom: 0;
       }
     }
     &--wrap{
@@ -46,7 +49,7 @@
       padding: 4px 0;
     }
     @media (min-width: 1200px) {
-      padding: 12px 0;
+      padding: 9px 0;
     }
   }
   &__download-btn {
@@ -56,11 +59,9 @@
     border: 2px solid white;
     border-radius: 30px;
     background: transparent;
-    width: 280px;
-    height: 53px;
+    padding: 13px 36px;
     outline: 0;
     @media (min-width: 1200px) {
-      width: 300px;
       font-size: @reviews-tablet-font-size;
     }
     &:hover{

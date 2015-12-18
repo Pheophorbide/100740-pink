@@ -1,5 +1,16 @@
 .pink {
-  display: block;
+  &--mobile {
+    display: block;
+    @media (min-width: 660px) {
+      display: none;
+    }
+  }
+  &--desktop {
+    display: none;
+    @media (min-width: 660px) {
+      display: block;
+    }
+  }
   &__stars {
     display: none;
     @media (min-width: 1200px) {
@@ -7,29 +18,13 @@
     }
   }
   &__glasses {
-    display: none;
-    &--footer{
-      display: block;
-    }
     &-color {
-      &--footer{
+      &--footer {
         fill: @radio-color;
       }
     }
     @media (min-width: 660px) {
       display: block;
-    }
-  }
-  &--footer {
-    transform: none;
-  }
-  &__text {
-    transform: translate(-96%, -30%);
-    @media (min-width: 660px) {
-      transform: translate(0, 0);
-    }
-    &--footer {
-      transform: translate(0, 0);
     }
   }
 }

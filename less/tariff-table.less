@@ -92,10 +92,10 @@
     }
   }
   &__cell {
-    padding: 19px;
+    padding: 17px 19px;
     text-transform: uppercase;
     font-size: @text-font-size;
-    vertical-align: middle;
+    align-self: center;
     &--hidden {
       @media (min-width: 660px) {
         display: none;
@@ -108,11 +108,11 @@
       }
     }
     &-icon {
-      background: url("../img/yes.png") center no-repeat;
-      min-height: 22px;
-      min-width: 30px;
+      background: url("../img/yes.png") center right no-repeat;
+      min-height: 24px;
+      min-width: 33px;
       &--no {
-        background: url("../img/no.png") center no-repeat;
+        background: url("../img/no.png") center right no-repeat;
       }
     }
     &--tablet {
@@ -124,16 +124,16 @@
       padding: 11px 61px;
     }
     @media (min-width: 1200px) {
-      padding: 18px 102px;
+      padding: 17px 100px;
     }
     &--tablet-text {
       @media (min-width: 660px) {
         font-size: @text-font-size;
         text-transform: none;
-        padding: 12.5px 19px;
+        padding: 13.5px 19px;
       }
       @media (min-width: 1200px) {
-        padding: 17px 65px 16.5px 23px;
+        padding: 17px 65px 17px 23px;
         font-size: @base-font-size;
       }
     }

@@ -16,11 +16,11 @@
     background-size: contain;
     width: 126%;
     height: 301px;
-    padding-right: @padding*3 + 12;
+    padding-right: 66px;
     @media (min-width: 1200px) {
       width: 600px;
       height: 348px;
-      padding-right: 148px;
+      padding-right: 140px;
     }
   }
   &__title {
@@ -34,7 +34,7 @@
   &__inner {
     padding: 7px 20px 20px;
     @media (min-width: 1200px) {
-      padding: 94px 24px 20px 20px;
+      padding: 98px 24px 20px 20px;
       align-self: stretch;
     }
   }
@@ -56,6 +56,12 @@
       @media (min-width: 1200px) {
         font-size: @base-font-size;
       }
+    }
+  }
+  &__wrap{
+    display: block;
+    @media (min-width: 1200px) {
+      display: inline;
     }
   }
 }
