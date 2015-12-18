@@ -118,6 +118,7 @@ module.exports = function(grunt) {
 
   // Не редактируйте эту строку
   config = require("./.gosha")(grunt, config);
+
   grunt.initConfig(config);
 };
 
