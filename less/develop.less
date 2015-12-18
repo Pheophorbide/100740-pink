@@ -1,10 +1,16 @@
 .develop {
   display: flex;
   align-items: center;
+  @media (min-width: 1200px) {
+    padding-right: 5px;
+  }
   &__title {
     font-size: @text-font-size;
     color: @text-color;
     padding-right: 14px;
+    @media (min-width: 660px) {
+      padding-top: 10px;
+    }
     @media (min-width: 1200px) {
       font-size: @base-font-size;
     }
@@ -23,8 +29,8 @@
         opacity: 0.3;
       }
     }
-
-
+    @media (min-width: 660px) {
+      padding-top: 10px;
+    }
   }
-
 }

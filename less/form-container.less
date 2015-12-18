@@ -1,7 +1,7 @@
 .form-container {
-  padding: 26px 20px 39px;
+  padding: 26px 20px 31px;
   @media (min-width: 660px) {
-    padding-bottom: 19px;
+    padding: 19px 20px;
   }
   @media (min-width: 1200px) {
     padding: 0;
@@ -19,7 +19,7 @@
         @media (min-width: 1200px) {
           display: block;
           white-space: nowrap;
-          padding-bottom: 48px;
+          padding-bottom: 37px;
         }
       }
 
@@ -33,6 +33,7 @@
         }
         @media (min-width: 1200px) {
           padding: 6px 0 31px 67px;
+          margin-bottom: 11px;
         }
       }
 
@@ -42,24 +43,28 @@
           margin-bottom: 17px;
         }
         @media (min-width: 1200px) {
-          padding: 6px 56px 49px;
-          margin-bottom: 57px;
+          padding: 6px 56px 44px;
+          margin-bottom: 27px;
         }
       }
 
       &--check {
         padding: 6px 56px 25px;
         @media (min-width: 1200px) {
-          padding: 6px 0 25px 68px;
-          margin-bottom: 56px;
+          padding: 6px 0 28px 68px;
+          margin-bottom: 46px;
         }
       }
 
       &--gallery {
         padding: 6px 56px 0;
         margin-bottom: 27px;
+        @media (min-width: 660px) {
+          padding: 6px 62px 0 56px;
+          margin-bottom: 10px;
+        }
         @media (min-width: 1200px) {
-          padding: 6px 0 26px 56px;
+          padding: 6px 0 29px 56px;
           margin-bottom: 30px;
         }
       }
@@ -71,22 +76,24 @@
   }
   &--gray {
     background: @bg-gray-color;
+    padding-bottom: 19px;
     @media (min-width: 660px) {
       background-color: white;
     }
   }
   &--padding {
-    padding-bottom: 40px;
+    padding-bottom: 30px;
     @media (min-width: 660px) {
       padding-bottom: 30px;
+      padding-top: 6px;
     }
     @media (min-width: 1200px) {
-      padding-bottom: 58px;
+      padding-bottom: 47px;
     }
   }
   &--gallery {
-    margin-bottom: 11px;
-    padding: 26px 14px 0 20px;
+    margin-bottom: 12px;
+    padding: 26px 14px 6px 20px;
     @media (min-width: 1200px) {
       padding: 0;
     }
@@ -107,29 +114,45 @@
   &__title {
     .text-style ();
     text-align: center;
-    padding: 0 20px;
-    margin-bottom: 26px;
+    padding: 9px 20px;
+    margin-bottom: 13px;
     &--important {
       &:after {
         content: " *";
       }
     }
     &--padding {
-      padding: 0;
-
-    }
-    &--margin-bottom {
-      margin-bottom: @margin + 22;
+      padding: 9px 0;
+      margin-bottom: 20px;
       @media (min-width: 660px) {
-        margin-bottom: 32px;
+        margin-bottom: 13px;
       }
       @media (min-width: 1200px) {
-        margin-bottom: 34px;
+        padding: 10px 20px;
+      }
+    }
+    &--margin-bottom {
+      margin-bottom: 17px;
+      padding: 23px 0;
+      @media (min-width: 660px) {
+        margin-bottom: 8px;
+      }
+      @media (min-width: 1200px) {
+        padding: 24px 20px;
+      }
+    }
+    &--fellow{
+      margin-bottom: 22px;
+      @media (min-width: 660px) {
+        margin-bottom: 17px;
       }
     }
   }
   &--check {
-    padding: 19px 20px 30px;
+    padding: 33px 20px 20px;
+    @media (min-width: 660px) {
+      padding-top: 7px;
+    }
     @media (min-width: 1200px) {
       padding: 0;
     }
@@ -137,11 +160,11 @@
   &__layout {
     @media (min-width: 660px) {
       display: block;
-      padding: 0 50px 7px;
+      padding: 0 42px 7px 49px;
     }
     @media (min-width: 1200px) {
       white-space: nowrap;
-      padding: 0 34px 0 42px;
+      padding: 0 42px 0;
 
     }
   }
@@ -277,7 +300,7 @@
       align-items: stretch;
       padding: 0;
       border: none;
-      height: 63px;
+      height: 66px;
 
     }
     &--gray {
@@ -303,14 +326,14 @@
           width: 50%;
         }
         @media (min-width: 1200px) {
-          width: 31.9%;
+          width: 34%;
           padding-right: 8px;
         }
       }
     }
 
     &__btn-item {
-      width: 47%;
+      width: 100%;
       &--border-none {
         input[type=text]{
         @media (min-width: 660px) {
@@ -369,10 +392,11 @@
     }
     &--fellow {
       border-bottom: 2px solid @input-border-color;
-      padding-bottom: @padding*2 + 12;
-      margin-bottom: @padding;
+      padding-bottom: 47px;
+      margin-bottom: 19px;
       @media (min-width: 660px) {
-        padding-bottom: 43px;
+        padding-bottom: 39px;
+        margin-right: 56px;
       }
     }
     &--fellow-inner {
@@ -393,7 +417,7 @@
       }
     }
     &--wrapper {
-      margin-bottom: @margin + 1;
+      margin-bottom: 11px;
       display: flex;
       justify-content: flex-end;
       align-items: stretch;
@@ -401,16 +425,19 @@
       @media (min-width: 660px) {
         margin-bottom: 12px;
       }
+      @media (min-width: 1200px) {
+        margin-bottom: 19px;
+      }
     }
     &--inline {
       @media (min-width: 660px) {
         display: inline-block;
         width: 49%;
-        padding: 0 6px 13px;
+        padding: 0 7px 13px;
       }
       @media (min-width: 1200px) {
-        width: 31.9%;
-        padding: 0 16px 0 13px;
+        width: 32%;
+        padding: 0 15px 0 13px;
         margin-right: 12px;
       }
     }
