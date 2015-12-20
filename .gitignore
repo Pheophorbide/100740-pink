@@ -6,4 +6,6 @@ Thumbs.db
 .idea
 *.sublime*
 *.log
-css/*.css
+source/css/*.css
+build/
+
