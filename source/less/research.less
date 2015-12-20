@@ -1,0 +1,66 @@
+.research {
+  display: none;
+  @media (min-width: 660px) {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding: 34px 20px 16px;
+    @media (min-width: 1200px) {
+      padding: 23px 128px 140px;
+      width: 1200px;
+      margin: 0 auto;
+    }
+  }
+  &__img {
+    background: url("../img/timer.png") no-repeat;
+    background-size: contain;
+    width: 126%;
+    height: 301px;
+    padding-right: 66px;
+    @media (min-width: 1200px) {
+      width: 600px;
+      height: 348px;
+      padding-right: 140px;
+    }
+  }
+  &__title {
+    font-size: @logo-font-size;
+    font-weight: bold;
+    line-height: 1;
+    @media (min-width: 1200px) {
+      padding-bottom: 20px;
+    }
+  }
+  &__inner {
+    padding: 7px 20px 20px;
+    @media (min-width: 1200px) {
+      padding: 98px 24px 20px 20px;
+    }
+  }
+  &__text {
+    font-size: @text-font-size;
+    color: @text-color;
+    padding: @padding/2 0;
+    @media (min-width: 1200px) {
+      font-size: @base-font-size;
+      padding: 0 31px 34px 0;
+      line-height: 1.8;
+    }
+  }
+  &__link {
+    a {
+      font-size: @text-font-size;
+      text-decoration: underline;
+      color: @contacts-color;
+      @media (min-width: 1200px) {
+        font-size: @base-font-size;
+      }
+    }
+  }
+  &__wrap{
+    display: block;
+    @media (min-width: 1200px) {
+      display: inline;
+    }
+  }
+}
