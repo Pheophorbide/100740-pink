@@ -35,14 +35,22 @@
 
     minus.addEventListener("click", function () {
       changeNumber("minus");
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      input.dispatchEvent(evt);
     });
 
     plus.addEventListener("click", function () {
       changeNumber("plus");
+      var evt = document.createEvent("HTMLEvents");
+      evt.initEvent("change", false, true);
+      input.dispatchEvent(evt);
     });
 
-    function changeNumber(operation) {
-      var value = parseDaysValue(input.value);
+
+
+      function changeNumber(operation) {
+      var value = convertInputValueToNumber(input.value);
       if (operation == "plus" && value < 100500) {
         input.value = (value + 1) + " " + declOfNum((value + 1), input.getAttribute("data-decl").split(","));
 
@@ -52,7 +60,7 @@
     }
   }
 
-  function parseDaysValue(daysCount) {
+  function convertInputValueToNumber(daysCount) {
     return parseInt(daysCount.replace(/\D/g, ''));
   }
 
@@ -60,4 +68,48 @@
     var cases = [2, 0, 1, 1, 1, 2];
     return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
   }
+
+  function addFellowContainer () {
+    var fellowInner = document.querySelector(".js-fellowInner");
+    var count = document.querySelectorAll('.js-fellowItemContainer').length + 1;
+    var div = document.createElement("div");
+    div.classList.add("js-fellowItemContainer");
+    div.innerHTML = getFellowItemHTML(count);
+    fellowInner.appendChild(div);
+  }
+
+  function removeLastFellowContainer () {
+    var lastFellowContainer = document.querySelector(".js-fellowItemContainer:last-child");
+    lastFellowContainer.remove();
+  }
+
+  function getFellowItemHTML (indexNumber) {
+    console.log(document.querySelector("#fellow-template"));
+
+    var template = document.querySelector("#fellow-template").innerHTML;
+    return Mustache.render(template, {
+      "indexNumber":indexNumber
+    });
+  }
+
+  window.onload = function() {
+    var inputFellow = document.querySelector(".js-fellow");
+    var inputValue = convertInputValueToNumber(inputFellow.value);
+
+    for (var i= 0; i < inputValue; i++) {
+      addFellowContainer();
+    }
+
+    inputFellow.addEventListener("change", function(event){
+      var currentValue = convertInputValueToNumber(event.target.value);
+      var currentContainerCount = document.querySelectorAll(".js-fellowItemContainer").length;
+      console.log(currentValue, currentContainerCount);
+      if (currentContainerCount < currentValue) {
+        addFellowContainer();
+      } else if (currentContainerCount > currentValue) {
+        removeLastFellowContainer();
+      }
+  });
+  };
+
 })();

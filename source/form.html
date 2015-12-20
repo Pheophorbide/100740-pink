@@ -228,59 +228,13 @@
                                                                                                     id="fellow-traveler-number"
                                                                                                     value="2 чел"
                                                                                                     readonly
-                                                                                                    data-decl="чел,чел,чел">
+                                                                                                    data-decl="чел,чел,чел" class="js-fellow">
                   <label for="fellow-traveler-number"></label>
                 </div>
                 <button class="form-container__btn  form-container__btn--plus"></button>
               </div>
             </div>
-            <div class="form-container__form form-container__form--wrapper">
-              <div class="form-container__form  form-container__form--fellow-inner">
-                <div class="form-container__fellow-number">  <!--блок c номером-->
-                  <div class="form-container__label  form-container__label--fellow-number">№</div>
-                  <div class="form-container__control  form-container__control--fellow-number">1</div>
-                </div>
-                <div class="form-container__fellow-name">
-                  <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
-                  <div class="form-container__label form-container__label--important"><label
-                    for="fellow-name-1">Имя:</label></div>
-                  <div class="form-container__control  form-container__control--fellow-count">
-                    <input type="text" id="fellow-name-1" placeholder="Введите Ваше имя" name="fellow-name-1">
-                  </div>
-                </div>
-                <div class="form-container__delete"><a href="#">Удалить</a></div>
-                <div class="form-container__fellow-name  form-container__fellow-name--margin-left">
-                  <div class="form-container__label"><label for="fellow-nickname-1">Прозвище:</label></div>
-                  <div class="form-container__control  form-container__control--fellow-count">
-                    <input type="text" id="fellow-nickname-1" placeholder="Ну как же без этого"
-                            name="fellow-nickname-1">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="form-container__form form-container__form--wrapper">
-              <div class="form-container__form  form-container__form--fellow-inner">
-                <div class="form-container__fellow-number">  <!--блок c номером-->
-                  <div class="form-container__label  form-container__label--fellow-number">№</div>
-                  <div class="form-container__control  form-container__control--fellow-number">2</div>
-                </div>
-                <div class="form-container__fellow-name">
-                  <!--Использовать в прозвище/возможно тоже form-container с модификатором??-->
-                  <div class="form-container__label form-container__label--important"><label
-                    for="fellow-name-2">Имя:</label></div>
-                  <div class="form-container__control  form-container__control--fellow-count">
-                    <input type="text" id="fellow-name-2" placeholder="Введите Ваше имя" name="fellow-name-2">
-                  </div>
-                </div>
-                <div class="form-container__delete"><a href="#">Удалить</a></div>
-                <div class="form-container__fellow-name    form-container__fellow-name--margin-left">
-                  <div class="form-container__label"><label for="fellow-nickname-2">Прозвище:</label></div>
-                  <div class="form-container__control  form-container__control--fellow-count">
-                    <input type="text" id="fellow-nickname-2" placeholder="Ну как же без этого"
-                            name="fellow-nickname-2">
-                  </div>
-                </div>
-              </div>
+            <div class="js-fellowInner">
             </div>
           </fieldset>
         </div>
@@ -491,7 +445,33 @@
     </div>
   </footer>
 </div>
+<script src="js/mustache.min.js"></script>
 <script src="js/script.js" type="text/javascript"></script>
 <script SRC="js/menu.js" type="text/javascript"></script>
+<script id="fellow-template" type="text/html">
+  <div class="form-container__form form-container__form--wrapper">
+    <div class="form-container__form  form-container__form--fellow-inner">
+      <div class="form-container__fellow-number">  <!--блок c номером-->
+        <div class="form-container__label  form-container__label--fellow-number">№</div>
+        <div class="form-container__control  form-container__control--fellow-number">{{indexNumber}}</div>
+      </div>
+      <div class="form-container__fellow-name">
+        <div class="form-container__label form-container__label--important"><label
+          for="fellow-number-{{indexNumber}}">Имя:</label></div>
+        <div class="form-container__control  form-container__control--fellow-count">
+          <input type="text" id="fellow-number-{{indexNumber}}" placeholder="Введите Ваше имя" name="fellow-name-{{indexNumber}}">
+        </div>
+      </div>
+      <div class="form-container__delete"><a href="#">Удалить</a></div>
+      <div class="form-container__fellow-name    form-container__fellow-name--margin-left">
+        <div class="form-container__label"><label for="fellow-nickname-{{indexNumber}}">Прозвище:</label></div>
+        <div class="form-container__control  form-container__control--fellow-count">
+          <input type="text" id="fellow-nickname-{{indexNumber}}" placeholder="Ну как же без этого"
+                 name="fellow-nickname-{{indexNumber}}">
+        </div>
+      </div>
+    </div>
+  </div>
+</script>
 </body>
 </html>
