@@ -1,16 +1,20 @@
 .reviews {
-  @media (min-width: 1200px) {
-    position: relative;
-    padding: 0 128px 147px;
-    width: 1200px;
-    margin: 0 auto;
+margin-bottom: 18px;
+  @media (min-width: 660px){
+    margin-bottom: 12px;
+    padding-top: 43px;
   }
-
+  @media (min-width: 1200px){
+      position: relative;
+      padding: 0 128px 147px;
+      width: 1200px;
+      margin: 0 auto;
+  }
   &__carousel {
     width: 100%;
-    position: relative;
-    height: 277px;
-    overflow: hidden;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: space-around;
   }
   &__nav {
     padding-bottom: 133px;

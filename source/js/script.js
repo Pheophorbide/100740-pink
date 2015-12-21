@@ -61,7 +61,7 @@
   }
 
   function convertInputValueToNumber(daysCount) {
-    return parseInt(daysCount.replace(/\D/g, ''));
+    return parseInt(daysCount.replace(/\D/g, ""));
   }
 
   function declOfNum(number, titles) {
@@ -71,7 +71,7 @@
 
   function addFellowContainer () {
     var fellowInner = document.querySelector(".js-fellowInner");
-    var count = document.querySelectorAll('.js-fellowItemContainer').length + 1;
+    var count = document.querySelectorAll(".js-fellowItemContainer").length + 1;
     var div = document.createElement("div");
     div.classList.add("js-fellowItemContainer");
     div.innerHTML = getFellowItemHTML(count);
@@ -84,8 +84,6 @@
   }
 
   function getFellowItemHTML (indexNumber) {
-    console.log(document.querySelector("#fellow-template"));
-
     var template = document.querySelector("#fellow-template").innerHTML;
     return Mustache.render(template, {
       "indexNumber":indexNumber
@@ -103,7 +101,6 @@
     inputFellow.addEventListener("change", function(event){
       var currentValue = convertInputValueToNumber(event.target.value);
       var currentContainerCount = document.querySelectorAll(".js-fellowItemContainer").length;
-      console.log(currentValue, currentContainerCount);
       if (currentContainerCount < currentValue) {
         addFellowContainer();
       } else if (currentContainerCount > currentValue) {

@@ -12,8 +12,8 @@
     myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
 
     }, {
-      iconLayout: 'default#image',
-      iconImageHref: 'img/map-marker.svg',
+      iconLayout: "default#image",
+      iconImageHref: "img/map-marker.svg",
       // Размеры метки.
       iconImageSize: [35.983, 35.983],
       iconImageOffset: [-3, -42]

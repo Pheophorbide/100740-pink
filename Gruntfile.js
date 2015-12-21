@@ -42,7 +42,6 @@ module.exports = function(grunt) {
           cwd: "source",
           src: [
             "img/**",
-            "js/**",
             "index.html",
             "form.html",
             "less/**"
@@ -98,8 +97,22 @@ module.exports = function(grunt) {
     uglify: {
       script: {
         files: {
-          'build/js/script.min.js': ['build/js/map.js', 'build/js/menu.js', 'build/js/script.js']
+          "build/js/index.min.js":["build/js/index.js"],
+          "build/js/form.min.js":["build/js/form.js"]
         }
+      }
+    },
+    concat: {
+      options: {
+
+      },
+      index: {
+        src: ["source/js/menu.js", "source/js/map.js"],
+        dest: "build/js/index.js"
+      },
+      form: {
+        src: ["source/js/menu.js", "source/js/script.js", "source/js/mustache.min.js"],
+        dest: "build/js/form.js"
       }
     }
   };
@@ -111,6 +124,7 @@ module.exports = function(grunt) {
     "cssmin",
     "imagemin",
     "htmlmin",
+    "concat",
     "uglify"
   ]);
 

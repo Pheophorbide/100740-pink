@@ -3,11 +3,13 @@
   font-size: initial;
   white-space: initial;
   background: white;
+  vertical-align: bottom;
   &--hidden {
     display: none;
     @media (min-width: 660px) {
       display: inline-block;
       background: @bg-gray-color;
+      vertical-align: bottom;
     }
   }
   &__wrapper {
@@ -74,7 +76,7 @@
     &--hit {
       position: relative;
       &:after{
-        content: '';
+        content: "";
         background: transparent url("../img/hit.png") no-repeat;
         position: absolute;
         /* z-index: 3; */

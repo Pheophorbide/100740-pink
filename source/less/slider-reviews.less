@@ -1,12 +1,5 @@
 .slider-reviews {
   display: flex;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%, 0);
-  overflow: hidden;
-  @media (min-width: 660px ) {
-    top: 15%;
-  }
   &__item {
     display: inline-flex;
     flex-direction: column;
@@ -34,7 +27,7 @@
       padding: @padding - 5;
       font-size: @text-font-size;
       &:after {
-        content: '25 лет, водитель трамвая';
+        content: "25 лет, водитель трамвая";
       }
 
       h2 {
