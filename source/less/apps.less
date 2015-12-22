@@ -1,7 +1,7 @@
 .apps {
   margin: 0 auto;
   z-index: 1;
-  width: 320px;
+  width: 100%;
   background: @apps-color;
   @media (min-width: 660px) {
     width: 660px;
@@ -10,19 +10,21 @@
   @media (min-width: 1200px) {
     width: 1200px;
   }
-
   &__layout{
-    width: 100%;
+    width: 320px;
     min-height: 270px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     padding: 27px 20px;
     align-items: center;
+    margin: 0 auto;
     @media (min-width: 660px) {
+      width: 100%;
       min-height: 300px;
       align-items: flex-start;
       padding: 27px 20px;
+      margin: 0;
     }
     @media (min-width: 1200px) {
       padding: 4px 128px;

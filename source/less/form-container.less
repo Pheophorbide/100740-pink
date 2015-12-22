@@ -1,5 +1,5 @@
 .form-container {
-  padding: 26px 20px 31px;
+  padding: 26px 0 31px;
   @media (min-width: 660px) {
     padding: 19px 20px;
   }
@@ -8,13 +8,15 @@
   }
   &__group {
     border: none;
-    padding: 0;
+    margin: 0 auto;
+    width: 320px;
+    padding: 0 20px;
     @media (min-width: 660px) {
       border: 2px solid #e5e5e5;
-
+      width: 100%;
+      padding: 0;
       &--border-none {
         border: none;
-        padding: 0;
         margin: 0;
         @media (min-width: 1200px) {
           display: block;
@@ -26,30 +28,34 @@
       &--radio {
         padding: 6px 56px 31px;
         margin-bottom: 10px;
+        @media (min-width: 660px) {
+          padding: 8px 58px 31px;
+          margin-bottom: 8px;
+        }
         @media (min-width: 1200px) {
           display: block;
           white-space: nowrap;
-          margin-bottom: 54px;
-        }
-        @media (min-width: 1200px) {
-          padding: 6px 0 31px 67px;
-          margin-bottom: 11px;
+          margin-bottom: 8px;
+          padding: 8px 3px 31px 70px;
         }
       }
 
       &--fellow {
         @media (min-width: 660px) {
-          padding: 6px 0 25px 56px;
-          margin-bottom: 17px;
+          padding: 6px 0 23px 59px;
+          margin-bottom: 20px;
         }
         @media (min-width: 1200px) {
-          padding: 6px 56px 44px;
+          padding: 6px 49px 44px 59px;
           margin-bottom: 27px;
         }
       }
 
       &--check {
         padding: 6px 56px 25px;
+        @media (min-width: 660px) {
+          padding-bottom: 21px;
+        }
         @media (min-width: 1200px) {
           padding: 6px 0 28px 68px;
           margin-bottom: 46px;
@@ -60,11 +66,11 @@
         padding: 6px 56px 0;
         margin-bottom: 27px;
         @media (min-width: 660px) {
-          padding: 6px 62px 0 56px;
-          margin-bottom: 10px;
+          padding: 8px 58px 0;
+          margin-bottom: 28px;
         }
         @media (min-width: 1200px) {
-          padding: 6px 0 29px 56px;
+          padding: 6px 0 29px 60px;
           margin-bottom: 30px;
         }
       }
@@ -93,7 +99,11 @@
   }
   &--gallery {
     margin-bottom: 12px;
-    padding: 26px 14px 6px 20px;
+    padding: 26px 0 6px 0;
+    @media (min-width: 660px) {
+      margin-bottom: 0;
+      padding: 27px 20px 0;
+    }
     @media (min-width: 1200px) {
       padding: 0;
     }
@@ -104,11 +114,10 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 25px 20px 38px;
+      padding: 25px 20px 37px;
     }
     @media (min-width: 1200px) {
-      padding-bottom: 13px;
-      padding-left: 0;
+      padding: 25px 0 13px;
     }
   }
   &__title {
@@ -126,6 +135,8 @@
       margin-bottom: 20px;
       @media (min-width: 660px) {
         margin-bottom: 13px;
+        padding: 9px 28px;
+
       }
       @media (min-width: 1200px) {
         padding: 10px 20px;
@@ -136,12 +147,13 @@
       padding: 23px 0;
       @media (min-width: 660px) {
         margin-bottom: 8px;
+        padding: 23px 17px;
       }
       @media (min-width: 1200px) {
         padding: 24px 20px;
       }
     }
-    &--fellow{
+    &--fellow {
       margin-bottom: 22px;
       @media (min-width: 660px) {
         margin-bottom: 17px;
@@ -149,9 +161,9 @@
     }
   }
   &--check {
-    padding: 33px 20px 20px;
+    padding: 33px 0 20px;
     @media (min-width: 660px) {
-      padding-top: 7px;
+      padding: 7px 20px 20px;
     }
     @media (min-width: 1200px) {
       padding: 0;
@@ -160,11 +172,11 @@
   &__layout {
     @media (min-width: 660px) {
       display: block;
-      padding: 0 42px 7px 49px;
+      padding: 3px 43px 8px 52px;
     }
     @media (min-width: 1200px) {
       white-space: nowrap;
-      padding: 0 42px 0;
+      padding: 0 44px 0 46px;
 
     }
   }
@@ -203,8 +215,9 @@
     margin-bottom: 8px;
     vertical-align: baseline;
     @media (min-width: 660px) {
-      margin-right: 12px;
+      margin-right: 16px;
       margin-bottom: 0;
+      text-align: center;
     }
     @media (min-width: 1200px) {
       margin-right: 19px;
@@ -247,10 +260,10 @@
       .main-border ();
       cursor: pointer;
 
-      &:hover{
+      &:hover {
         border: 2px solid @mail-hover-color;
       }
-      &:active{
+      &:active {
         border: 2px solid @radio-color;
       }
     }
@@ -274,13 +287,13 @@
             left: 4%;
           }
         }
-        &:hover{
-          &:before{
+        &:hover {
+          &:before {
             box-shadow: 0 0 0 2px @mail-hover-color;
           }
         }
-        &:active{
-          &:before{
+        &:active {
+          &:before {
             box-shadow: 0 0 0 2px @radio-color;
           }
         }
@@ -316,9 +329,9 @@
         background-color: white;
       }
       &--fellow-number {
-        padding: 17px  25px 18px;
+        padding: 17px 25px 18px;
         .main-border ();
-        border-right:none ;
+        border-right: none;
         @media (min-width: 660px) {
           border-right: 2px solid @input-border-color;
         }
@@ -337,20 +350,20 @@
     &__btn-item {
       width: 100%;
       &--border-none {
-        input[type=text]{
-        @media (min-width: 660px) {
-          border: none;
+        input[type=text] {
+          @media (min-width: 660px) {
+            border: none;
+          }
         }
-      }
       }
       input[type=text] {
         text-align: center;
         border-right: none;
         border-left: none;
-        &:hover{
+        &:hover {
           border: 2px solid @mail-hover-color;
         }
-        &:active{
+        &:active {
           border: 2px solid @radio-color;
         }
       }
@@ -360,17 +373,17 @@
       height: 64px;
       padding: 0 30px;
       .main-border ();
-      background:white url("../img/plus.png") center no-repeat;
+      background: white url("../img/plus.png") center no-repeat;
       &--minus {
         background-image: url("../img/minus.png");
       }
-      &:hover{
+      &:hover {
         border-color: @mail-hover-color;
       }
-      &:active{
+      &:active {
         background: @mail-hover-color url("../img/plus-down.png") center no-repeat;
-        &:first-child{
-          background-image:url("../img/minus-down.png") ;
+        &:first-child {
+          background-image: url("../img/minus-down.png");
         }
       }
     }
@@ -434,7 +447,7 @@
       @media (min-width: 660px) {
         display: inline-block;
         width: 49%;
-        padding: 0 7px 13px;
+        padding: 0 7px 11px;
         vertical-align: top;
       }
       @media (min-width: 1200px) {
@@ -461,7 +474,7 @@
     display: none;
     @media (min-width: 660px) {
       display: inline-block;
-      vertical-align: middle;
+      vertical-align: baseline;
     }
     @media (min-width: 1200px) {
       order: 5;
@@ -473,11 +486,11 @@
         text-transform: uppercase;
         font-size: @text-font-size;
       }
-      &:hover{
+      &:hover {
         color: @radio-color;
         text-decoration: underline;
       }
-      &:active{
+      &:active {
         text-decoration: none;
         opacity: 0.3;
       }
