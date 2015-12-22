@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content: space-between;
   min-height: 729px;
-  background-size: 100% 462px;
+  background-size: auto 462px;
   overflow: hidden;
   width: 100%;
   @media (min-resolution: 2dppx) {
@@ -16,14 +16,14 @@
   @media (min-width: 660px) {
     justify-content: flex-start;
     background: @mail-hover-color url("../img/background-tablet@1x.jpg") top center no-repeat;
-    background-size: 100% 729px;
+    background-size: auto 729px;
   }
   @media (min-width: 660px) and (min-resolution: 2dppx) {
     background-image: url("../img/background-tablet@2x.jpg");
   }
   @media (min-width: 1200px) {
-    background: @mail-hover-color url("../img/background-fullsize.jpg") top center no-repeat;
-    background-size: 100% 856px;
+    background: @mail-hover-color url("../img/background-fullsize.jpg") center center no-repeat;
+    background-size: cover;
     height: 856px;
   }
 
