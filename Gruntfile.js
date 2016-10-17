@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     less: {
       style: {
         files: {
-          "build/css/style.css": "source/less/style.less"
+          "css/style.css": "source/less/style.less"
         }
       }
     },
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
         ]
       },
       style: {
-        src: "build/css/style.css"
+        src: "css/style.css"
       }
     },
 
@@ -52,7 +52,7 @@ module.exports = function(grunt) {
     cmq:{
     style:{
       file:{
-        "build/css/style.css":["build/css/style.css"]
+        "css/style.css":["css/style.css"]
       }
     }
   },
@@ -63,7 +63,7 @@ module.exports = function(grunt) {
       },
       style:{
         files:{
-          "build/css/style.min.css":["build/css/style.css"]
+          "css/style.min.css":["css/style.css"]
         }
       }
     },
@@ -74,7 +74,7 @@ module.exports = function(grunt) {
         },
         files: [{
           expand: true,
-          src: ["build/img/**/*.{png,jpg,gif,svg}"]
+          src: ["img/**/*.{png,jpg,gif,svg}"]
         }]
       }
     },
@@ -88,16 +88,16 @@ module.exports = function(grunt) {
       },
       html:{
         files:{
-          "build/index.min.html":["build/index.html"],
-          "build/form.min.html":["build/form.html"]
+          "index.min.html":["index.html"],
+          "form.min.html":["form.html"]
         }
       }
     },
     uglify: {
       script: {
         files: {
-          "build/js/index.min.js":["build/js/index.js"],
-          "build/js/form.min.js":["build/js/form.js"]
+          "js/index.min.js":["js/index.js"],
+          "js/form.min.js":["js/form.js"]
         }
       }
     },
@@ -106,12 +106,12 @@ module.exports = function(grunt) {
 
       },
       index: {
-        src: ["source/js/menu.js", "source/js/map.js"],
-        dest: "build/js/index.js"
+        src: ["js/menu.js", "js/map.js"],
+        dest: "js/index.js"
       },
       form: {
-        src: ["source/js/menu.js", "source/js/script.js", "source/js/mustache.min.js"],
-        dest: "build/js/form.js"
+        src: ["js/menu.js", "js/script.js", "js/mustache.min.js"],
+        dest: "js/form.js"
       }
     }
   };
